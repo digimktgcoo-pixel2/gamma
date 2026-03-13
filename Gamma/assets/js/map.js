@@ -1,5 +1,4 @@
 ﻿import { RADNET_CONFIG, SITE_CONFIG } from "./config.js";
-import { injectAdSlots, injectSiteChrome, registerAdsIfNeeded } from "./layout.js";
 import { fetchStationData } from "./radnet.js";
 
 const DIRECTORY_URL = "data/stations.json";
@@ -304,9 +303,6 @@ function renderStations(map, stations, listNode, countNode) {
 }
 
 function initMapPage() {
-  injectSiteChrome();
-  injectAdSlots();
-  registerAdsIfNeeded();
   registerServiceWorker();
 
   const mapNode = document.getElementById("station-map");

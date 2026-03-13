@@ -1,5 +1,4 @@
 import { SITE_CONFIG } from "./config.js";
-import { injectAdSlots, injectSiteChrome, registerAdsIfNeeded } from "./layout.js";
 import { initHomePage, initStationsPage } from "./pages.js";
 
 function registerServiceWorker() {
@@ -15,9 +14,6 @@ function registerServiceWorker() {
 }
 
 function initPage() {
-  injectSiteChrome();
-  injectAdSlots();
-  registerAdsIfNeeded();
   registerServiceWorker();
 
   const page = document.body.dataset.page;

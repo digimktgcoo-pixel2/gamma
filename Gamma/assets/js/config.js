@@ -1,10 +1,10 @@
 ﻿export const SITE_CONFIG = {
-  name: "Signal & Shelter",
-  tagline: "Live RadNet tracking with source-aware public context.",
+  name: "NuclearThreatWatch.org",
+  tagline: "Live U.S. radiation monitoring powered by EPA RadNet.",
   description:
-    "A public-facing radiation monitoring site built around EPA RadNet live data, station clarity, and launch-ready educational pages.",
-  workerBaseUrl: "",
-  themeColor: "#102133",
+    "Free public radiation monitoring and nuclear preparedness resources powered by EPA RadNet live data. Track radiation levels, nuclear threats, and emergency preparedness information.",
+  workerBaseUrl: "https://nuclearthreatwatch.org",
+  themeColor: "#0a0e13",
   staleAfterHours: 6,
   serviceWorkerPath: "/sw.js",
 };
