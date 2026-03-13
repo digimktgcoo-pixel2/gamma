@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | NuclearThreatWatch.org</title>
+    <meta
+      name="description"
+      content="Contact NuclearThreatWatch.org for site questions, station corrections, or partnership inquiries. For emergencies, call 911 — we are not first responders."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://nuclearthreatwatch.org/contact.html" />
+
+    <meta property="og:title" content="Contact | NuclearThreatWatch.org" />
+    <meta property="og:description" content="Reach the NuclearThreatWatch.org team for questions, corrections, or partnerships. Not an emergency service — call 911 in an emergency." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nuclearthreatwatch.org/contact.html" />
+    <meta property="og:site_name" content="NuclearThreatWatch" />
+
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png" />
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#0a0e13" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/theme.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+
+    <style>
+      :root {
+        --ntw-red:      #c0392b;
+        --ntw-red-dark: #962d22;
+        --ntw-amber:    #e67e22;
+        --ntw-green:    #27ae60;
+        --ntw-gold:     #e8c84a;
+        --ntw-bg:       #080c10;
+        --ntw-surface:  #0d151d;
+        --ntw-surface2: #111d27;
+        --ntw-border:   #1c2e3e;
+        --ntw-muted:    #6a8a9e;
+        --header-font:  'Oswald', 'Arial Narrow', Arial, sans-serif;
+        --body-font:    'Source Serif 4', Georgia, serif;
+        --bg:           var(--ntw-bg);
+        --surface:      var(--ntw-surface);
+      }
+
+      body[data-page="contact"] { background: var(--ntw-bg); }
+      body[data-page="contact"] h1,
+      body[data-page="contact"] h2,
+      body[data-page="contact"] h3,
+      body[data-page="contact"] h4 {
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase; letter-spacing: 0.02em;
+      }
+      body[data-page="contact"] p,
+      body[data-page="contact"] li {
+        font-family: 'Source Serif 4', Georgia, serif;
+        color: var(--ntw-muted);
+      }
+
+      /* Ticker */
+      .ntw-ticker {
+        background: var(--ntw-red); overflow: hidden;
+        white-space: nowrap; padding: 0.42rem 0;
+      }
+      .ntw-ticker-track {
+        display: inline-flex; align-items: center;
+        animation: ntw-scroll 55s linear infinite;
+      }
+      .ntw-ticker-label {
+        font-family: 'Oswald', sans-serif; font-size: 0.7rem; font-weight: 700;
+        letter-spacing: 0.18em; background: #fff; color: var(--ntw-red);
+        padding: 0.15rem 0.6rem; margin-right: 1.5rem; flex-shrink: 0;
+      }
+      .ntw-ticker-text {
+        font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem;
+        letter-spacing: 0.06em; color: rgba(255,255,255,0.92); padding-right: 4rem;
+      }
+      @keyframes ntw-scroll {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+
+      /* Label */
+      .ntw-label {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase;
+        color: var(--ntw-red); margin-bottom: 0.65rem;
+        display: flex; align-items: center; gap: 0.5rem;
+      }
+      .ntw-label.is-gold  { color: var(--ntw-gold);  }
+      .ntw-label.is-green { color: var(--ntw-green); }
+      .ntw-label.is-amber { color: var(--ntw-amber); }
+      .ntw-label::before {
+        content: ''; display: inline-block;
+        width: 14px; height: 2px; background: currentColor; flex-shrink: 0;
+      }
+
+      /* Emergency banner */
+      .ntw-emergency-banner {
+        background: #1a0000;
+        border-top: 3px solid var(--ntw-red);
+        border-bottom: 3px solid var(--ntw-red);
+        padding: 1.5rem 0;
+      }
+      .ntw-emergency-inner {
+        display: flex; flex-wrap: wrap; align-items: flex-start; gap: 1.25rem;
+      }
+      .ntw-emergency-icon {
+        font-size: 2.5rem; line-height: 1; flex-shrink: 0; margin-top: 0.1rem;
+      }
+      .ntw-emergency-copy h2 {
+        font-family: 'Oswald', sans-serif; font-size: 1.3rem; font-weight: 700;
+        text-transform: uppercase; color: #ff4d4d; margin: 0 0 0.5rem;
+        letter-spacing: 0.04em;
+      }
+      .ntw-emergency-copy p {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: 1rem; line-height: 1.7; color: #c87a7a; margin: 0;
+      }
+      .ntw-emergency-copy p strong { color: #ffaaaa; }
+
+      /* Page hero */
+      .ntw-page-hero {
+        padding: 3rem 0 2.5rem; background: var(--ntw-bg);
+        border-bottom: 3px solid var(--ntw-border);
+        position: relative; overflow: hidden;
+      }
+      .ntw-page-hero::before {
+        content: ''; position: absolute; inset: 0;
+        background: radial-gradient(ellipse 50% 60% at 90% 30%, rgba(192,57,43,0.05) 0%, transparent 70%);
+        pointer-events: none;
+      }
+      .ntw-page-hero-inner { position: relative; max-width: 760px; }
+      .ntw-page-hero h1 {
+        font-family: 'Oswald', sans-serif;
+        font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; line-height: 1.02;
+        text-transform: uppercase; color: #fff; margin: 0 0 1rem;
+      }
+      .ntw-page-hero h1 em { font-style: normal; color: var(--ntw-gold); }
+      .ntw-page-hero-lead {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: 1.05rem; line-height: 1.72; color: #8faec0;
+        max-width: 62ch; margin: 0;
+      }
+
+      /* Content grid */
+      .ntw-content-grid {
+        display: grid; grid-template-columns: 1fr; gap: 3rem;
+      }
+      @media (min-width: 768px) {
+        .ntw-content-grid { grid-template-columns: 1fr 300px; }
+      }
+
+      /* Section divider */
+      .ntw-divider {
+        display: flex; align-items: center; gap: 1rem;
+        border-bottom: 2px solid var(--ntw-border);
+        padding-bottom: 0.6rem; margin-bottom: 1.75rem;
+      }
+      .ntw-divider h2 {
+        font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 700;
+        text-transform: uppercase; letter-spacing: 0.06em;
+        color: #fff; margin: 0; white-space: nowrap;
+      }
+      .ntw-divider-line { flex: 1; height: 1px; background: var(--ntw-border); }
+
+      /* Contact form */
+      .ntw-form-panel {
+        background: var(--ntw-surface2); border: 1px solid var(--ntw-border); padding: 2rem;
+      }
+      .ntw-form-panel h2 {
+        font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 700;
+        text-transform: uppercase; color: #fff; margin: 0.3rem 0 1.5rem; letter-spacing: 0.04em;
+      }
+      .ntw-form { display: flex; flex-direction: column; gap: 1.1rem; }
+      .ntw-form label {
+        display: flex; flex-direction: column; gap: 0.35rem;
+        font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem;
+        letter-spacing: 0.12em; text-transform: uppercase; color: var(--ntw-muted);
+      }
+      .ntw-form input,
+      .ntw-form select,
+      .ntw-form textarea {
+        background: #06101a; color: #fff;
+        border: 1px solid var(--ntw-border);
+        padding: 0.75rem 0.9rem;
+        font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem;
+        width: 100%; transition: border-color 0.2s;
+        -webkit-text-fill-color: #fff;
+      }
+      .ntw-form input:focus,
+      .ntw-form select:focus,
+      .ntw-form textarea:focus {
+        outline: none; border-color: var(--ntw-gold);
+      }
+      .ntw-form select option { background: #06101a; color: #fff; }
+      .ntw-form textarea { resize: vertical; min-height: 140px; }
+      .ntw-form input::placeholder,
+      .ntw-form textarea::placeholder { color: #2d4a5e; }
+      .ntw-btn-submit {
+        display: inline-flex; align-items: center; justify-content: center;
+        background: var(--ntw-red); color: #fff;
+        font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 600;
+        letter-spacing: 0.08em; text-transform: uppercase;
+        padding: 0.85rem 2rem; border: 2px solid var(--ntw-red);
+        cursor: pointer; transition: background 0.2s;
+        width: 100%; margin-top: 0.25rem;
+      }
+      .ntw-btn-submit:hover { background: var(--ntw-red-dark); border-color: var(--ntw-red-dark); }
+      .ntw-form-note {
+        font-family: 'IBM Plex Mono', monospace; font-size: 0.64rem;
+        letter-spacing: 0.06em; color: #2d4a5e; line-height: 1.6;
+        margin-top: 0.75rem;
+      }
+
+      /* Sidebar */
+      .ntw-sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+      .ntw-panel {
+        background: var(--ntw-surface2); border: 1px solid var(--ntw-border); padding: 1.5rem;
+      }
+      .ntw-panel.is-gold  { border-top: 3px solid var(--ntw-gold); }
+      .ntw-panel.is-green { border-top: 3px solid var(--ntw-green); }
+      .ntw-panel.is-amber { border-top: 3px solid var(--ntw-amber); }
+      .ntw-panel h3 {
+        font-family: 'Oswald', sans-serif; font-size: 0.95rem; font-weight: 600;
+        text-transform: uppercase; color: #fff; margin: 0.35rem 0 0.85rem; letter-spacing: 0.04em;
+      }
+      .ntw-panel p {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: 0.88rem; line-height: 1.62; color: var(--ntw-muted); margin: 0 0 0.6rem;
+      }
+      .ntw-panel p:last-child { margin: 0; }
+      .ntw-panel ul { padding-left: 1rem; margin: 0; }
+      .ntw-panel ul li {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: 0.86rem; line-height: 1.65; color: var(--ntw-muted); margin-bottom: 0.4rem;
+      }
+
+      /* Contact items */
+      .ntw-contact-row { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem; }
+      .ntw-contact-item {
+        display: flex; flex-direction: column; gap: 0.1rem;
+        padding: 0.6rem 0.85rem; background: var(--ntw-bg); border: 1px solid var(--ntw-border);
+      }
+      .ntw-contact-type {
+        font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem;
+        letter-spacing: 0.14em; text-transform: uppercase; color: var(--ntw-muted);
+      }
+      .ntw-contact-val {
+        font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem;
+        letter-spacing: 0.04em; color: var(--ntw-gold); text-decoration: none;
+      }
+      .ntw-contact-val:hover { color: #f0d86a; }
+      .ntw-address {
+        font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem;
+        letter-spacing: 0.06em; color: var(--ntw-muted); line-height: 1.8;
+        font-style: normal; margin-top: 0.85rem;
+        padding: 0.75rem; background: var(--ntw-bg); border: 1px solid var(--ntw-border);
+      }
+
+      /* Comms / radio section */
+      .ntw-section { padding: 3rem 0; background: var(--ntw-bg); }
+      .ntw-section-mid { padding: 3rem 0; background: var(--ntw-surface); }
+
+      .ntw-prose p {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: 1rem; line-height: 1.78; color: #7a9fb5; margin: 0 0 1.1rem;
+      }
+      .ntw-prose strong { color: #c8dde8; }
+      .ntw-prose a { color: var(--ntw-gold); text-decoration: underline; text-underline-offset: 2px; }
+      .ntw-prose a:hover { color: #f0d86a; }
+
+      /* Radio product cards */
+      .ntw-radio-grid {
+        display: grid; grid-template-columns: 1fr; gap: 1px;
+        background: var(--ntw-border); border: 1px solid var(--ntw-border);
+        margin-top: 1.5rem;
+      }
+      @media (min-width: 600px) { .ntw-radio-grid { grid-template-columns: repeat(3, 1fr); } }
+      .ntw-radio-card {
+        background: var(--ntw-bg); padding: 1.5rem 1.75rem;
+        display: flex; flex-direction: column; gap: 0.6rem;
+      }
+      .ntw-radio-tag {
+        font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem;
+        letter-spacing: 0.15em; text-transform: uppercase; color: var(--ntw-amber);
+      }
+      .ntw-radio-card h3 {
+        font-family: 'Oswald', sans-serif; font-size: 0.98rem; font-weight: 600;
+        text-transform: uppercase; color: #fff; margin: 0; letter-spacing: 0.03em;
+      }
+      .ntw-radio-card p {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: 0.86rem; line-height: 1.62; color: var(--ntw-muted); margin: 0;
+      }
+      .ntw-radio-price {
+        font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem;
+        letter-spacing: 0.08em; color: var(--ntw-gold);
+      }
+      .ntw-radio-link {
+        display: inline-flex; align-items: center; gap: 0.4rem;
+        font-family: 'Oswald', sans-serif; font-size: 0.82rem; font-weight: 600;
+        letter-spacing: 0.08em; text-transform: uppercase;
+        text-decoration: none; color: #08111a; background: var(--ntw-amber);
+        padding: 0.5rem 1rem; width: fit-content; margin-top: 0.25rem;
+        transition: background 0.2s;
+      }
+      .ntw-radio-link:hover { background: #c96d1a; color: #fff; }
+
+      /* Safety tip */
+      .ntw-safety-tip {
+        background: #0d1a0d; border: 1px solid rgba(39,174,96,0.35);
+        border-left: 4px solid var(--ntw-green); padding: 1.25rem 1.5rem; margin-top: 2rem;
+      }
+      .ntw-safety-tip-label {
+        font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem;
+        letter-spacing: 0.16em; text-transform: uppercase; color: var(--ntw-green);
+        margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.4rem;
+      }
+      .ntw-safety-tip-label::before {
+        content: ''; width: 7px; height: 7px;
+        background: var(--ntw-green); border-radius: 50%;
+      }
+      .ntw-safety-tip p {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: 0.9rem; line-height: 1.68; color: #5a9e6a; margin: 0;
+      }
+      .ntw-safety-tip p strong { color: #8fcf9a; }
+
+      /* Disclosure */
+      .ntw-disclosure {
+        font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem;
+        letter-spacing: 0.05em; color: #2d4050; line-height: 1.6;
+        border-top: 1px solid var(--ntw-border); padding-top: 1rem; margin-top: 2rem;
+      }
+
+      /* Ad slots hidden */
+      .ntw-ad-slot {
+        display: none; width: 100%; background: var(--ntw-surface);
+        border-top: 1px solid var(--ntw-border); border-bottom: 1px solid var(--ntw-border);
+        padding: 0.5rem 0; min-height: 100px;
+      }
+    </style>
+  </head>
+
+  <body data-page="contact">
+    <div class="site-shell">
+
+      <!-- TICKER -->
+      <div class="ntw-ticker" aria-label="Live status ticker" role="marquee">
+        <div class="ntw-ticker-track">
+          <span class="ntw-ticker-label">LIVE</span>
+          <span class="ntw-ticker-text">EPA RadNet monitoring active across the United States &nbsp;|&nbsp; NuclearThreatWatch.org — free public radiation monitoring &nbsp;|&nbsp; Hourly readings from the federal sensor network &nbsp;|&nbsp; Stale data flagged in real time — never hidden &nbsp;|&nbsp; EPA RadNet monitoring active across the United States &nbsp;|&nbsp; NuclearThreatWatch.org — free public radiation monitoring &nbsp;|&nbsp; Hourly readings from the federal sensor network &nbsp;|&nbsp; Stale data flagged in real time — never hidden &nbsp;|&nbsp;</span>
+        </div>
+      </div>
+
+      <!-- SITE HEADER — injected by layout.js -->
+      <div data-site-header></div>
+
+      <main id="main-content">
+
+        <!-- ═══ EMERGENCY WARNING — TOP OF PAGE ═══ -->
+        <div class="ntw-emergency-banner" role="alert" aria-label="Emergency notice">
+          <div class="container">
+            <div class="ntw-emergency-inner">
+              <div class="ntw-emergency-icon" aria-hidden="true">&#9888;</div>
+              <div class="ntw-emergency-copy">
+                <h2>This Is Not an Emergency Service</h2>
+                <p>
+                  <strong>NuclearThreatWatch.org is an informational website. We are not first responders, 
+                  not connected to emergency services, and cannot dispatch help of any kind.</strong> 
+                  If you are experiencing a nuclear, radiological, or any other emergency — 
+                  <strong>call 911 immediately</strong> or contact your local emergency management agency. 
+                  For national nuclear emergencies, contact the 
+                  <a href="https://www.ready.gov/" target="_blank" rel="noopener noreferrer" style="color:#ffaaaa;">FEMA Emergency line</a> 
+                  or tune to your local Emergency Alert System broadcast. 
+                  Do not use this contact form in an emergency situation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ PAGE HERO ═══ -->
+        <section class="ntw-page-hero">
+          <div class="container">
+            <div class="ntw-page-hero-inner">
+              <p class="ntw-label">Contact</p>
+              <h1>
+                Questions,<br>Corrections &amp; <em>Partnerships</em>
+              </h1>
+              <p class="ntw-page-hero-lead">
+                Reach the NuclearThreatWatch.org team for site feedback, station data corrections, 
+                press inquiries, or partnership opportunities. We read every message and aim to 
+                respond within 2 business days.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ═══ FORM + SIDEBAR ═══ -->
+        <section class="ntw-section">
+          <div class="container">
+            <div class="ntw-content-grid">
+
+              <!-- FORM -->
+              <div>
+                <div class="ntw-form-panel">
+                  <p class="ntw-label">Send a Message</p>
+                  <h2>Contact Form</h2>
+                  <form class="ntw-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="ntw-contact-form" novalidate>
+                    <label>
+                      Your Name
+                      <input type="text" name="name" required placeholder="Full name" />
+                    </label>
+                    <label>
+                      Email Address
+                      <input type="email" name="email" required placeholder="you@example.com" />
+                    </label>
+                    <label>
+                      Topic
+                      <select name="topic">
+                        <option>General question</option>
+                        <option>Station data correction</option>
+                        <option>Press or media inquiry</option>
+                        <option>Partnership or advertising</option>
+                        <option>Technical issue</option>
+                        <option>Accessibility concern</option>
+                        <option>Broken link report</option>
+                      </select>
+                    </label>
+                    <label>
+                      Message
+                      <textarea name="message" rows="6" required placeholder="Describe your question or feedback..."></textarea>
+                    </label>
+
+                    <!-- Mailing list checkbox -->
+                    <div style="display:flex; align-items:center; gap:0.75rem; padding:0.85rem 1rem; background:var(--ntw-bg); border:1px solid var(--ntw-border);">
+                      <input
+                        type="checkbox"
+                        name="mailing_list"
+                        id="ntw-mailing-list"
+                        value="Yes"
+                        style="width:18px; height:18px; accent-color:var(--ntw-gold); cursor:pointer; flex-shrink:0;"
+                      />
+                      <!-- Hidden field so Formspree always sends the value -->
+                      <input type="hidden" name="mailing_list_status" id="ntw-mailing-status" value="No" />
+                      <label for="ntw-mailing-list" style="font-family:'Source Serif 4',Georgia,serif; font-size:0.9rem; color:#8faec0; cursor:pointer; margin:0; letter-spacing:0; text-transform:none;">
+                        Join the <strong style="color:var(--ntw-gold);">DigiMktg Co.</strong> mailing list for nuclear preparedness updates
+                      </label>
+                    </div>
+
+                    <!-- Human verification — case-sensitive -->
+                    <div style="background:#06101a; border:2px solid var(--ntw-amber); padding:1.1rem 1.25rem;">
+                      <p style="font-family:'IBM Plex Mono',monospace; font-size:0.68rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--ntw-amber); margin:0 0 0.5rem;">&#9888; Human Verification Required</p>
+                      <p style="font-family:'Source Serif 4',Georgia,serif; font-size:0.88rem; color:#7a9fb5; margin:0 0 0.75rem; line-height:1.55;">
+                        To prevent spam, type exactly as shown below — <strong style="color:#c8dde8;">capitalization matters:</strong>
+                      </p>
+                      <p style="font-family:'IBM Plex Mono',monospace; font-size:1.1rem; font-weight:700; letter-spacing:0.18em; color:#fff; margin:0 0 0.75rem; background:#0d1a2a; padding:0.5rem 0.75rem; display:inline-block;">I aM a HuMaN</p>
+                      <label style="display:flex; flex-direction:column; gap:0.35rem; font-family:'IBM Plex Mono',monospace; font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--ntw-muted);">
+                        Your answer
+                        <input
+                          type="text"
+                          id="ntw-human-check"
+                          name="_human_verify"
+                          autocomplete="off"
+                          autocorrect="off"
+                          autocapitalize="none"
+                          spellcheck="false"
+                          placeholder="Type exactly as shown above"
+                          style="background:#06101a; color:#fff; border:1px solid #2a4a63; padding:0.65rem 0.85rem; font-family:'IBM Plex Mono',monospace; font-size:0.9rem; letter-spacing:0.06em; width:100%; -webkit-text-fill-color:#fff;"
+                        />
+                      </label>
+                      <p id="ntw-human-error" style="display:none; font-family:'IBM Plex Mono',monospace; font-size:0.68rem; color:#ff6b6b; margin:0.5rem 0 0; letter-spacing:0.08em;">&#10008; Incorrect. Please type: I aM a HuMaN — exactly as shown.</p>
+                    </div>
+
+                    <button class="ntw-btn-submit" type="submit" id="ntw-submit-btn">&#9654;&nbsp; Send Message</button>
+                  </form>
+                  <p class="ntw-form-note">
+                    Your message is sent directly to our team. We do not sell or share contact information. 
+                    For urgent site issues email <a href="mailto:support@nuclearthreatwatch.org" style="color:var(--ntw-gold);">support@nuclearthreatwatch.org</a> directly.
+                  </p>
+                </div>
+
+                <!-- What to use contact for -->
+                <div style="margin-top:1.5rem; background:var(--ntw-surface2); border:1px solid var(--ntw-border); padding:1.5rem;">
+                  <p class="ntw-label">Use This Form For</p>
+                  <ul style="padding-left:1.1rem; margin:0.5rem 0 0;">
+                    <li style="font-family:'Source Serif 4',Georgia,serif; font-size:0.95rem; line-height:1.7; color:var(--ntw-muted); margin-bottom:0.4rem;">Station naming or geographic mapping corrections</li>
+                    <li style="font-family:'Source Serif 4',Georgia,serif; font-size:0.95rem; line-height:1.7; color:var(--ntw-muted); margin-bottom:0.4rem;">Press, research, or media outreach</li>
+                    <li style="font-family:'Source Serif 4',Georgia,serif; font-size:0.95rem; line-height:1.7; color:var(--ntw-muted); margin-bottom:0.4rem;">Editorial or content partnership inquiries</li>
+                    <li style="font-family:'Source Serif 4',Georgia,serif; font-size:0.95rem; line-height:1.7; color:var(--ntw-muted); margin-bottom:0.4rem;">Advertising or sponsorship questions</li>
+                    <li style="font-family:'Source Serif 4',Georgia,serif; font-size:0.95rem; line-height:1.7; color:var(--ntw-muted); margin-bottom:0.4rem;">Accessibility barriers or technical issues</li>
+                    <li style="font-family:'Source Serif 4',Georgia,serif; font-size:0.95rem; line-height:1.7; color:var(--ntw-muted);">General site feedback</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- SIDEBAR -->
+              <aside class="ntw-sidebar">
+
+                <!-- Email contacts -->
+                <div class="ntw-panel is-gold">
+                  <p class="ntw-label is-gold">Direct Email</p>
+                  <h3>Reach Us Directly</h3>
+                  <div class="ntw-contact-row">
+                    <div class="ntw-contact-item">
+                      <span class="ntw-contact-type">General Support</span>
+                      <a class="ntw-contact-val" href="mailto:support@nuclearthreatwatch.org">support@nuclearthreatwatch.org</a>
+                    </div>
+                    <div class="ntw-contact-item">
+                      <span class="ntw-contact-type">Accessibility</span>
+                      <a class="ntw-contact-val" href="mailto:accessibility@nuclearthreatwatch.org">accessibility@nuclearthreatwatch.org</a>
+                    </div>
+                    <div class="ntw-contact-item">
+                      <span class="ntw-contact-type">Legal &amp; Compliance</span>
+                      <a class="ntw-contact-val" href="mailto:legal@nuclearthreatwatch.org">legal@nuclearthreatwatch.org</a>
+                    </div>
+                    <div class="ntw-contact-item">
+                      <span class="ntw-contact-type">Privacy Requests</span>
+                      <a class="ntw-contact-val" href="mailto:privacy@nuclearthreatwatch.org">privacy@nuclearthreatwatch.org</a>
+                    </div>
+                  </div>
+                  <address class="ntw-address">
+                    DigiMktg Co. LLC<br>
+                    P.O. Box 185<br>
+                    Ursa, IL 62301
+                  </address>
+                </div>
+
+                <!-- Response times -->
+                <div class="ntw-panel">
+                  <p class="ntw-label is-green">Response Times</p>
+                  <h3>What to Expect</h3>
+                  <p>General inquiries: <strong style="color:#c8dde8;">2 business days</strong></p>
+                  <p>Station corrections: <strong style="color:#c8dde8;">3–5 business days</strong></p>
+                  <p>Press &amp; media: <strong style="color:#c8dde8;">1–2 business days</strong></p>
+                  <p>Legal matters: <strong style="color:#c8dde8;">5 business days</strong></p>
+                </div>
+
+                <!-- NOT emergency notice repeat (sidebar) -->
+                <div style="background:#1a0000; border:1px solid rgba(192,57,43,0.5); border-left:4px solid var(--ntw-red); padding:1.25rem;">
+                  <p style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--ntw-red); margin:0 0 0.5rem;">&#9888; Not an Emergency Line</p>
+                  <p style="font-family:'Source Serif 4',Georgia,serif; font-size:0.86rem; line-height:1.62; color:#c87a7a; margin:0;">
+                    For any emergency call <strong style="color:#ff4d4d;">911</strong> or your local emergency authority. This inbox is not monitored 24/7.
+                  </p>
+                </div>
+
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <!-- AD SLOT REMOVED — keeping content/ad ratio clean for AdSense approval -->
+
+        <!-- ═══ COMMUNICATIONS & PREPAREDNESS ═══ -->
+        <section class="ntw-section-mid" id="emergency-communications">
+          <div class="container">
+            <div class="ntw-divider">
+              <h2>Emergency Communications — When the Grid Goes Down</h2>
+              <div class="ntw-divider-line"></div>
+            </div>
+
+            <div class="ntw-prose" style="max-width:820px; margin-bottom:2rem;">
+              <p>
+                NuclearThreatWatch.org keeps you informed via the internet — but in a major nuclear 
+                or infrastructure emergency, <strong>cell towers fail, internet goes down, and your 
+                smartphone becomes a paperweight</strong>. The single most overlooked piece of nuclear 
+                preparedness gear isn't a Geiger counter or a stockpile of food. It's a way to 
+                communicate with the people around you when every digital channel is gone.
+              </p>
+              <p>
+                <strong>Two-way radios are your answer.</strong> They require no cell network, no 
+                internet, no infrastructure at all — just charged batteries or a hand crank. 
+                In a localized emergency, they let you reach neighbors, family members in different 
+                parts of your home or property, and anyone else nearby who has a radio on the same 
+                channel. More importantly, <strong>millions of Americans already own two-way radios</strong> 
+                — which means in a neighborhood emergency, there's a real chance someone nearby can 
+                hear you even if you've never met.
+              </p>
+              <p>
+                We recommend starting with a quality <strong>GMRS or FRS two-way radio</strong> over 
+                a ham radio for most families. Ham radios cover far greater distances and are 
+                invaluable for serious preppers — but they require an FCC license to transmit legally 
+                and have a steeper learning curve. Most people in your immediate area won't have one. 
+                Two-way radios on shared FRS/GMRS channels give you immediate neighborhood reach with 
+                zero setup and no license required. <strong>That said — it never hurts to have both.</strong> 
+                Ham radio extends your range dramatically when you need to reach someone miles away.
+              </p>
+            </div>
+
+            <!-- Radio product cards -->
+            <div class="ntw-radio-grid">
+
+              <!-- Card 1: Midland with image -->
+              <div class="ntw-radio-card" style="flex-direction:row; gap:1.25rem; align-items:flex-start; padding:1.5rem;">
+                <a href="https://amzn.to/3Nzrm1I" target="_blank" rel="nofollow sponsored noopener" aria-label="Buy Midland GXT1000VP4 on Amazon" style="flex-shrink:0; display:block; width:110px;">
+                  <img
+                    src="assets/img/hand-held-2way-radio-ad.jpg"
+                    alt="Midland GXT1000VP4 GMRS Two-Way Radio"
+                    width="110" height="110"
+                    loading="lazy"
+                    style="width:110px; height:110px; object-fit:cover; display:block; background:#000;"
+                    onerror="this.src='assets/img/hand-held-2way-radio-ad.png'; this.onerror=null;"
+                  />
+                </a>
+                <div style="display:flex; flex-direction:column; gap:0.5rem; flex:1;">
+                  <span class="ntw-radio-tag">&#11088; Top Pick — Long Range GMRS</span>
+                  <h3 style="margin:0;">Midland GXT1000VP4 — 2-Pack</h3>
+                  <p style="margin:0;">
+                    50 channels, 142 privacy codes, NOAA weather alerts, SOS, and rechargeable 
+                    batteries included. <strong style="color:#c8dde8;">No license required on FRS channels.</strong> 
+                    One of the best long-range consumer radios available — trusted by search and rescue volunteers.
+                  </p>
+                  <p class="ntw-radio-price">~$90 for a 2-Pack</p>
+                  <a class="ntw-radio-link" href="https://amzn.to/3Nzrm1I" target="_blank" rel="nofollow sponsored noopener">
+                    &#8599;&nbsp; Shop on Amazon
+                  </a>
+                </div>
+              </div>
+
+              <!-- Card 2: Baofeng 6-pack -->
+              <div class="ntw-radio-card">
+                <span class="ntw-radio-tag">&#128373; Ham Radio — Best Value 6-Pack</span>
+                <h3>Baofeng UV-5R — 6-Pack</h3>
+                <p>
+                  The most popular entry-level ham radio in the world. Long range, dual band (VHF/UHF), 
+                  built tough. A 6-pack equips your whole household for under $125. 
+                  <strong style="color:#c8dde8;">Requires FCC Technician license to transmit on ham frequencies</strong> — 
+                  but can receive without one. A Baofeng and a Midland together covers both short 
+                  and long-range scenarios.
+                </p>
+                <p class="ntw-radio-price">Under $125 for 6-Pack</p>
+                <a class="ntw-radio-link" href="https://amzn.to/3OWkyf9" target="_blank" rel="nofollow sponsored noopener" aria-label="Buy Baofeng UV-5R 6-Pack on Amazon">
+                  &#8599;&nbsp; Shop on Amazon
+                </a>
+              </div>
+
+            </div>
+
+            <!-- Safety tip -->
+            <div class="ntw-safety-tip">
+              <p class="ntw-safety-tip-label">Safety Tip</p>
+              <p>
+                <strong>Store your radios charged and on the same channel as your household members right now.</strong> 
+                Decide on a primary channel and a backup channel with your family today — before an emergency. 
+                Write the channel numbers on a piece of tape on the back of each radio. In a grid-down scenario, 
+                you won't have time to figure out how to program them. Two minutes of prep today is 
+                worth an hour of confusion later.
+              </p>
+            </div>
+
+            <!-- Amazon disclosure -->
+            <p class="ntw-disclosure">
+              &#9432; NuclearThreatWatch.org participates in the Amazon Services LLC Associates Program. Product links on this page may earn a small commission at no additional cost to you.
+            </p>
+
+          </div>
+        </section>
+
+        <!-- AD SLOT REMOVED — keeping content/ad ratio clean for AdSense approval -->
+
+      </main>
+
+      <!-- SITE FOOTER — injected by layout.js -->
+      <div data-site-footer></div>
+
+      <!-- COPYRIGHT -->
+      <div style="background:#04080c; border-top:2px solid #1c2e3e; padding:1rem 0; text-align:center;">
+        <p style="font-family:'IBM Plex Mono',monospace; font-size:0.64rem; letter-spacing:0.1em; color:#2d4a5e; margin:0; line-height:1.8;">
+          &copy; 2026 NuclearThreatWatch.org &nbsp;|&nbsp; DigiMktg Co. LLC &nbsp;|&nbsp; Dev: Eric Glas
+          <br>
+          <span style="color:#1e3545;">Data sourced from <a href="https://www.epa.gov/radnet" target="_blank" rel="noopener" style="color:#2d5a74;text-decoration:none;">EPA RadNet</a> &mdash; for informational use only. Not an official government service.</span>
+        </p>
+      </div>
+    </div>
+
+    <script type="module" src="assets/js/main.js"></script>
+
+    <script>
+      // Mailing list — stamp yes/no into hidden field
+      var mlCheck = document.getElementById('ntw-mailing-list');
+      var mlStatus = document.getElementById('ntw-mailing-status');
+      if (mlCheck && mlStatus) {
+        mlCheck.addEventListener('change', function () {
+          mlStatus.value = mlCheck.checked ? 'Yes — Join DigiMktg Co. Mailing List' : 'No — Do Not Add';
+        });
+      }
+
+      // Human verification — case-sensitive, blocks submit if wrong
+      var form = document.getElementById('ntw-contact-form');
+      var humanInput = document.getElementById('ntw-human-check');
+      var humanError = document.getElementById('ntw-human-error');
+      var REQUIRED_PHRASE = 'I aM a HuMaN';
+
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          var val = humanInput ? humanInput.value : '';
+          if (val !== REQUIRED_PHRASE) {
+            e.preventDefault();
+            if (humanError) humanError.style.display = 'block';
+            if (humanInput) {
+              humanInput.style.borderColor = '#ff6b6b';
+              humanInput.focus();
+            }
+          } else {
+            if (humanError) humanError.style.display = 'none';
+            if (humanInput) humanInput.style.borderColor = '#27ae60';
+          }
+        });
+
+        // Clear error on typing
+        if (humanInput) {
+          humanInput.addEventListener('input', function () {
+            if (humanError) humanError.style.display = 'none';
+            humanInput.style.borderColor = '#2a4a63';
+          });
+        }
+      }
+    </script>
+</html>

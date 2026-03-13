@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessibility Statement | NuclearThreatWatch.org</title>
+    <meta
+      name="description"
+      content="NuclearThreatWatch.org is committed to making real-time U.S. radiation monitoring data accessible to everyone. Read our accessibility statement, known limitations, and how to contact us for assistance."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://nuclearthreatwatch.org/accessibility.html" />
+
+    <meta property="og:title" content="Accessibility Statement | NuclearThreatWatch.org" />
+    <meta property="og:description" content="Our commitment to making live U.S. radiation monitoring data accessible to all users, including those using assistive technology." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nuclearthreatwatch.org/accessibility.html" />
+    <meta property="og:site_name" content="NuclearThreatWatch" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Accessibility Statement — NuclearThreatWatch.org",
+      "url": "https://nuclearthreatwatch.org/accessibility.html",
+      "description": "Accessibility commitment, WCAG compliance status, known limitations, and contact information for NuclearThreatWatch.org.",
+      "isPartOf": { "@id": "https://nuclearthreatwatch.org/#website" }
+    }
+    </script>
+
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png" />
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#0a0e13" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/theme.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+
+    <style>
+      :root {
+        --ntw-red:      #c0392b;
+        --ntw-amber:    #e67e22;
+        --ntw-green:    #27ae60;
+        --ntw-gold:     #e8c84a;
+        --ntw-bg:       #080c10;
+        --ntw-surface:  #0d151d;
+        --ntw-surface2: #111d27;
+        --ntw-border:   #1c2e3e;
+        --ntw-muted:    #6a8a9e;
+        --header-font:  'Oswald', 'Arial Narrow', Arial, sans-serif;
+        --body-font:    'Source Serif 4', Georgia, serif;
+        --bg:           var(--ntw-bg);
+        --surface:      var(--ntw-surface);
+      }
+
+      body[data-page="accessibility"] { background: var(--ntw-bg); }
+      body[data-page="accessibility"] h1,
+      body[data-page="accessibility"] h2,
+      body[data-page="accessibility"] h3 {
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase; letter-spacing: 0.02em;
+      }
+
+      /* Ticker */
+      .ntw-ticker {
+        background: var(--ntw-red); overflow: hidden;
+        white-space: nowrap; padding: 0.42rem 0;
+      }
+      .ntw-ticker-track {
+        display: inline-flex; align-items: center;
+        animation: ntw-scroll 55s linear infinite;
+      }
+      .ntw-ticker-label {
+        font-family: 'Oswald', sans-serif; font-size: 0.7rem; font-weight: 700;
+        letter-spacing: 0.18em; background: #fff; color: var(--ntw-red);
+        padding: 0.15rem 0.6rem; margin-right: 1.5rem; flex-shrink: 0;
+      }
+      .ntw-ticker-text {
+        font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem;
+        letter-spacing: 0.06em; color: rgba(255,255,255,0.92); padding-right: 4rem;
+      }
+      @keyframes ntw-scroll {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+
+      /* Label */
+      .ntw-label {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase;
+        color: var(--ntw-red); margin-bottom: 0.65rem;
+        display: flex; align-items: center; gap: 0.5rem;
+      }
+      .ntw-label.is-green { color: var(--ntw-green); }
+      .ntw-label.is-gold  { color: var(--ntw-gold);  }
+      .ntw-label.is-amber { color: var(--ntw-amber); }
+      .ntw-label::before {
+        content: ''; display: inline-block;
+        width: 14px; height: 2px; background: currentColor; flex-shrink: 0;
+      }
+
+      /* Page hero */
+      .ntw-page-hero {
+        padding: 3rem 0 2.5rem;
+        background: var(--ntw-bg);
+        border-bottom: 3px solid var(--ntw-border);
+        position: relative; overflow: hidden;
+      }
+      .ntw-page-hero::before {
+        content: ''; position: absolute; inset: 0;
+        background: radial-gradient(ellipse 50% 60% at 90% 30%, rgba(39,174,96,0.04) 0%, transparent 70%);
+        pointer-events: none;
+      }
+      .ntw-page-hero-inner { position: relative; max-width: 760px; }
+      .ntw-page-hero h1 {
+        font-family: 'Oswald', sans-serif;
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        font-weight: 700; line-height: 1.02;
+        text-transform: uppercase; color: #fff; margin: 0 0 1rem;
+      }
+      .ntw-page-hero h1 em { font-style: normal; color: var(--ntw-green); }
+      .ntw-page-hero-lead {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: 1.05rem; line-height: 1.72;
+        color: #8faec0; max-width: 62ch; margin: 0;
+      }
+
+      /* Updated badge */
+      .ntw-updated {
+        display: inline-flex; align-items: center; gap: 0.5rem;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.64rem; letter-spacing: 0.12em; text-transform: uppercase;
+        color: var(--ntw-muted); margin-top: 1rem;
+      }
+      .ntw-updated::before {
+        content: ''; width: 6px; height: 6px;
+        background: var(--ntw-green); border-radius: 50%;
+      }
+
+      /* Content layout */
+      .ntw-content-grid {
+        display: grid; grid-template-columns: 1fr; gap: 3rem;
+      }
+      @media (min-width: 768px) {
+        .ntw-content-grid { grid-template-columns: 1fr 300px; }
+      }
+
+      /* Section divider */
+      .ntw-divider {
+        display: flex; align-items: center; gap: 1rem;
+        border-bottom: 2px solid var(--ntw-border);
+        padding-bottom: 0.6rem; margin-bottom: 1.75rem;
+      }
+      .ntw-divider h2 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.1rem; font-weight: 700;
+        text-transform: uppercase; letter-spacing: 0.06em;
+        color: #fff; margin: 0; white-space: nowrap;
+      }
+      .ntw-divider-line { flex: 1; height: 1px; background: var(--ntw-border); }
+
+      /* Prose */
+      .ntw-prose h2 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.15rem; font-weight: 700; text-transform: uppercase;
+        color: #fff; margin: 2.5rem 0 0.75rem; letter-spacing: 0.04em;
+        border-left: 3px solid var(--ntw-green); padding-left: 0.75rem;
+      }
+      .ntw-prose h2:first-child { margin-top: 0; }
+      .ntw-prose p {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: 1rem; line-height: 1.78; color: #7a9fb5; margin: 0 0 1.1rem;
+      }
+      .ntw-prose strong { color: #c8dde8; }
+      .ntw-prose a { color: var(--ntw-gold); text-decoration: underline; text-underline-offset: 2px; }
+      .ntw-prose a:hover { color: #f0d86a; }
+      .ntw-prose ul { padding-left: 1.2rem; margin: 0 0 1.25rem; }
+      .ntw-prose ul li {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: 1rem; line-height: 1.72; color: #7a9fb5; margin-bottom: 0.45rem;
+      }
+      .ntw-prose ul li strong { color: #c8dde8; }
+
+      /* Conformance table */
+      .ntw-conform-table {
+        width: 100%; border-collapse: collapse;
+        margin: 1.5rem 0; font-family: 'Source Serif 4', Georgia, serif;
+      }
+      .ntw-conform-table th {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase;
+        color: var(--ntw-muted); text-align: left;
+        padding: 0.6rem 0.85rem; border-bottom: 2px solid var(--ntw-border);
+        background: var(--ntw-surface2);
+      }
+      .ntw-conform-table td {
+        font-size: 0.9rem; color: #7a9fb5; line-height: 1.55;
+        padding: 0.75rem 0.85rem; border-bottom: 1px solid var(--ntw-border);
+        vertical-align: top;
+      }
+      .ntw-conform-table tr:last-child td { border-bottom: none; }
+      .ntw-conform-table td:first-child { color: #c8dde8; font-weight: 600; }
+      .ntw-badge-yes {
+        display: inline-block; font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase;
+        color: var(--ntw-green); border: 1px solid rgba(39,174,96,0.4);
+        padding: 0.15rem 0.5rem;
+      }
+      .ntw-badge-partial {
+        display: inline-block; font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase;
+        color: var(--ntw-amber); border: 1px solid rgba(230,126,34,0.4);
+        padding: 0.15rem 0.5rem;
+      }
+      .ntw-badge-no {
+        display: inline-block; font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase;
+        color: var(--ntw-muted); border: 1px solid var(--ntw-border);
+        padding: 0.15rem 0.5rem;
+      }
+
+      /* Sidebar */
+      .ntw-sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+      .ntw-panel {
+        background: var(--ntw-surface2); border: 1px solid var(--ntw-border); padding: 1.5rem;
+      }
+      .ntw-panel.is-green { border-top: 3px solid var(--ntw-green); }
+      .ntw-panel.is-gold  { border-top: 3px solid var(--ntw-gold);  }
+      .ntw-panel h3 {
+        font-family: 'Oswald', sans-serif; font-size: 0.95rem; font-weight: 600;
+        text-transform: uppercase; color: #fff; margin: 0.35rem 0 0.85rem; letter-spacing: 0.04em;
+      }
+      .ntw-panel p {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: 0.88rem; line-height: 1.62; color: var(--ntw-muted); margin: 0 0 0.75rem;
+      }
+      .ntw-panel p:last-child { margin: 0; }
+      .ntw-panel a { color: var(--ntw-gold); text-decoration: underline; text-underline-offset: 2px; }
+      .ntw-panel a:hover { color: #f0d86a; }
+      .ntw-panel address {
+        font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem;
+        letter-spacing: 0.06em; color: var(--ntw-muted); line-height: 1.8;
+        font-style: normal;
+      }
+      .ntw-panel-links { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem; }
+      .ntw-panel-link {
+        font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem;
+        letter-spacing: 0.1em; text-transform: uppercase;
+        color: var(--ntw-gold); text-decoration: none;
+        padding: 0.45rem 0; border-bottom: 1px solid var(--ntw-border);
+      }
+      .ntw-panel-link:last-child { border-bottom: none; }
+      .ntw-panel-link:hover { color: #f0d86a; }
+      .ntw-panel-link::before { content: '→ '; }
+
+      /* Contact card */
+      .ntw-contact-row {
+        display: flex; flex-direction: column; gap: 0.6rem; margin-top: 0.5rem;
+      }
+      .ntw-contact-item {
+        display: flex; flex-direction: column; gap: 0.1rem;
+        padding: 0.65rem 0.85rem;
+        background: var(--ntw-bg); border: 1px solid var(--ntw-border);
+      }
+      .ntw-contact-type {
+        font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem;
+        letter-spacing: 0.14em; text-transform: uppercase; color: var(--ntw-muted);
+      }
+      .ntw-contact-val {
+        font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem;
+        letter-spacing: 0.05em; color: var(--ntw-gold); text-decoration: none;
+      }
+      .ntw-contact-val:hover { color: #f0d86a; }
+
+      /* Safety tip */
+      .ntw-safety-tip {
+        background: #0d1a0d; border: 1px solid rgba(39,174,96,0.35);
+        border-left: 4px solid var(--ntw-green); padding: 1.25rem 1.5rem; margin-top: 2.5rem;
+      }
+      .ntw-safety-tip-label {
+        font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem;
+        letter-spacing: 0.16em; text-transform: uppercase; color: var(--ntw-green);
+        margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.4rem;
+      }
+      .ntw-safety-tip-label::before {
+        content: ''; width: 7px; height: 7px;
+        background: var(--ntw-green); border-radius: 50%;
+      }
+      .ntw-safety-tip p {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: 0.9rem; line-height: 1.68; color: #5a9e6a; margin: 0;
+      }
+      .ntw-safety-tip p strong { color: #8fcf9a; }
+      .ntw-safety-tip a { color: var(--ntw-gold); }
+
+      .ntw-section { padding: 3rem 0; background: var(--ntw-bg); }
+    </style>
+  </head>
+
+  <body data-page="accessibility">
+    <div class="site-shell">
+
+      <!-- TICKER -->
+      <div class="ntw-ticker" aria-label="Live status ticker" role="marquee">
+        <div class="ntw-ticker-track">
+          <span class="ntw-ticker-label">LIVE</span>
+          <span class="ntw-ticker-text">EPA RadNet monitoring active across the United States &nbsp;|&nbsp; NuclearThreatWatch.org — free public radiation monitoring &nbsp;|&nbsp; Hourly radiation data from the federal sensor network &nbsp;|&nbsp; Stale data flagged in real time — never hidden &nbsp;|&nbsp; EPA RadNet monitoring active across the United States &nbsp;|&nbsp; NuclearThreatWatch.org — free public radiation monitoring &nbsp;|&nbsp; Hourly radiation data from the federal sensor network &nbsp;|&nbsp; Stale data flagged in real time — never hidden &nbsp;|&nbsp;</span>
+        </div>
+      </div>
+
+      <!-- SITE HEADER — injected by layout.js -->
+      <div data-site-header></div>
+
+      <main id="main-content">
+
+        <!-- ═══ PAGE HERO ═══ -->
+        <section class="ntw-page-hero">
+          <div class="container">
+            <div class="ntw-page-hero-inner">
+              <p class="ntw-label is-green">Accessibility</p>
+              <h1>
+                <em>Accessible</em> to Everyone.<br>
+                No Exceptions.
+              </h1>
+              <p class="ntw-page-hero-lead">
+                In an emergency, everyone deserves equal access to life-saving information. 
+                NuclearThreatWatch.org is committed to meeting 
+                <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener noreferrer">WCAG 2.1 Level AA</a> 
+                accessibility standards so that real-time radiation data is available to every user, 
+                regardless of ability or the technology they use to access it.
+              </p>
+              <p class="ntw-updated">Last reviewed: March 2026</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ═══ MAIN CONTENT ═══ -->
+        <section class="ntw-section">
+          <div class="container">
+            <div class="ntw-content-grid">
+
+              <!-- PROSE -->
+              <article class="ntw-prose">
+
+                <h2>Our Accessibility Commitment</h2>
+                <p>
+                  NuclearThreatWatch.org is operated by DigiMktg Co. LLC. We believe that access to 
+                  real-time nuclear threat and radiation monitoring data is a public safety issue — 
+                  and public safety tools must work for everyone. We are actively working to ensure 
+                  that NuclearThreatWatch.org conforms to the 
+                  <a href="https://www.w3.org/TR/WCAG21/" target="_blank" rel="noopener noreferrer">Web Content Accessibility Guidelines (WCAG) 2.1</a> 
+                  at Level AA, as published by the World Wide Web Consortium (W3C).
+                </p>
+                <p>
+                  This commitment is ongoing. We review and update accessibility features with each 
+                  significant site update and welcome direct feedback from users who encounter barriers 
+                  while using our tools.
+                </p>
+
+                <h2>Measures We Have Taken</h2>
+                <p>We have implemented the following accessibility measures across NuclearThreatWatch.org:</p>
+                <ul>
+                  <li><strong>Semantic HTML5 structure</strong> — All pages use proper heading hierarchy (H1–H3), landmark regions (<code>main</code>, <code>nav</code>, <code>footer</code>), and ARIA labels on interactive components.</li>
+                  <li><strong>Keyboard navigation</strong> — All interactive elements including map filters, station search, and navigation links are reachable and operable via keyboard alone.</li>
+                  <li><strong>Screen reader support</strong> — Map visualizations include descriptive <code>aria-label</code> attributes. Station data cards are structured with role and label markup. The live alert ticker is marked with <code>role="marquee"</code> and an accessible label.</li>
+                  <li><strong>Color contrast</strong> — Text and interactive elements meet or exceed the WCAG 2.1 AA minimum contrast ratio of 4.5:1 against their backgrounds.</li>
+                  <li><strong>Text resizing</strong> — The site uses relative font sizing (rem/clamp) that responds correctly when browser text size is increased up to 200%.</li>
+                  <li><strong>Focus indicators</strong> — Keyboard focus is visually indicated on all interactive elements.</li>
+                  <li><strong>Alt text</strong> — All meaningful images include descriptive alt attributes. Decorative images use empty alt attributes to be ignored by assistive technology.</li>
+                  <li><strong>Progressive Web App (PWA)</strong> — The installable PWA version of NuclearThreatWatch.org provides a consistent, accessible experience on both iOS and Android devices, including compatibility with VoiceOver and TalkBack.</li>
+                  <li><strong>No auto-playing media</strong> — No audio or video plays automatically on any page.</li>
+                  <li><strong>Link context</strong> — All links are written to be descriptive and meaningful when read out of context by a screen reader.</li>
+                </ul>
+
+                <h2>Current Conformance Status</h2>
+                <p>
+                  NuclearThreatWatch.org is <strong>partially conformant</strong> with WCAG 2.1 Level AA. 
+                  Partially conformant means that some parts of the content do not fully conform to 
+                  the accessibility standard. Known areas of partial conformance are listed below.
+                </p>
+
+                <table class="ntw-conform-table" aria-label="Accessibility conformance status by feature">
+                  <thead>
+                    <tr>
+                      <th scope="col">Feature</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Notes</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Page structure &amp; headings</td>
+                      <td><span class="ntw-badge-yes">Conformant</span></td>
+                      <td>Proper H1–H3 hierarchy on all pages.</td>
+                    </tr>
+                    <tr>
+                      <td>Keyboard navigation</td>
+                      <td><span class="ntw-badge-yes">Conformant</span></td>
+                      <td>All controls reachable and operable by keyboard.</td>
+                    </tr>
+                    <tr>
+                      <td>Color contrast</td>
+                      <td><span class="ntw-badge-yes">Conformant</span></td>
+                      <td>Minimum 4.5:1 ratio on body text; 3:1 on large text.</td>
+                    </tr>
+                    <tr>
+                      <td>SVG radiation map</td>
+                      <td><span class="ntw-badge-partial">Partial</span></td>
+                      <td>Map has an ARIA label and role. Individual station data points are accessible via the station grid below the map. Full interactive SVG accessibility for screen readers is in progress.</td>
+                    </tr>
+                    <tr>
+                      <td>Live data updates</td>
+                      <td><span class="ntw-badge-partial">Partial</span></td>
+                      <td>Station cards update dynamically. ARIA live region announcements for automatic data refreshes are planned for a future update.</td>
+                    </tr>
+                    <tr>
+                      <td>Alt text on all images</td>
+                      <td><span class="ntw-badge-yes">Conformant</span></td>
+                      <td>All content images carry descriptive alt text.</td>
+                    </tr>
+                    <tr>
+                      <td>Third-party ad content</td>
+                      <td><span class="ntw-badge-partial">Partial</span></td>
+                      <td>Google AdSense and Amazon affiliate content is served by third parties. We cannot fully control the accessibility of third-party ad units.</td>
+                    </tr>
+                    <tr>
+                      <td>Mobile / touch accessibility</td>
+                      <td><span class="ntw-badge-yes">Conformant</span></td>
+                      <td>Touch targets meet minimum 44×44px size. Compatible with iOS VoiceOver and Android TalkBack.</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <h2>Known Limitations</h2>
+                <p>
+                  We are transparent about the areas where NuclearThreatWatch.org does not yet fully 
+                  meet WCAG 2.1 AA. We are actively working to resolve the following:
+                </p>
+                <ul>
+                  <li><strong>SVG map interactivity for screen readers</strong> — The live radiation map is an SVG element. While it carries a descriptive ARIA label, individual station data points within the SVG are not fully announced by all screen readers. Users who rely on screen readers can access the same station data in the station grid section below the map, which is fully accessible.</li>
+                  <li><strong>Dynamic content ARIA announcements</strong> — When station data updates automatically, the changes are not currently announced via <code>aria-live</code> regions. This is scheduled for a future release.</li>
+                  <li><strong>Third-party embedded content</strong> — Google AdSense units and Amazon affiliate links are served through third-party scripts. We cannot guarantee full accessibility compliance for content generated by these platforms.</li>
+                </ul>
+
+                <h2>Technical Specifications</h2>
+                <p>
+                  NuclearThreatWatch.org is built with the following technologies that affect accessibility:
+                </p>
+                <ul>
+                  <li>HTML5 with semantic landmark elements</li>
+                  <li>CSS3 with relative units and responsive layout</li>
+                  <li>Vanilla JavaScript ES modules (no accessibility-blocking frameworks)</li>
+                  <li>SVG for the radiation monitoring map</li>
+                  <li>Progressive Web App (PWA) with <code>manifest.json</code> and service worker</li>
+                  <li>Cloudflare Workers for the EPA RadNet data proxy</li>
+                </ul>
+                <p>
+                  We rely on the following assistive technologies for compatibility testing: 
+                  NVDA with Chrome (Windows), VoiceOver with Safari (macOS and iOS), 
+                  TalkBack with Chrome (Android), and keyboard-only navigation in all major browsers.
+                </p>
+
+                <h2>Feedback &amp; Contact</h2>
+                <p>
+                  We welcome your feedback on the accessibility of NuclearThreatWatch.org. 
+                  If you experience any barriers, find that a page or feature is not accessible, 
+                  or need information in an alternative format, please contact us directly. 
+                  We aim to respond to accessibility inquiries within <strong>2 business days</strong>.
+                </p>
+                <p>
+                  You can reach our accessibility team at:<br>
+                  <a href="mailto:accessibility@nuclearthreatwatch.org">accessibility@nuclearthreatwatch.org</a><br>
+                  or for general support: <a href="mailto:support@nuclearthreatwatch.org">support@nuclearthreatwatch.org</a>
+                </p>
+                <p>
+                  By mail:<br>
+                  <strong>DigiMktg Co. LLC</strong><br>
+                  P.O. Box 185<br>
+                  Ursa, IL 62301
+                </p>
+
+                <h2>Formal Complaints</h2>
+                <p>
+                  If you are not satisfied with our response to your accessibility concern, you may 
+                  contact the 
+                  <a href="https://www.ada.gov/" target="_blank" rel="noopener noreferrer">U.S. Department of Justice ADA Information Line</a> 
+                  or the 
+                  <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener noreferrer">W3C Web Accessibility Initiative</a> 
+                  for additional guidance and resources.
+                </p>
+
+                <!-- Safety Tip -->
+                <div class="ntw-safety-tip">
+                  <p class="ntw-safety-tip-label">Safety Tip</p>
+                  <p>
+                    <strong>If you use a screen reader or assistive technology</strong>, we recommend 
+                    bookmarking the 
+                    <a href="stations.html">Station Directory page</a> directly — it provides 
+                    the same live EPA RadNet data as the map in a fully accessible list format. 
+                    In an emergency, that page will be your fastest path to radiation readings 
+                    for your area without needing to interact with the SVG map.
+                  </p>
+                </div>
+
+              </article>
+
+              <!-- SIDEBAR -->
+              <aside class="ntw-sidebar">
+
+                <!-- Conformance summary -->
+                <div class="ntw-panel is-green">
+                  <p class="ntw-label is-green">Conformance</p>
+                  <h3>WCAG 2.1 Level AA</h3>
+                  <p>
+                    NuclearThreatWatch.org targets partial conformance with WCAG 2.1 Level AA. 
+                    We are actively working toward full conformance with each site update.
+                  </p>
+                  <p>
+                    <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener noreferrer">Learn about WCAG standards ↗</a>
+                  </p>
+                </div>
+
+                <!-- Contact -->
+                <div class="ntw-panel is-gold">
+                  <p class="ntw-label is-gold">Contact Us</p>
+                  <h3>Accessibility Support</h3>
+                  <div class="ntw-contact-row">
+                    <div class="ntw-contact-item">
+                      <span class="ntw-contact-type">Accessibility</span>
+                      <a class="ntw-contact-val" href="mailto:accessibility@nuclearthreatwatch.org">accessibility@nuclearthreatwatch.org</a>
+                    </div>
+                    <div class="ntw-contact-item">
+                      <span class="ntw-contact-type">General Support</span>
+                      <a class="ntw-contact-val" href="mailto:support@nuclearthreatwatch.org">support@nuclearthreatwatch.org</a>
+                    </div>
+                    <div class="ntw-contact-item">
+                      <span class="ntw-contact-type">Legal / Privacy</span>
+                      <a class="ntw-contact-val" href="mailto:legal@nuclearthreatwatch.org">legal@nuclearthreatwatch.org</a>
+                    </div>
+                    <div class="ntw-contact-item">
+                      <span class="ntw-contact-type">Privacy Requests</span>
+                      <a class="ntw-contact-val" href="mailto:privacy@nuclearthreatwatch.org">privacy@nuclearthreatwatch.org</a>
+                    </div>
+                  </div>
+                  <p style="margin-top:1rem;">
+                    <address>
+                      DigiMktg Co. LLC<br>
+                      P.O. Box 185<br>
+                      Ursa, IL 62301
+                    </address>
+                  </p>
+                </div>
+
+                <!-- Related pages -->
+                <div class="ntw-panel">
+                  <p class="ntw-label">Legal &amp; Policies</p>
+                  <div class="ntw-panel-links">
+                    <a class="ntw-panel-link" href="privacy.html">Privacy Policy</a>
+                    <a class="ntw-panel-link" href="terms.html">Terms of Use</a>
+                    <a class="ntw-panel-link" href="disclaimer.html">Disclaimer</a>
+                    <a class="ntw-panel-link" href="contact.html">Contact Us</a>
+                  </div>
+                </div>
+
+                <!-- Accessible alternatives -->
+                <div class="ntw-panel">
+                  <p class="ntw-label is-green">Accessible Alternatives</p>
+                  <h3>Screen Reader Friendly Pages</h3>
+                  <p>If the live map presents accessibility challenges, these pages offer the same data in a more accessible format:</p>
+                  <div class="ntw-panel-links">
+                    <a class="ntw-panel-link" href="stations.html">Station Directory (list format)</a>
+                    <a class="ntw-panel-link" href="data.html">Raw Data View</a>
+                    <a class="ntw-panel-link" href="methodology.html">Data Methodology</a>
+                  </div>
+                </div>
+
+              </aside>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- SITE FOOTER — injected by layout.js -->
+      <div data-site-footer></div>
+
+      <!-- COPYRIGHT -->
+      <div style="background:#04080c; border-top:2px solid #1c2e3e; padding:1rem 0; text-align:center;">
+        <p style="font-family:'IBM Plex Mono',monospace; font-size:0.64rem; letter-spacing:0.1em; color:#2d4a5e; margin:0; line-height:1.8;">
+          &copy; 2026 NuclearThreatWatch.org &nbsp;|&nbsp; DigiMktg Co. LLC &nbsp;|&nbsp; Dev: Eric Glas
+          <br>
+          <span style="color:#1e3545;">Data sourced from <a href="https://www.epa.gov/radnet" target="_blank" rel="noopener" style="color:#2d5a74;text-decoration:none;">EPA RadNet</a> &mdash; for informational use only. Not an official government service.</span>
+        </p>
+      </div>
+    </div>
+
+    <script type="module" src="assets/js/main.js"></script>
+  </body>
+</html>

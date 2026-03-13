@@ -1,0 +1,287 @@
+.eyebrow {
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.78rem;
+  color: var(--accent);
+}
+
+h1 {
+  font-size: clamp(2.6rem, 5vw, 5rem);
+  line-height: 0.98;
+  margin: 0 0 1rem;
+}
+
+h2 {
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+  margin: 0 0 0.75rem;
+}
+
+h3 {
+  font-size: 1.35rem;
+  margin: 0 0 0.75rem;
+}
+
+p,
+li {
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.lead {
+  font-size: 1.15rem;
+  max-width: 52rem;
+}
+
+.narrow {
+  max-width: 44rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.3rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 600;
+}
+
+.button-primary {
+  color: #08111a;
+  background: linear-gradient(135deg, var(--accent), #baf2eb);
+}
+
+.button-secondary {
+  color: var(--text);
+  border-color: var(--line);
+  background: rgba(15, 31, 49, 0.75);
+}
+
+.hero-actions,
+.hero-points,
+.compact-list,
+.sidebar-stack,
+.faq-stack,
+.footer-links,
+.resource-card,
+.contact-form,
+.prose {
+  display: grid;
+  gap: 1rem;
+}
+
+.hero-points,
+.compact-list {
+  padding-left: 1.15rem;
+}
+
+.panel,
+.metric-card {
+  background: linear-gradient(180deg, rgba(16, 33, 51, 0.95), rgba(12, 23, 36, 0.92));
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+.panel-accent {
+  background:
+    radial-gradient(circle at top right, rgba(124, 224, 214, 0.22), transparent 40%),
+    linear-gradient(180deg, rgba(16, 33, 51, 0.95), rgba(12, 23, 36, 0.92));
+}
+
+.metric-card {
+  gap: 0.35rem;
+}
+
+.metric-label {
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  font-size: 0.76rem;
+  color: var(--accent);
+}
+
+.metric-value {
+  margin: 0;
+  color: #fff;
+  font-family: var(--header-font);
+  font-size: 2rem;
+}
+
+.metric-note,
+.section-copy {
+  max-width: 32rem;
+}
+
+.filter-chip {
+  display: inline-grid;
+  gap: 0.35rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-sm);
+  background: rgba(16, 33, 51, 0.82);
+}
+
+.filter-chip span {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.filter-chip select,
+.filter-chip input,
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  background: rgba(5, 12, 18, 0.75);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.8rem 0.9rem;
+}
+
+.map-toolbar {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.station-map {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(124, 224, 214, 0.18);
+  box-shadow: var(--shadow);
+}
+
+.map-grid line {
+  stroke: rgba(124, 224, 214, 0.12);
+  stroke-width: 2;
+}
+
+.map-point {
+  cursor: pointer;
+}
+
+.map-point circle {
+  fill: #c4f7f1;
+  stroke: #07121b;
+  stroke-width: 2;
+  transition: transform 0.2s ease, fill 0.2s ease;
+}
+
+.map-point:hover circle,
+.map-point.is-active circle {
+  transform: scale(1.15);
+  fill: var(--warm);
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(124, 224, 214, 0.12);
+  color: var(--text);
+  font-size: 0.82rem;
+}
+
+.status-pill.normal {
+  background: rgba(124, 224, 214, 0.12);
+}
+
+.status-pill.elevated {
+  background: rgba(241, 194, 125, 0.18);
+}
+
+.status-pill.watch {
+  background: rgba(255, 138, 107, 0.22);
+}
+
+.status-pill.fallback,
+.status-pill.stale {
+  background: rgba(152, 172, 189, 0.18);
+}
+
+.station-card,
+.directory-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.station-card::after,
+.directory-card::after {
+  content: "";
+  position: absolute;
+  inset: auto -2rem -2rem auto;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124, 224, 214, 0.17), transparent 65%);
+}
+
+.station-card.is-hidden,
+.directory-card.is-hidden {
+  display: none;
+}
+
+.text-link {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: rgba(124, 224, 214, 0.55);
+  text-underline-offset: 0.24em;
+}
+
+.prose {
+  max-width: 54rem;
+}
+
+.prose h2 {
+  margin-top: 1rem;
+}
+
+.ad-slot {
+  margin: 1rem auto 2rem;
+  width: min(var(--container), calc(100% - 2rem));
+}
+
+.ad-slot.is-hidden {
+  display: none;
+}
+
+.ad-placeholder {
+  min-height: 140px;
+  border-radius: var(--radius-lg);
+  border: 1px dashed rgba(124, 224, 214, 0.28);
+  background: rgba(16, 33, 51, 0.32);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1.25rem;
+}
+
+.ad-placeholder strong {
+  display: block;
+}
+
+.form-note {
+  font-size: 0.92rem;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 0.45rem;
+}
+
+@media (max-width: 720px) {
+  .button {
+    width: 100%;
+  }
+
+  .hero-actions {
+    grid-template-columns: 1fr;
+  }
+}

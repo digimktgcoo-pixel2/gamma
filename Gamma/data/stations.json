@@ -1,0 +1,1262 @@
+[
+    {
+        "id": null,
+        "name": "Birmingham",
+        "state": "AL",
+        "epaCity": "Birmingham",
+        "lat": 33.5207,
+        "lng": -86.8025,
+        "baseline": 30
+    },
+    {
+        "id": null,
+        "name": "Mobile",
+        "state": "AL",
+        "epaCity": "Mobile",
+        "lat": 30.6954,
+        "lng": -88.0399,
+        "baseline": 20
+    },
+    {
+        "id": null,
+        "name": "Montgomery",
+        "state": "AL",
+        "epaCity": "Montgomery",
+        "lat": 32.3792,
+        "lng": -86.2999,
+        "baseline": 25
+    },
+    {
+        "id": null,
+        "name": "Anchorage",
+        "state": "AK",
+        "epaCity": "Anchorage",
+        "lat": 61.2181,
+        "lng": -149.9003,
+        "baseline": 28
+    },
+    {
+        "id": null,
+        "name": "Fairbanks",
+        "state": "AK",
+        "epaCity": "Fairbanks",
+        "lat": 64.8378,
+        "lng": -147.7164,
+        "baseline": 32
+    },
+    {
+        "id": null,
+        "name": "Juneau",
+        "state": "AK",
+        "epaCity": "Juneau",
+        "lat": 58.3019,
+        "lng": -134.4197,
+        "baseline": 22
+    },
+    {
+        "id": null,
+        "name": "Phoenix",
+        "state": "AZ",
+        "epaCity": "Phoenix",
+        "lat": 33.4484,
+        "lng": -112.074,
+        "baseline": 55
+    },
+    {
+        "id": null,
+        "name": "Tucson",
+        "state": "AZ",
+        "epaCity": "Tucson",
+        "lat": 32.2226,
+        "lng": -110.9265,
+        "baseline": 58
+    },
+    {
+        "id": null,
+        "name": "Yuma",
+        "state": "AZ",
+        "epaCity": "Yuma",
+        "lat": 32.6927,
+        "lng": -114.6276,
+        "baseline": 50
+    },
+    {
+        "id": null,
+        "name": "Fort Smith",
+        "state": "AR",
+        "epaCity": "Fort Smith",
+        "lat": 35.3859,
+        "lng": -94.3985,
+        "baseline": 30
+    },
+    {
+        "id": null,
+        "name": "Little Rock",
+        "state": "AR",
+        "epaCity": "Little Rock",
+        "lat": 34.7465,
+        "lng": -92.2896,
+        "baseline": 28
+    },
+    {
+        "id": null,
+        "name": "Anaheim",
+        "state": "CA",
+        "epaCity": "Anaheim",
+        "lat": 33.8366,
+        "lng": -117.9145,
+        "baseline": 22
+    },
+    {
+        "id": null,
+        "name": "Bakersfield",
+        "state": "CA",
+        "epaCity": "Bakersfield",
+        "lat": 35.3733,
+        "lng": -119.0187,
+        "baseline": 35
+    },
+    {
+        "id": null,
+        "name": "Eureka",
+        "state": "CA",
+        "epaCity": "Eureka",
+        "lat": 40.8021,
+        "lng": -124.1637,
+        "baseline": 20
+    },
+    {
+        "id": null,
+        "name": "Fresno",
+        "state": "CA",
+        "epaCity": "Fresno",
+        "lat": 36.7378,
+        "lng": -119.7871,
+        "baseline": 38
+    },
+    {
+        "id": null,
+        "name": "Los Angeles",
+        "state": "CA",
+        "epaCity": "Los Angeles",
+        "lat": 34.0522,
+        "lng": -118.2437,
+        "baseline": 22
+    },
+    {
+        "id": null,
+        "name": "Riverside",
+        "state": "CA",
+        "epaCity": "Riverside",
+        "lat": 33.9806,
+        "lng": -117.3961,
+        "baseline": 28
+    },
+    {
+        "id": null,
+        "name": "Sacramento",
+        "state": "CA",
+        "epaCity": "Sacramento",
+        "lat": 38.5816,
+        "lng": -121.4944,
+        "baseline": 30
+    },
+    {
+        "id": null,
+        "name": "San Bernardino County",
+        "state": "CA",
+        "epaCity": "San Bernardino County",
+        "lat": 34.1083,
+        "lng": -117.2898,
+        "baseline": 32
+    },
+    {
+        "id": null,
+        "name": "San Diego",
+        "state": "CA",
+        "epaCity": "San Diego",
+        "lat": 32.7157,
+        "lng": -117.1611,
+        "baseline": 20
+    },
+    {
+        "id": null,
+        "name": "San Francisco",
+        "state": "CA",
+        "epaCity": "San Francisco",
+        "lat": 37.7749,
+        "lng": -122.4194,
+        "baseline": 20
+    },
+    {
+        "id": null,
+        "name": "San Jose",
+        "state": "CA",
+        "epaCity": "San Jose",
+        "lat": 37.3382,
+        "lng": -121.8863,
+        "baseline": 22
+    },
+    {
+        "id": null,
+        "name": "Colorado Springs",
+        "state": "CO",
+        "epaCity": "Colorado Springs",
+        "lat": 38.8339,
+        "lng": -104.8214,
+        "baseline": 75
+    },
+    {
+        "id": null,
+        "name": "Denver",
+        "state": "CO",
+        "epaCity": "Denver",
+        "lat": 39.7392,
+        "lng": -104.9903,
+        "baseline": 80
+    },
+    {
+        "id": null,
+        "name": "Grand Junction",
+        "state": "CO",
+        "epaCity": "Grand Junction",
+        "lat": 39.0639,
+        "lng": -108.5506,
+        "baseline": 85
+    },
+    {
+        "id": null,
+        "name": "Hartford",
+        "state": "CT",
+        "epaCity": "Hartford",
+        "lat": 41.7658,
+        "lng": -72.6851,
+        "baseline": 28
+    },
+    {
+        "id": null,
+        "name": "Washington",
+        "state": "DC",
+        "epaCity": "Washington",
+        "lat": 38.9072,
+        "lng": -77.0369,
+        "baseline": 30
+    },
+    {
+        "id": null,
+        "name": "Dover",
+        "state": "DE",
+        "epaCity": "Dover",
+        "lat": 39.1582,
+        "lng": -75.5244,
+        "baseline": 25
+    },
+    {
+        "id": null,
+        "name": "Jacksonville",
+        "state": "FL",
+        "epaCity": "Jacksonville",
+        "lat": 30.3322,
+        "lng": -81.6557,
+        "baseline": 20
+    },
+    {
+        "id": null,
+        "name": "Miami",
+        "state": "FL",
+        "epaCity": "Miami",
+        "lat": 25.7617,
+        "lng": -80.1918,
+        "baseline": 18
+    },
+    {
+        "id": null,
+        "name": "Orlando",
+        "state": "FL",
+        "epaCity": "Orlando",
+        "lat": 28.5383,
+        "lng": -81.3792,
+        "baseline": 20
+    },
+    {
+        "id": null,
+        "name": "Tallahassee",
+        "state": "FL",
+        "epaCity": "Tallahassee",
+        "lat": 30.4383,
+        "lng": -84.2807,
+        "baseline": 22
+    },
+    {
+        "id": null,
+        "name": "Tampa",
+        "state": "FL",
+        "epaCity": "Tampa",
+        "lat": 27.9506,
+        "lng": -82.4572,
+        "baseline": 20
+    },
+    {
+        "id": null,
+        "name": "Atlanta",
+        "state": "GA",
+        "epaCity": "Atlanta",
+        "lat": 33.749,
+        "lng": -84.388,
+        "baseline": 32
+    },
+    {
+        "id": null,
+        "name": "Augusta",
+        "state": "GA",
+        "epaCity": "Augusta",
+        "lat": 33.4735,
+        "lng": -81.9748,
+        "baseline": 28
+    },
+    {
+        "id": null,
+        "name": "Honolulu",
+        "state": "HI",
+        "epaCity": "Honolulu",
+        "lat": 21.3069,
+        "lng": -157.8583,
+        "baseline": 18
+    },
+    {
+        "id": null,
+        "name": "Boise",
+        "state": "ID",
+        "epaCity": "Boise",
+        "lat": 43.615,
+        "lng": -116.2023,
+        "baseline": 45
+    },
+    {
+        "id": null,
+        "name": "Idaho Falls",
+        "state": "ID",
+        "epaCity": "Idaho Falls",
+        "lat": 43.4917,
+        "lng": -112.033,
+        "baseline": 50
+    },
+    {
+        "id": null,
+        "name": "Aurora",
+        "state": "IL",
+        "epaCity": "Aurora",
+        "lat": 41.7606,
+        "lng": -88.3201,
+        "baseline": 35
+    },
+    {
+        "id": null,
+        "name": "Champaign",
+        "state": "IL",
+        "epaCity": "Champaign",
+        "lat": 40.1164,
+        "lng": -88.2434,
+        "baseline": 30
+    },
+    {
+        "id": null,
+        "name": "Chicago",
+        "state": "IL",
+        "epaCity": "Chicago",
+        "lat": 41.8781,
+        "lng": -87.6298,
+        "baseline": 30
+    },
+    {
+        "id": null,
+        "name": "Fort Wayne",
+        "state": "IN",
+        "epaCity": "Fort Wayne",
+        "lat": 41.0793,
+        "lng": -85.1394,
+        "baseline": 28
+    },
+    {
+        "id": null,
+        "name": "Indianapolis",
+        "state": "IN",
+        "epaCity": "Indianapolis",
+        "lat": 39.7684,
+        "lng": -86.1581,
+        "baseline": 28
+    },
+    {
+        "id": null,
+        "name": "Des Moines",
+        "state": "IA",
+        "epaCity": "Des Moines",
+        "lat": 41.5868,
+        "lng": -93.6208,
+        "baseline": 32
+    },
+    {
+        "id": null,
+        "name": "Fort Madison",
+        "state": "IA",
+        "epaCity": "Fort Madison",
+        "lat": 40.6292,
+        "lng": -91.3154,
+        "baseline": 30
+    },
+    {
+        "id": null,
+        "name": "Mason City",
+        "state": "IA",
+        "epaCity": "Mason City",
+        "lat": 43.1538,
+        "lng": -93.201,
+        "baseline": 32
+    },
+    {
+        "id": null,
+        "name": "Dodge City",
+        "state": "KS",
+        "epaCity": "Dodge City",
+        "lat": 37.7528,
+        "lng": -99.9956,
+        "baseline": 45
+    },
+    {
+        "id": null,
+        "name": "Kansas City",
+        "state": "KS",
+        "epaCity": "Kansas City",
+        "lat": 39.1142,
+        "lng": -94.6275,
+        "baseline": 35
+    },
+    {
+        "id": null,
+        "name": "Wichita",
+        "state": "KS",
+        "epaCity": "Wichita",
+        "lat": 37.6872,
+        "lng": -97.3375,
+        "baseline": 40
+    },
+    {
+        "id": null,
+        "name": "Lexington",
+        "state": "KY",
+        "epaCity": "Lexington",
+        "lat": 38.0406,
+        "lng": -84.5037,
+        "baseline": 30
+    },
+    {
+        "id": null,
+        "name": "Louisville",
+        "state": "KY",
+        "epaCity": "Louisville",
+        "lat": 38.2527,
+        "lng": -85.7585,
+        "baseline": 28
+    },
+    {
+        "id": null,
+        "name": "Paducah",
+        "state": "KY",
+        "epaCity": "Paducah",
+        "lat": 37.0842,
+        "lng": -88.5997,
+        "baseline": 28
+    },
+    {
+        "id": null,
+        "name": "Baton Rouge",
+        "state": "LA",
+        "epaCity": "Baton Rouge",
+        "lat": 30.4515,
+        "lng": -91.1871,
+        "baseline": 20
+    },
+    {
+        "id": null,
+        "name": "Shreveport",
+        "state": "LA",
+        "epaCity": "Shreveport",
+        "lat": 32.5252,
+        "lng": -93.7502,
+        "baseline": 25
+    },
+    {
+        "id": null,
+        "name": "Boston",
+        "state": "MA",
+        "epaCity": "Boston",
+        "lat": 42.3601,
+        "lng": -71.0589,
+        "baseline": 25
+    },
+    {
+        "id": null,
+        "name": "Worcester",
+        "state": "MA",
+        "epaCity": "Worcester",
+        "lat": 42.2626,
+        "lng": -71.8023,
+        "baseline": 28
+    },
+    {
+        "id": null,
+        "name": "Baltimore",
+        "state": "MD",
+        "epaCity": "Baltimore",
+        "lat": 39.2904,
+        "lng": -76.6122,
+        "baseline": 28
+    },
+    {
+        "id": null,
+        "name": "Orono",
+        "state": "ME",
+        "epaCity": "Orono",
+        "lat": 44.9419,
+        "lng": -68.6702,
+        "baseline": 25
+    },
+    {
+        "id": null,
+        "name": "Portland",
+        "state": "ME",
+        "epaCity": "Portland",
+        "lat": 43.6591,
+        "lng": -70.2553,
+        "baseline": 25
+    },
+    {
+        "id": null,
+        "name": "Bay City",
+        "state": "MI",
+        "epaCity": "Bay City",
+        "lat": 43.5945,
+        "lng": -83.8877,
+        "baseline": 28
+    },
+    {
+        "id": null,
+        "name": "Detroit",
+        "state": "MI",
+        "epaCity": "Detroit",
+        "lat": 42.3314,
+        "lng": -83.0458,
+        "baseline": 28
+    },
+    {
+        "id": null,
+        "name": "Grand Rapids",
+        "state": "MI",
+        "epaCity": "Grand Rapids",
+        "lat": 42.9634,
+        "lng": -85.6681,
+        "baseline": 28
+    },
+    {
+        "id": null,
+        "name": "Duluth",
+        "state": "MN",
+        "epaCity": "Duluth",
+        "lat": 46.7867,
+        "lng": -92.1005,
+        "baseline": 35
+    },
+    {
+        "id": null,
+        "name": "St. Paul",
+        "state": "MN",
+        "epaCity": "St. Paul",
+        "lat": 44.9537,
+        "lng": -93.09,
+        "baseline": 30
+    },
+    {
+        "id": null,
+        "name": "Jefferson City",
+        "state": "MO",
+        "epaCity": "Jefferson City",
+        "lat": 38.5767,
+        "lng": -92.1735,
+        "baseline": 32
+    },
+    {
+        "id": null,
+        "name": "Springfield",
+        "state": "MO",
+        "epaCity": "Springfield",
+        "lat": 37.2089,
+        "lng": -93.2923,
+        "baseline": 35
+    },
+    {
+        "id": null,
+        "name": "St. Louis",
+        "state": "MO",
+        "epaCity": "St. Louis",
+        "lat": 38.627,
+        "lng": -90.1994,
+        "baseline": 30
+    },
+    {
+        "id": null,
+        "name": "Jackson",
+        "state": "MS",
+        "epaCity": "Jackson",
+        "lat": 32.2988,
+        "lng": -90.1848,
+        "baseline": 25
+    },
+    {
+        "id": null,
+        "name": "Billings",
+        "state": "MT",
+        "epaCity": "Billings",
+        "lat": 45.7833,
+        "lng": -108.5007,
+        "baseline": 70
+    },
+    {
+        "id": null,
+        "name": "Kalispell",
+        "state": "MT",
+        "epaCity": "Kalispell",
+        "lat": 48.195,
+        "lng": -114.3125,
+        "baseline": 55
+    },
+    {
+        "id": null,
+        "name": "Kearney",
+        "state": "NE",
+        "epaCity": "Kearney",
+        "lat": 40.6998,
+        "lng": -99.0817,
+        "baseline": 42
+    },
+    {
+        "id": null,
+        "name": "Lincoln",
+        "state": "NE",
+        "epaCity": "Lincoln",
+        "lat": 40.8136,
+        "lng": -96.7026,
+        "baseline": 38
+    },
+    {
+        "id": null,
+        "name": "Omaha",
+        "state": "NE",
+        "epaCity": "Omaha",
+        "lat": 41.2565,
+        "lng": -95.9345,
+        "baseline": 35
+    },
+    {
+        "id": null,
+        "name": "Edison",
+        "state": "NJ",
+        "epaCity": "Edison",
+        "lat": 40.5187,
+        "lng": -74.4121,
+        "baseline": 25
+    },
+    {
+        "id": null,
+        "name": "Concord",
+        "state": "NH",
+        "epaCity": "Concord",
+        "lat": 43.2081,
+        "lng": -71.5376,
+        "baseline": 28
+    },
+    {
+        "id": null,
+        "name": "Portsmouth",
+        "state": "NH",
+        "epaCity": "Portsmouth",
+        "lat": 43.0718,
+        "lng": -70.7626,
+        "baseline": 25
+    },
+    {
+        "id": null,
+        "name": "Albuquerque",
+        "state": "NM",
+        "epaCity": "Albuquerque",
+        "lat": 35.0844,
+        "lng": -106.6504,
+        "baseline": 82
+    },
+    {
+        "id": null,
+        "name": "Carlsbad",
+        "state": "NM",
+        "epaCity": "Carlsbad",
+        "lat": 32.4207,
+        "lng": -104.2288,
+        "baseline": 65
+    },
+    {
+        "id": null,
+        "name": "Navajo Lake",
+        "state": "NM",
+        "epaCity": "Navajo Lake",
+        "lat": 36.651,
+        "lng": -107.6128,
+        "baseline": 78
+    },
+    {
+        "id": null,
+        "name": "Las Vegas",
+        "state": "NV",
+        "epaCity": "Las Vegas",
+        "lat": 36.1699,
+        "lng": -115.1398,
+        "baseline": 55
+    },
+    {
+        "id": null,
+        "name": "Reno",
+        "state": "NV",
+        "epaCity": "Reno",
+        "lat": 39.5296,
+        "lng": -119.8138,
+        "baseline": 65
+    },
+    {
+        "id": null,
+        "name": "Albany",
+        "state": "NY",
+        "epaCity": "Albany",
+        "lat": 42.6526,
+        "lng": -73.7562,
+        "baseline": 28
+    },
+    {
+        "id": null,
+        "name": "Lockport",
+        "state": "NY",
+        "epaCity": "Lockport",
+        "lat": 43.1706,
+        "lng": -78.6909,
+        "baseline": 28
+    },
+    {
+        "id": null,
+        "name": "New York City",
+        "state": "NY",
+        "epaCity": "New York City",
+        "lat": 40.7128,
+        "lng": -74.006,
+        "baseline": 25
+    },
+    {
+        "id": null,
+        "name": "Rochester",
+        "state": "NY",
+        "epaCity": "Rochester",
+        "lat": 43.161,
+        "lng": -77.6109,
+        "baseline": 28
+    },
+    {
+        "id": null,
+        "name": "Syracuse",
+        "state": "NY",
+        "epaCity": "Syracuse",
+        "lat": 43.0481,
+        "lng": -76.1474,
+        "baseline": 28
+    },
+    {
+        "id": null,
+        "name": "Yaphank",
+        "state": "NY",
+        "epaCity": "Yaphank",
+        "lat": 40.8204,
+        "lng": -72.9165,
+        "baseline": 25
+    },
+    {
+        "id": null,
+        "name": "Charlotte",
+        "state": "NC",
+        "epaCity": "Charlotte",
+        "lat": 35.2271,
+        "lng": -80.8431,
+        "baseline": 32
+    },
+    {
+        "id": null,
+        "name": "Greensboro",
+        "state": "NC",
+        "epaCity": "Greensboro",
+        "lat": 36.0726,
+        "lng": -79.792,
+        "baseline": 30
+    },
+    {
+        "id": null,
+        "name": "Raleigh",
+        "state": "NC",
+        "epaCity": "Raleigh",
+        "lat": 35.7796,
+        "lng": -78.6382,
+        "baseline": 28
+    },
+    {
+        "id": null,
+        "name": "Wilmington",
+        "state": "NC",
+        "epaCity": "Wilmington",
+        "lat": 34.2257,
+        "lng": -77.9447,
+        "baseline": 22
+    },
+    {
+        "id": null,
+        "name": "Bismarck",
+        "state": "ND",
+        "epaCity": "Bismarck",
+        "lat": 46.8083,
+        "lng": -100.7837,
+        "baseline": 45
+    },
+    {
+        "id": null,
+        "name": "Cincinnati",
+        "state": "OH",
+        "epaCity": "Cincinnati",
+        "lat": 39.1031,
+        "lng": -84.512,
+        "baseline": 28
+    },
+    {
+        "id": null,
+        "name": "Cleveland",
+        "state": "OH",
+        "epaCity": "Cleveland",
+        "lat": 41.4993,
+        "lng": -81.6944,
+        "baseline": 28
+    },
+    {
+        "id": null,
+        "name": "Columbus",
+        "state": "OH",
+        "epaCity": "Columbus",
+        "lat": 39.9612,
+        "lng": -82.9988,
+        "baseline": 28
+    },
+    {
+        "id": null,
+        "name": "Toledo",
+        "state": "OH",
+        "epaCity": "Toledo",
+        "lat": 41.6528,
+        "lng": -83.5552,
+        "baseline": 28
+    },
+    {
+        "id": null,
+        "name": "Oklahoma City",
+        "state": "OK",
+        "epaCity": "Oklahoma City",
+        "lat": 35.4676,
+        "lng": -97.5164,
+        "baseline": 38
+    },
+    {
+        "id": null,
+        "name": "Tulsa",
+        "state": "OK",
+        "epaCity": "Tulsa",
+        "lat": 36.1539,
+        "lng": -95.9928,
+        "baseline": 35
+    },
+    {
+        "id": null,
+        "name": "Corvallis",
+        "state": "OR",
+        "epaCity": "Corvallis",
+        "lat": 44.5646,
+        "lng": -123.262,
+        "baseline": 25
+    },
+    {
+        "id": null,
+        "name": "Portland",
+        "state": "OR",
+        "epaCity": "Portland",
+        "lat": 45.5051,
+        "lng": -122.675,
+        "baseline": 25
+    },
+    {
+        "id": null,
+        "name": "Bloomsburg",
+        "state": "PA",
+        "epaCity": "Bloomsburg",
+        "lat": 40.9826,
+        "lng": -76.4547,
+        "baseline": 30
+    },
+    {
+        "id": null,
+        "name": "Philadelphia",
+        "state": "PA",
+        "epaCity": "Philadelphia",
+        "lat": 39.9526,
+        "lng": -75.1652,
+        "baseline": 25
+    },
+    {
+        "id": null,
+        "name": "Pittsburgh",
+        "state": "PA",
+        "epaCity": "Pittsburgh",
+        "lat": 40.4406,
+        "lng": -79.9959,
+        "baseline": 30
+    },
+    {
+        "id": null,
+        "name": "San Juan",
+        "state": "PR",
+        "epaCity": "San Juan",
+        "lat": 18.4655,
+        "lng": -66.1057,
+        "baseline": 16
+    },
+    {
+        "id": null,
+        "name": "Providence",
+        "state": "RI",
+        "epaCity": "Providence",
+        "lat": 41.8236,
+        "lng": -71.4128,
+        "baseline": 25
+    },
+    {
+        "id": null,
+        "name": "Columbia",
+        "state": "SC",
+        "epaCity": "Columbia",
+        "lat": 34.0007,
+        "lng": -81.0348,
+        "baseline": 28
+    },
+    {
+        "id": null,
+        "name": "Pierre",
+        "state": "SD",
+        "epaCity": "Pierre",
+        "lat": 44.3683,
+        "lng": -100.3464,
+        "baseline": 48
+    },
+    {
+        "id": null,
+        "name": "Rapid City",
+        "state": "SD",
+        "epaCity": "Rapid City",
+        "lat": 44.0805,
+        "lng": -103.231,
+        "baseline": 58
+    },
+    {
+        "id": null,
+        "name": "Knoxville",
+        "state": "TN",
+        "epaCity": "Knoxville",
+        "lat": 35.9606,
+        "lng": -83.9207,
+        "baseline": 32
+    },
+    {
+        "id": null,
+        "name": "Memphis",
+        "state": "TN",
+        "epaCity": "Memphis",
+        "lat": 35.1495,
+        "lng": -90.049,
+        "baseline": 26
+    },
+    {
+        "id": null,
+        "name": "Nashville",
+        "state": "TN",
+        "epaCity": "Nashville",
+        "lat": 36.1627,
+        "lng": -86.7816,
+        "baseline": 28
+    },
+    {
+        "id": null,
+        "name": "Amarillo",
+        "state": "TX",
+        "epaCity": "Amarillo",
+        "lat": 35.2219,
+        "lng": -101.8313,
+        "baseline": 52
+    },
+    {
+        "id": null,
+        "name": "Austin",
+        "state": "TX",
+        "epaCity": "Austin",
+        "lat": 30.2672,
+        "lng": -97.7431,
+        "baseline": 32
+    },
+    {
+        "id": null,
+        "name": "Corpus Christi",
+        "state": "TX",
+        "epaCity": "Corpus Christi",
+        "lat": 27.8006,
+        "lng": -97.3964,
+        "baseline": 20
+    },
+    {
+        "id": null,
+        "name": "Dallas",
+        "state": "TX",
+        "epaCity": "Dallas",
+        "lat": 32.7767,
+        "lng": -96.797,
+        "baseline": 30
+    },
+    {
+        "id": null,
+        "name": "El Paso",
+        "state": "TX",
+        "epaCity": "El Paso",
+        "lat": 31.7619,
+        "lng": -106.485,
+        "baseline": 60
+    },
+    {
+        "id": null,
+        "name": "Fort Worth",
+        "state": "TX",
+        "epaCity": "Fort Worth",
+        "lat": 32.7555,
+        "lng": -97.3308,
+        "baseline": 30
+    },
+    {
+        "id": null,
+        "name": "Harlingen",
+        "state": "TX",
+        "epaCity": "Harlingen",
+        "lat": 26.1906,
+        "lng": -97.6961,
+        "baseline": 18
+    },
+    {
+        "id": null,
+        "name": "Houston",
+        "state": "TX",
+        "epaCity": "Houston",
+        "lat": 29.7604,
+        "lng": -95.3698,
+        "baseline": 20
+    },
+    {
+        "id": null,
+        "name": "Laredo",
+        "state": "TX",
+        "epaCity": "Laredo",
+        "lat": 27.5306,
+        "lng": -99.5075,
+        "baseline": 25
+    },
+    {
+        "id": null,
+        "name": "Lubbock",
+        "state": "TX",
+        "epaCity": "Lubbock",
+        "lat": 33.5779,
+        "lng": -101.8552,
+        "baseline": 48
+    },
+    {
+        "id": null,
+        "name": "San Angelo",
+        "state": "TX",
+        "epaCity": "San Angelo",
+        "lat": 31.4638,
+        "lng": -100.437,
+        "baseline": 45
+    },
+    {
+        "id": null,
+        "name": "San Antonio",
+        "state": "TX",
+        "epaCity": "San Antonio",
+        "lat": 29.4241,
+        "lng": -98.4936,
+        "baseline": 30
+    },
+    {
+        "id": null,
+        "name": "Salt Lake City",
+        "state": "UT",
+        "epaCity": "Salt Lake City",
+        "lat": 40.7608,
+        "lng": -111.891,
+        "baseline": 72
+    },
+    {
+        "id": null,
+        "name": "St. George",
+        "state": "UT",
+        "epaCity": "St. George",
+        "lat": 37.0965,
+        "lng": -113.5684,
+        "baseline": 68
+    },
+    {
+        "id": null,
+        "name": "Harrisonburg",
+        "state": "VA",
+        "epaCity": "Harrisonburg",
+        "lat": 38.4496,
+        "lng": -78.8689,
+        "baseline": 35
+    },
+    {
+        "id": null,
+        "name": "Richmond",
+        "state": "VA",
+        "epaCity": "Richmond",
+        "lat": 37.5407,
+        "lng": -77.436,
+        "baseline": 28
+    },
+    {
+        "id": null,
+        "name": "Virginia Beach",
+        "state": "VA",
+        "epaCity": "Virginia Beach",
+        "lat": 36.8529,
+        "lng": -75.978,
+        "baseline": 22
+    },
+    {
+        "id": null,
+        "name": "Burlington",
+        "state": "VT",
+        "epaCity": "Burlington",
+        "lat": 44.4759,
+        "lng": -73.2121,
+        "baseline": 30
+    },
+    {
+        "id": null,
+        "name": "Ellensburg",
+        "state": "WA",
+        "epaCity": "Ellensburg",
+        "lat": 46.9965,
+        "lng": -120.5478,
+        "baseline": 42
+    },
+    {
+        "id": null,
+        "name": "Olympia",
+        "state": "WA",
+        "epaCity": "Olympia",
+        "lat": 47.0379,
+        "lng": -122.9007,
+        "baseline": 25
+    },
+    {
+        "id": null,
+        "name": "Richland",
+        "state": "WA",
+        "epaCity": "Richland",
+        "lat": 46.2853,
+        "lng": -119.2846,
+        "baseline": 40
+    },
+    {
+        "id": null,
+        "name": "Seattle",
+        "state": "WA",
+        "epaCity": "Seattle",
+        "lat": 47.6062,
+        "lng": -122.3321,
+        "baseline": 22
+    },
+    {
+        "id": null,
+        "name": "Spokane",
+        "state": "WA",
+        "epaCity": "Spokane",
+        "lat": 47.6588,
+        "lng": -117.426,
+        "baseline": 38
+    },
+    {
+        "id": null,
+        "name": "Charleston",
+        "state": "WV",
+        "epaCity": "Charleston",
+        "lat": 38.3498,
+        "lng": -81.6326,
+        "baseline": 30
+    },
+    {
+        "id": null,
+        "name": "La Crosse",
+        "state": "WI",
+        "epaCity": "La Crosse",
+        "lat": 43.8014,
+        "lng": -91.2396,
+        "baseline": 30
+    },
+    {
+        "id": null,
+        "name": "Madison",
+        "state": "WI",
+        "epaCity": "Madison",
+        "lat": 43.0731,
+        "lng": -89.4012,
+        "baseline": 30
+    },
+    {
+        "id": null,
+        "name": "Milwaukee",
+        "state": "WI",
+        "epaCity": "Milwaukee",
+        "lat": 43.0389,
+        "lng": -87.9065,
+        "baseline": 28
+    },
+    {
+        "id": null,
+        "name": "Shawano",
+        "state": "WI",
+        "epaCity": "Shawano",
+        "lat": 44.7824,
+        "lng": -88.5887,
+        "baseline": 32
+    },
+    {
+        "id": null,
+        "name": "Casper",
+        "state": "WY",
+        "epaCity": "Casper",
+        "lat": 42.8467,
+        "lng": -106.3126,
+        "baseline": 72
+    }
+]

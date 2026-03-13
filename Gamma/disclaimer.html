@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disclaimer | NuclearThreatWatch.org</title>
+    <meta
+      name="description"
+      content="Full disclaimer for NuclearThreatWatch.org. This site provides informational access to EPA RadNet public data only. Not an emergency service. Not medical advice. Read before use."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://nuclearthreatwatch.org/disclaimer.html" />
+
+    <meta property="og:title" content="Disclaimer | NuclearThreatWatch.org" />
+    <meta property="og:description" content="Important limitations on how to use NuclearThreatWatch.org. Informational only. Not an emergency service. Not affiliated with EPA, FEMA, NRC, or any government agency." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nuclearthreatwatch.org/disclaimer.html" />
+    <meta property="og:site_name" content="NuclearThreatWatch" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Disclaimer — NuclearThreatWatch.org",
+      "url": "https://nuclearthreatwatch.org/disclaimer.html",
+      "description": "Full disclaimer for NuclearThreatWatch.org covering data accuracy, emergency use limitations, affiliate relationships, and liability.",
+      "isPartOf": { "@id": "https://nuclearthreatwatch.org/#website" }
+    }
+    </script>
+
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png" />
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#0a0e13" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/theme.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+
+    <style>
+      :root {
+        --ntw-red:      #c0392b;
+        --ntw-red-dark: #962d22;
+        --ntw-amber:    #e67e22;
+        --ntw-green:    #27ae60;
+        --ntw-gold:     #e8c84a;
+        --ntw-bg:       #080c10;
+        --ntw-surface:  #0d151d;
+        --ntw-surface2: #111d27;
+        --ntw-border:   #1c2e3e;
+        --ntw-muted:    #6a8a9e;
+      }
+
+      body[data-page="disclaimer"] { background: var(--ntw-bg); }
+      body[data-page="disclaimer"] h1,
+      body[data-page="disclaimer"] h2,
+      body[data-page="disclaimer"] h3 {
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase; letter-spacing: 0.02em;
+      }
+
+      /* Ticker */
+      .ntw-ticker {
+        background: var(--ntw-red); overflow: hidden; white-space: nowrap; padding: 0.42rem 0;
+      }
+      .ntw-ticker-track {
+        display: inline-flex; align-items: center;
+        animation: ntw-scroll 55s linear infinite;
+      }
+      .ntw-ticker-label {
+        font-family: 'Oswald', sans-serif; font-size: 0.7rem; font-weight: 700;
+        letter-spacing: 0.18em; background: #fff; color: var(--ntw-red);
+        padding: 0.15rem 0.6rem; margin-right: 1.5rem; flex-shrink: 0;
+      }
+      .ntw-ticker-text {
+        font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem;
+        letter-spacing: 0.06em; color: rgba(255,255,255,0.92); padding-right: 4rem;
+      }
+      @keyframes ntw-scroll {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+
+      /* Label */
+      .ntw-label {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase;
+        color: var(--ntw-red); margin-bottom: 0.65rem;
+        display: flex; align-items: center; gap: 0.5rem;
+      }
+      .ntw-label.is-amber { color: var(--ntw-amber); }
+      .ntw-label.is-gold  { color: var(--ntw-gold); }
+      .ntw-label::before {
+        content: ''; display: inline-block;
+        width: 14px; height: 2px; background: currentColor; flex-shrink: 0;
+      }
+
+      /* Page hero */
+      .ntw-page-hero {
+        padding: 3rem 0 2.5rem; background: var(--ntw-bg);
+        border-bottom: 3px solid var(--ntw-border);
+        position: relative; overflow: hidden;
+      }
+      .ntw-page-hero::before {
+        content: ''; position: absolute; inset: 0;
+        background: radial-gradient(ellipse 50% 60% at 90% 30%, rgba(192,57,43,0.04) 0%, transparent 70%);
+        pointer-events: none;
+      }
+      .ntw-page-hero-inner { position: relative; max-width: 820px; }
+      .ntw-page-hero h1 {
+        font-family: 'Oswald', sans-serif;
+        font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; line-height: 1.02;
+        text-transform: uppercase; color: #fff; margin: 0 0 1rem;
+      }
+      .ntw-page-hero h1 em { font-style: normal; color: var(--ntw-red); }
+      .ntw-page-hero-lead {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: 1rem; line-height: 1.72; color: #8faec0; max-width: 70ch; margin: 0;
+      }
+      .ntw-updated {
+        display: inline-flex; align-items: center; gap: 0.5rem;
+        font-family: 'IBM Plex Mono', monospace; font-size: 0.64rem;
+        letter-spacing: 0.12em; text-transform: uppercase;
+        color: var(--ntw-muted); margin-top: 1rem;
+      }
+      .ntw-updated::before {
+        content: ''; width: 6px; height: 6px;
+        background: var(--ntw-amber); border-radius: 50%;
+      }
+
+      /* Critical warning box */
+      .ntw-critical-box {
+        background: #1a0000; border: 2px solid var(--ntw-red);
+        padding: 1.5rem 1.75rem; margin-bottom: 3rem;
+      }
+      .ntw-critical-box h2 {
+        font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 700;
+        text-transform: uppercase; color: #ff4d4d; margin: 0 0 0.75rem; letter-spacing: 0.04em;
+      }
+      .ntw-critical-box p {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: 0.96rem; line-height: 1.72; color: #c87a7a; margin: 0;
+      }
+      .ntw-critical-box p strong { color: #ffaaaa; }
+
+      /* Content + sidebar layout */
+      .ntw-content-grid {
+        display: grid; grid-template-columns: 1fr; gap: 3rem;
+      }
+      @media (min-width: 820px) {
+        .ntw-content-grid { grid-template-columns: 1fr 280px; }
+      }
+
+      /* Legal prose */
+      .ntw-legal h2 {
+        font-family: 'Oswald', sans-serif; font-size: 1.05rem; font-weight: 700;
+        text-transform: uppercase; color: #fff; margin: 2.25rem 0 0.7rem;
+        letter-spacing: 0.04em; border-left: 3px solid var(--ntw-red); padding-left: 0.75rem;
+      }
+      .ntw-legal h2:first-child { margin-top: 0; }
+      .ntw-legal p {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: 0.96rem; line-height: 1.8; color: #7a9fb5; margin: 0 0 1rem;
+      }
+      .ntw-legal strong { color: #c8dde8; }
+      .ntw-legal a { color: var(--ntw-gold); text-decoration: underline; text-underline-offset: 2px; }
+      .ntw-legal a:hover { color: #f0d86a; }
+      .ntw-legal ul { padding-left: 1.2rem; margin: 0 0 1.1rem; }
+      .ntw-legal ul li {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: 0.94rem; line-height: 1.75; color: #7a9fb5; margin-bottom: 0.45rem;
+      }
+      .ntw-legal ul li strong { color: #c8dde8; }
+
+      /* Section divider */
+      .ntw-divider {
+        display: flex; align-items: center; gap: 1rem;
+        border-bottom: 2px solid var(--ntw-border);
+        padding-bottom: 0.6rem; margin-bottom: 2rem;
+      }
+      .ntw-divider h2 {
+        font-family: 'Oswald', sans-serif; font-size: 1.05rem; font-weight: 700;
+        text-transform: uppercase; letter-spacing: 0.06em; color: #fff; margin: 0; white-space: nowrap;
+      }
+      .ntw-divider-line { flex: 1; height: 1px; background: var(--ntw-border); }
+
+      /* Sidebar */
+      .ntw-sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+      .ntw-panel {
+        background: var(--ntw-surface2); border: 1px solid var(--ntw-border); padding: 1.5rem;
+      }
+      .ntw-panel.is-red   { border-top: 3px solid var(--ntw-red); }
+      .ntw-panel.is-amber { border-top: 3px solid var(--ntw-amber); }
+      .ntw-panel.is-gold  { border-top: 3px solid var(--ntw-gold); }
+      .ntw-panel h3 {
+        font-family: 'Oswald', sans-serif; font-size: 0.9rem; font-weight: 600;
+        text-transform: uppercase; color: #fff; margin: 0.3rem 0 0.8rem; letter-spacing: 0.04em;
+      }
+      .ntw-panel p {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: 0.84rem; line-height: 1.62; color: var(--ntw-muted); margin: 0 0 0.6rem;
+      }
+      .ntw-panel p:last-child { margin: 0; }
+      .ntw-panel a { color: var(--ntw-gold); text-decoration: underline; text-underline-offset: 2px; }
+      .ntw-panel-links { display: flex; flex-direction: column; gap: 0; }
+      .ntw-panel-link {
+        font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em;
+        text-transform: uppercase; color: var(--ntw-gold); text-decoration: none;
+        padding: 0.5rem 0; border-bottom: 1px solid var(--ntw-border);
+      }
+      .ntw-panel-link:last-child { border-bottom: none; }
+      .ntw-panel-link:hover { color: #f0d86a; }
+      .ntw-panel-link::before { content: '→ '; }
+      .ntw-panel address {
+        font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem;
+        letter-spacing: 0.06em; color: var(--ntw-muted); line-height: 1.9; font-style: normal;
+      }
+      .ntw-contact-item {
+        display: flex; flex-direction: column; gap: 0.1rem;
+        padding: 0.55rem 0.75rem; background: var(--ntw-bg);
+        border: 1px solid var(--ntw-border); margin-bottom: 0.5rem;
+      }
+      .ntw-contact-item:last-of-type { margin-bottom: 0; }
+      .ntw-contact-type {
+        font-family: 'IBM Plex Mono', monospace; font-size: 0.58rem;
+        letter-spacing: 0.14em; text-transform: uppercase; color: var(--ntw-muted);
+      }
+      .ntw-contact-val {
+        font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem;
+        letter-spacing: 0.04em; color: var(--ntw-gold); text-decoration: none;
+      }
+      .ntw-contact-val:hover { color: #f0d86a; }
+
+      .ntw-section { padding: 3rem 0; background: var(--ntw-bg); }
+    </style>
+  </head>
+
+  <body data-page="disclaimer">
+    <div class="site-shell">
+
+      <!-- TICKER -->
+      <div class="ntw-ticker" aria-label="Live status ticker" role="marquee">
+        <div class="ntw-ticker-track">
+          <span class="ntw-ticker-label">LIVE</span>
+          <span class="ntw-ticker-text">EPA RadNet monitoring active across the United States &nbsp;|&nbsp; NuclearThreatWatch.org — informational use only &nbsp;|&nbsp; Not an emergency service — call 911 in any emergency &nbsp;|&nbsp; Data sourced from EPA RadNet public API &nbsp;|&nbsp; EPA RadNet monitoring active across the United States &nbsp;|&nbsp; NuclearThreatWatch.org — informational use only &nbsp;|&nbsp; Not an emergency service — call 911 in any emergency &nbsp;|&nbsp; Data sourced from EPA RadNet public API &nbsp;|&nbsp;</span>
+        </div>
+      </div>
+
+      <!-- SITE HEADER — injected by layout.js -->
+      <div data-site-header></div>
+
+      <main id="main-content">
+
+        <!-- PAGE HERO -->
+        <section class="ntw-page-hero">
+          <div class="container">
+            <div class="ntw-page-hero-inner">
+              <p class="ntw-label">Legal</p>
+              <h1>
+                Disclaimer &amp; <em>Limitations</em><br>of Liability
+              </h1>
+              <p class="ntw-page-hero-lead">
+                By accessing or using NuclearThreatWatch.org, you acknowledge that you have read, 
+                understood, and agreed to the limitations described on this page. Please read this 
+                disclaimer carefully before relying on any information provided by this website.
+              </p>
+              <p class="ntw-updated">Effective date: January 1, 2026 &nbsp;|&nbsp; Last reviewed: March 2026</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- MAIN CONTENT -->
+        <section class="ntw-section">
+          <div class="container">
+
+            <!-- Critical emergency warning -->
+            <div class="ntw-critical-box" role="alert">
+              <h2>&#9888; This Is Not an Emergency Service — Read This First</h2>
+              <p>
+                <strong>NuclearThreatWatch.org is not an emergency response service, a government agency, 
+                or a first responder organization of any kind.</strong> This website cannot contact emergency 
+                services on your behalf, dispatch help, issue official warnings, or provide any form of 
+                real-time emergency assistance. If you believe you are in immediate danger from a nuclear, 
+                radiological, or any other emergency, <strong>stop using this website and call 911 
+                immediately.</strong> For national nuclear emergencies, follow guidance from 
+                <a href="https://www.ready.gov/nuclear-explosion" target="_blank" rel="noopener noreferrer">FEMA Ready.gov</a> 
+                and your local Emergency Alert System. Do not waste time on this website in an active emergency.
+              </p>
+            </div>
+
+            <div class="ntw-content-grid">
+
+              <!-- LEGAL PROSE -->
+              <article class="ntw-legal">
+
+                <h2>1. Nature of This Website — Informational Use Only</h2>
+                <p>
+                  NuclearThreatWatch.org is an independent, privately operated informational website 
+                  owned and operated by DigiMktg Co. LLC, a limited liability company registered in 
+                  Illinois. The sole purpose of this website is to present publicly available radiation 
+                  monitoring data sourced from the 
+                  <a href="https://www.epa.gov/radnet" target="_blank" rel="noopener noreferrer">U.S. Environmental Protection Agency's RadNet network</a> 
+                  in a format that is accessible to the general public.
+                </p>
+                <p>
+                  Nothing on this website constitutes emergency guidance, official safety instructions, 
+                  government-issued warnings, medical advice, health recommendations, legal advice, 
+                  financial advice, or any professional advisory service of any kind. 
+                  <strong>All content is provided strictly for general informational and educational 
+                  purposes.</strong> Your use of this site and any reliance you place on information 
+                  found here is entirely at your own risk.
+                </p>
+
+                <h2>2. No Affiliation With Government Agencies</h2>
+                <p>
+                  NuclearThreatWatch.org is <strong>not affiliated with, endorsed by, sponsored by, 
+                  or connected to</strong> any government agency, department, or instrumentality, 
+                  including but not limited to:
+                </p>
+                <ul>
+                  <li>The U.S. Environmental Protection Agency (EPA)</li>
+                  <li>The Federal Emergency Management Agency (FEMA)</li>
+                  <li>The Nuclear Regulatory Commission (NRC)</li>
+                  <li>The Department of Homeland Security (DHS)</li>
+                  <li>The Department of Energy (DOE)</li>
+                  <li>The Centers for Disease Control and Prevention (CDC)</li>
+                  <li>The Food and Drug Administration (FDA)</li>
+                  <li>Any state, county, or local emergency management agency</li>
+                  <li>Any nuclear power plant operator, utility, or licensed facility</li>
+                </ul>
+                <p>
+                  References to these agencies and links to their websites are provided solely for 
+                  the user's benefit and convenience. They do not imply any relationship, partnership, 
+                  or endorsement of any kind. In the event of a conflict between information on 
+                  NuclearThreatWatch.org and official government guidance, 
+                  <strong>always defer to official government sources.</strong>
+                </p>
+
+                <h2>3. Data Accuracy, Completeness, and Timeliness</h2>
+                <p>
+                  Radiation data displayed on NuclearThreatWatch.org is sourced from the EPA's 
+                  publicly available CDX RadNet API endpoint. DigiMktg Co. LLC has no control over 
+                  the accuracy, completeness, timeliness, or availability of data provided by the EPA 
+                  or any other third-party data source. We make no warranty, express or implied, that 
+                  any data displayed on this website is:
+                </p>
+                <ul>
+                  <li><strong>Accurate</strong> — Data is transmitted from EPA sensors and may contain 
+                  errors, instrument malfunctions, calibration gaps, or transmission artifacts.</li>
+                  <li><strong>Complete</strong> — Not all RadNet stations report at all times. Station 
+                  outages, maintenance windows, and transmission failures can result in missing data 
+                  for any station at any time.</li>
+                  <li><strong>Current</strong> — While the target update cadence is hourly, actual 
+                  posting times vary. Data labeled "Stale" or "Estimated" explicitly indicates reduced 
+                  freshness. Even data labeled "Live" reflects the most recent available posting — 
+                  not necessarily a reading taken within the past hour.</li>
+                  <li><strong>Representative of your location</strong> — RadNet stations are spaced 
+                  miles apart. A reading from the nearest station does not represent the radiation 
+                  level at your specific location. Local variations, weather, geography, and proximity 
+                  to radiation sources all affect readings that no fixed regional sensor can capture 
+                  for your exact address.</li>
+                </ul>
+                <p>
+                  <strong>Estimated and fallback values</strong> displayed when live data is 
+                  unavailable are synthetic placeholders. They are clearly labeled as such and should 
+                  under no circumstances be used to make any safety, health, or emergency decision. 
+                  They exist solely to maintain interface usability during data outages.
+                </p>
+
+                <h2>4. No Medical or Health Advice</h2>
+                <p>
+                  Nothing on NuclearThreatWatch.org constitutes medical advice, health guidance, 
+                  diagnosis, or treatment recommendations. Radiation exposure and its health 
+                  implications are complex topics that depend on dose rate, duration, type of 
+                  radiation, distance, shielding, age, health status, and many other variables 
+                  that this website cannot assess for any individual user.
+                </p>
+                <p>
+                  Do not use this website to determine whether you or anyone else has been exposed 
+                  to harmful levels of radiation, whether it is safe to remain in or evacuate a 
+                  location, or what health actions to take following a radiological event. For any 
+                  health-related concerns involving radiation exposure, contact a licensed medical 
+                  professional or your local public health authority immediately.
+                </p>
+
+                <h2>5. No Guarantee of Uptime or Continuous Availability</h2>
+                <p>
+                  NuclearThreatWatch.org is a privately operated website running on third-party 
+                  infrastructure. We make no guarantee that this website will be available at any 
+                  particular time, including during emergencies. The site may experience downtime 
+                  due to server maintenance, infrastructure failure, cyberattack, DNS issues, CDN 
+                  outages, or any number of other technical causes outside our control.
+                </p>
+                <p>
+                  <strong>Do not rely on NuclearThreatWatch.org as your primary or sole source of 
+                  emergency information.</strong> Bookmark and familiarize yourself with official 
+                  government sources including 
+                  <a href="https://www.ready.gov/" target="_blank" rel="noopener noreferrer">FEMA Ready.gov</a>, 
+                  <a href="https://www.epa.gov/radnet" target="_blank" rel="noopener noreferrer">EPA RadNet</a>, 
+                  and your local emergency management agency's website and social media channels 
+                  before you ever need them.
+                </p>
+
+                <h2>6. Third-Party Data Sources and External Links</h2>
+                <p>
+                  This website relies on data and APIs provided by third parties, primarily the 
+                  U.S. Environmental Protection Agency. DigiMktg Co. LLC has no control over and 
+                  assumes no responsibility for the content, accuracy, policies, or availability 
+                  of any third-party data source, website, or API referenced on or accessed through 
+                  NuclearThreatWatch.org. The inclusion of any link or data source does not imply 
+                  endorsement of the linked site or source.
+                </p>
+                <p>
+                  If a third-party data source changes its API, discontinues service, alters its 
+                  data format, or becomes unavailable, the data displayed on NuclearThreatWatch.org 
+                  may become inaccurate, incomplete, or entirely unavailable without advance notice. 
+                  DigiMktg Co. LLC shall have no liability for any such interruption or alteration.
+                </p>
+
+                <h2>7. Affiliate Links and Commercial Relationships</h2>
+                <p>
+                  NuclearThreatWatch.org participates in the 
+                  <strong>Amazon Services LLC Associates Program</strong>, an affiliate advertising 
+                  program. This means that when you click a product link on this site and make a 
+                  purchase on Amazon, DigiMktg Co. LLC may receive a small commission at no 
+                  additional cost to you.
+                </p>
+                <p>
+                  Product recommendations on this site are made in good faith based on relevance 
+                  to nuclear and radiological preparedness. However, <strong>DigiMktg Co. LLC makes 
+                  no warranty regarding the fitness, safety, accuracy, or performance of any 
+                  third-party product linked from this website.</strong> Product descriptions, 
+                  prices, and availability are subject to change by Amazon and third-party sellers 
+                  at any time without notice. Always verify product specifications directly with 
+                  the manufacturer or seller before purchase.
+                </p>
+                <p>
+                  The presence of an affiliate product link on this website does not constitute 
+                  an endorsement of that product as sufficient preparation for any emergency. 
+                  No product purchase eliminates the need to follow official emergency management 
+                  guidance during a nuclear or radiological event.
+                </p>
+
+                <h2>8. Advertising</h2>
+                <p>
+                  This website may display third-party advertising, including but not limited to 
+                  Google AdSense advertisements. DigiMktg Co. LLC does not control the content 
+                  of third-party advertisements and makes no representations or warranties 
+                  regarding any advertised product, service, or company. The appearance of an 
+                  advertisement on NuclearThreatWatch.org does not constitute an endorsement 
+                  of the advertiser or its offerings.
+                </p>
+
+                <h2>9. Limitation of Liability</h2>
+                <p>
+                  To the fullest extent permitted by applicable law, DigiMktg Co. LLC, its members, 
+                  officers, employees, contractors, agents, and assigns shall not be liable for 
+                  any direct, indirect, incidental, special, consequential, punitive, or exemplary 
+                  damages arising out of or in connection with your use of — or inability to use — 
+                  NuclearThreatWatch.org, including but not limited to:
+                </p>
+                <ul>
+                  <li>Decisions made in reliance on any data, reading, status label, or content displayed on this website</li>
+                  <li>Failure to evacuate, shelter-in-place, or take protective action based on information from this website</li>
+                  <li>Injury, illness, death, property damage, or economic loss of any kind arising from any use of this site</li>
+                  <li>Data inaccuracies, gaps, delays, or errors originating from the EPA or any other third-party source</li>
+                  <li>Website downtime, data unavailability, or technical failures during any event including emergencies</li>
+                  <li>Reliance on product recommendations or affiliate links contained on this website</li>
+                  <li>Any harm resulting from third-party content, links, or advertisements displayed on this site</li>
+                </ul>
+                <p>
+                  This limitation of liability applies regardless of the form of action, whether 
+                  in contract, tort (including negligence), strict liability, or any other legal 
+                  theory, and regardless of whether DigiMktg Co. LLC has been advised of the 
+                  possibility of such damages.
+                </p>
+
+                <h2>10. Indemnification</h2>
+                <p>
+                  By using NuclearThreatWatch.org, you agree to indemnify, defend, and hold harmless 
+                  DigiMktg Co. LLC, its members, officers, employees, contractors, and agents from 
+                  and against any and all claims, damages, losses, costs, and expenses (including 
+                  reasonable attorneys' fees) arising from your use of this website, your violation 
+                  of these terms, or your violation of any rights of any third party.
+                </p>
+
+                <h2>11. No Warranty</h2>
+                <p>
+                  NuclearThreatWatch.org is provided on an <strong>"as is" and "as available" 
+                  basis without any warranties of any kind</strong>, either express or implied, 
+                  including but not limited to implied warranties of merchantability, fitness for 
+                  a particular purpose, non-infringement, or course of performance. DigiMktg Co. LLC 
+                  does not warrant that the site will be uninterrupted, error-free, secure, or free 
+                  of viruses or other harmful components.
+                </p>
+
+                <h2>12. Jurisdictional and Governing Law</h2>
+                <p>
+                  This disclaimer and all matters relating to your use of NuclearThreatWatch.org 
+                  shall be governed by and construed in accordance with the laws of the 
+                  <strong>State of Illinois</strong>, without regard to its conflict of law provisions. 
+                  Any legal action or proceeding arising out of or relating to this website shall be 
+                  brought exclusively in the state or federal courts of Adams County, Illinois, 
+                  and you hereby consent to the personal jurisdiction of such courts.
+                </p>
+
+                <h2>13. Children's Use</h2>
+                <p>
+                  NuclearThreatWatch.org is not directed at children under the age of 13 and does 
+                  not knowingly collect personal information from children. If you are under 13, 
+                  please do not use this website or submit any information through the contact form.
+                </p>
+
+                <h2>14. Changes to This Disclaimer</h2>
+                <p>
+                  DigiMktg Co. LLC reserves the right to modify this disclaimer at any time without 
+                  prior notice. Changes are effective immediately upon posting to this page. The 
+                  "Last reviewed" date at the top of this page reflects the most recent revision. 
+                  Your continued use of NuclearThreatWatch.org following any update constitutes 
+                  your acceptance of the revised disclaimer.
+                </p>
+
+                <h2>15. Contact</h2>
+                <p>
+                  For questions about this disclaimer, contact us at 
+                  <a href="mailto:legal@nuclearthreatwatch.org">legal@nuclearthreatwatch.org</a>
+                  or in writing at:
+                </p>
+                <p>
+                  DigiMktg Co. LLC<br>
+                  P.O. Box 185<br>
+                  Ursa, IL 62301
+                </p>
+
+              </article>
+
+              <!-- SIDEBAR -->
+              <aside class="ntw-sidebar">
+
+                <!-- Quick summary -->
+                <div class="ntw-panel is-red">
+                  <p class="ntw-label">Bottom Line</p>
+                  <h3>What This Site Is Not</h3>
+                  <ul style="padding-left:1rem; margin:0;">
+                    <li style="font-family:'Source Serif 4',Georgia,serif; font-size:0.82rem; color:var(--ntw-muted); line-height:1.6; margin-bottom:0.5rem;">Not an emergency service</li>
+                    <li style="font-family:'Source Serif 4',Georgia,serif; font-size:0.82rem; color:var(--ntw-muted); line-height:1.6; margin-bottom:0.5rem;">Not affiliated with any government agency</li>
+                    <li style="font-family:'Source Serif 4',Georgia,serif; font-size:0.82rem; color:var(--ntw-muted); line-height:1.6; margin-bottom:0.5rem;">Not a source of medical advice</li>
+                    <li style="font-family:'Source Serif 4',Georgia,serif; font-size:0.82rem; color:var(--ntw-muted); line-height:1.6; margin-bottom:0.5rem;">Not guaranteed to be accurate or current</li>
+                    <li style="font-family:'Source Serif 4',Georgia,serif; font-size:0.82rem; color:var(--ntw-muted); line-height:1.6; margin-bottom:0.5rem;">Not guaranteed to be available during emergencies</li>
+                    <li style="font-family:'Source Serif 4',Georgia,serif; font-size:0.82rem; color:var(--ntw-muted); line-height:1.6;">Not a substitute for official emergency guidance</li>
+                  </ul>
+                </div>
+
+                <!-- Emergency resources -->
+                <div class="ntw-panel is-amber">
+                  <p class="ntw-label is-amber">In an Emergency</p>
+                  <h3>Official Sources Only</h3>
+                  <div class="ntw-panel-links">
+                    <a class="ntw-panel-link" href="https://www.ready.gov/nuclear-explosion" target="_blank" rel="noopener">FEMA Ready.gov</a>
+                    <a class="ntw-panel-link" href="https://www.epa.gov/radnet" target="_blank" rel="noopener">EPA RadNet (official)</a>
+                    <a class="ntw-panel-link" href="https://www.nrc.gov/" target="_blank" rel="noopener">Nuclear Regulatory Commission</a>
+                    <a class="ntw-panel-link" href="https://www.cdc.gov/radiation-health/index.html" target="_blank" rel="noopener">CDC Radiation Health</a>
+                    <a class="ntw-panel-link" href="https://www.dhs.gov/topic/nuclear-and-radiological-threats" target="_blank" rel="noopener">DHS Nuclear Threats</a>
+                  </div>
+                </div>
+
+                <!-- Legal contact -->
+                <div class="ntw-panel is-gold">
+                  <p class="ntw-label is-gold">Legal Contact</p>
+                  <h3>DigiMktg Co. LLC</h3>
+                  <div class="ntw-contact-item">
+                    <span class="ntw-contact-type">Legal &amp; Compliance</span>
+                    <a class="ntw-contact-val" href="mailto:legal@nuclearthreatwatch.org">legal@nuclearthreatwatch.org</a>
+                  </div>
+                  <div class="ntw-contact-item">
+                    <span class="ntw-contact-type">Privacy Requests</span>
+                    <a class="ntw-contact-val" href="mailto:privacy@nuclearthreatwatch.org">privacy@nuclearthreatwatch.org</a>
+                  </div>
+                  <address style="font-family:'IBM Plex Mono',monospace; font-size:0.68rem; letter-spacing:0.05em; color:var(--ntw-muted); line-height:1.9; font-style:normal; margin-top:0.85rem;">
+                    DigiMktg Co. LLC<br>
+                    P.O. Box 185<br>
+                    Ursa, IL 62301
+                  </address>
+                </div>
+
+                <!-- Related legal pages -->
+                <div class="ntw-panel">
+                  <p class="ntw-label">Legal Pages</p>
+                  <div class="ntw-panel-links">
+                    <a class="ntw-panel-link" href="privacy.html">Privacy Policy</a>
+                    <a class="ntw-panel-link" href="terms.html">Terms of Use</a>
+                    <a class="ntw-panel-link" href="accessibility.html">Accessibility</a>
+                    <a class="ntw-panel-link" href="contact.html">Contact Us</a>
+                  </div>
+                </div>
+
+              </aside>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- SITE FOOTER — injected by layout.js -->
+      <div data-site-footer></div>
+
+      <!-- COPYRIGHT -->
+      <div style="background:#04080c; border-top:2px solid #1c2e3e; padding:1rem 0; text-align:center;">
+        <p style="font-family:'IBM Plex Mono',monospace; font-size:0.64rem; letter-spacing:0.1em; color:#2d4a5e; margin:0; line-height:1.8;">
+          &copy; 2026 NuclearThreatWatch.org &nbsp;|&nbsp; DigiMktg Co. LLC &nbsp;|&nbsp; Dev: Eric Glas
+          <br>
+          <span style="color:#1e3545;">Data sourced from <a href="https://www.epa.gov/radnet" target="_blank" rel="noopener" style="color:#2d5a74;text-decoration:none;">EPA RadNet</a> &mdash; for informational use only. Not an official government service.</span>
+        </p>
+      </div>
+    </div>
+
+    <script type="module" src="assets/js/main.js"></script>
+  </body>
+</html>

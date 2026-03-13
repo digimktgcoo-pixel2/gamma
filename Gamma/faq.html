@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frequently Asked Questions | NuclearThreatWatch.org</title>
+    <meta name="description" content="Answers to common questions about live EPA RadNet data, radiation safety, what stale readings mean, and how NuclearThreatWatch.org works. Know before you need to know." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://nuclearthreatwatch.org/faq.html" />
+
+    <meta property="og:title" content="FAQ — Live Radiation Data & Preparedness Answers | NuclearThreatWatch.org" />
+    <meta property="og:description" content="Common questions about EPA RadNet monitoring, radiation exposure, potassium iodide, and how to read the NuclearThreatWatch.org live map." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nuclearthreatwatch.org/faq.html" />
+    <meta property="og:image" content="https://nuclearthreatwatch.org/assets/img/social-share.png" />
+    <meta property="og:site_name" content="NuclearThreatWatch.org" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- FAQPage Schema — Google rich results eligible -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "name": "Frequently Asked Questions — NuclearThreatWatch.org",
+      "url": "https://nuclearthreatwatch.org/faq.html",
+      "description": "Common questions about live EPA RadNet radiation monitoring, radiation safety, potassium iodide, and how NuclearThreatWatch.org works.",
+      "isPartOf": { "@id": "https://nuclearthreatwatch.org/#website" },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is NuclearThreatWatch.org?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NuclearThreatWatch.org is a free public radiation monitoring platform that pulls live gamma radiation readings from the EPA RadNet sensor network and displays them on an interactive U.S. map. The site is operated by DigiMktg Co. LLC and is not affiliated with any government agency."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this site replace official government guidance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. NuclearThreatWatch.org is a reader-friendly interface built on public EPA data. It is not an official alerting service and should never replace emergency instructions from FEMA, local authorities, or the Emergency Alert System."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where does the radiation data come from?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All readings come from the EPA RadNet program — a nationwide network of fixed gamma radiation air monitors operated by the U.S. Environmental Protection Agency. Data is retrieved via the EPA CDX API and refreshed on an hourly cycle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does stale data mean on the map?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Stale means the most recent usable reading for a station is older than the site's freshness threshold. It does not mean something is wrong — EPA sensors go offline for maintenance and calibration regularly. Stale readings are always flagged and never hidden."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a NuclearThreatWatch.org mobile app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NuclearThreatWatch.org is a Progressive Web App (PWA). You can install it to your phone's home screen from your browser without an app store. It is one of the only mobile platforms delivering real EPA gamma data — not a camera-based approximation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is background radiation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Background radiation is the naturally occurring ionizing radiation present everywhere on Earth. It comes from cosmic rays, radon gas, trace radioactive minerals in soil and building materials, and the human body. The U.S. average is roughly 310 millirem per year, or about 0.035 microsieverts per hour at ground level."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What radiation level is dangerous?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Brief exposure below 100 millisieverts (mSv) is not associated with measurable health effects. Acute Radiation Syndrome can begin at whole-body doses above 1,000 mSv (1 Sv) received in a short period. The EPA and NRC set public dose limits well below these thresholds for routine exposure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is radiation poisoning and what are the symptoms?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Acute Radiation Syndrome (ARS) results from high-dose whole-body exposure in a short time. Early symptoms include nausea, vomiting, headache, and fatigue within hours of exposure. Severity depends on dose and time to medical treatment. ARS is a medical emergency — seek care immediately if you suspect high-level exposure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I do if radiation levels spike on the map?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A single elevated reading does not confirm an emergency. Check whether neighboring stations show similar elevation and monitor official sources including FEMA Ready.gov and the Emergency Alert System. Do not evacuate based solely on this site. Follow official government instructions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is potassium iodide (KI) and when should I take it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Potassium iodide (KI) saturates the thyroid gland so it cannot absorb radioactive iodine released in a nuclear incident. It protects only the thyroid and should only be taken on direction from public health officials. The FDA recommends 130mg for adults and 65mg for children."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is an estimated reading?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An estimated reading is a fallback value displayed only when a live EPA row cannot be retrieved for a station. Estimated values are clearly labeled and never presented as confirmed live data."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does a city name on the map differ from the EPA station name?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "EPA station identifiers are technical slugs that do not always match common city names. NuclearThreatWatch.org uses display name overrides where needed so the data path works reliably while the map remains readable to the public."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png" />
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#0a0e13" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/theme.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+
+    <style>
+      :root {
+        --ntw-red:      #c0392b;
+        --ntw-red-dark: #962d22;
+        --ntw-amber:    #e67e22;
+        --ntw-green:    #27ae60;
+        --ntw-gold:     #e8c84a;
+        --ntw-bg:       #080c10;
+        --ntw-surface:  #0d151d;
+        --ntw-surface2: #111d27;
+        --ntw-border:   #1c2e3e;
+        --ntw-muted:    #6a8a9e;
+      }
+
+      /* ─── TICKER ─────────────────────────────────────── */
+      .ntw-ticker { background: var(--ntw-red); overflow: hidden; white-space: nowrap; padding: 0.42rem 0; }
+      .ntw-ticker-track { display: inline-flex; align-items: center; animation: ntw-scroll 55s linear infinite; }
+      .ntw-ticker-label { font-family: 'Oswald', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em; background: #fff; color: var(--ntw-red); padding: 0.15rem 0.6rem; margin-right: 1.5rem; flex-shrink: 0; }
+      .ntw-ticker-text { font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; letter-spacing: 0.06em; color: rgba(255,255,255,0.92); padding-right: 4rem; }
+      @keyframes ntw-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+      /* ─── LABEL ──────────────────────────────────────── */
+      .ntw-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ntw-red); margin-bottom: 0.65rem; display: flex; align-items: center; gap: 0.5rem; }
+      .ntw-label.is-gold  { color: var(--ntw-gold); }
+      .ntw-label.is-green { color: var(--ntw-green); }
+      .ntw-label.is-amber { color: var(--ntw-amber); }
+      .ntw-label::before { content: ''; display: inline-block; width: 14px; height: 2px; background: currentColor; flex-shrink: 0; }
+
+      /* ─── PAGE HERO ──────────────────────────────────── */
+      .ntw-page-hero { padding: 3rem 0 2.5rem; background: var(--ntw-bg); border-bottom: 3px solid var(--ntw-border); position: relative; overflow: hidden; }
+      .ntw-page-hero-inner { position: relative; max-width: 820px; }
+      .ntw-page-hero h1 { font-family: 'Oswald', sans-serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; line-height: 1.02; text-transform: uppercase; color: #fff; margin: 0 0 1rem; }
+      .ntw-page-hero h1 em { font-style: normal; color: var(--ntw-gold); }
+      .ntw-page-hero-lead { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.05rem; line-height: 1.72; color: #8faec0; max-width: 70ch; margin: 0; }
+
+      /* ─── CONTENT GRID ───────────────────────────────── */
+      .ntw-content-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; }
+      @media (min-width: 820px) { .ntw-content-grid { grid-template-columns: 1fr 300px; } }
+
+      /* ─── SECTION DIVIDER ────────────────────────────── */
+      .ntw-divider { display: flex; align-items: center; gap: 1rem; border-bottom: 2px solid var(--ntw-border); padding-bottom: 0.6rem; margin-bottom: 1.75rem; }
+      .ntw-divider h2 { font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #fff; margin: 0; white-space: nowrap; }
+      .ntw-divider-line { flex: 1; height: 1px; background: var(--ntw-border); }
+
+      /* ─── PROSE ──────────────────────────────────────── */
+      .ntw-prose p { font-family: 'Source Serif 4', Georgia, serif; font-size: 1rem; line-height: 1.8; color: #7a9fb5; margin: 0 0 1.1rem; }
+      .ntw-prose strong { color: #c8dde8; }
+      .ntw-prose a { color: var(--ntw-gold); text-decoration: underline; text-underline-offset: 2px; }
+      .ntw-prose ul { padding-left: 1.2rem; margin: 0 0 1.25rem; }
+      .ntw-prose ul li { font-family: 'Source Serif 4', Georgia, serif; font-size: 1rem; line-height: 1.75; color: #7a9fb5; margin-bottom: 0.5rem; }
+
+      /* ─── FAQ ACCORDION ──────────────────────────────── */
+      .ntw-faq-group { margin-bottom: 2rem; }
+      .ntw-faq-item { border: 1px solid var(--ntw-border); border-left: 3px solid var(--ntw-border); background: var(--ntw-surface2); margin-bottom: 0.6rem; transition: border-left-color 0.18s; }
+      .ntw-faq-item:hover,
+      .ntw-faq-item.is-open { border-left-color: var(--ntw-gold); }
+      .ntw-faq-q { width: 100%; background: none; border: none; padding: 1.05rem 1.25rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; text-align: left; }
+      .ntw-faq-q-text { font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; color: #c8dde8; line-height: 1.3; }
+      .ntw-faq-icon { font-family: 'IBM Plex Mono', monospace; font-size: 1.2rem; color: var(--ntw-gold); flex-shrink: 0; transition: transform 0.18s; line-height: 1; }
+      .ntw-faq-item.is-open .ntw-faq-icon { transform: rotate(45deg); }
+      .ntw-faq-a { display: none; padding: 0 1.25rem 1.1rem; }
+      .ntw-faq-item.is-open .ntw-faq-a { display: block; }
+      .ntw-faq-a p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; line-height: 1.78; color: #7a9fb5; margin: 0 0 0.75rem; }
+      .ntw-faq-a p:last-child { margin: 0; }
+      .ntw-faq-a ul { padding-left: 1.1rem; margin: 0 0 0.75rem; }
+      .ntw-faq-a ul li { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.93rem; line-height: 1.72; color: #7a9fb5; margin-bottom: 0.4rem; }
+      .ntw-faq-a a { color: var(--ntw-gold); text-underline-offset: 2px; }
+
+      /* ─── SIDEBAR PANELS ─────────────────────────────── */
+      .ntw-sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+      .ntw-panel { background: var(--ntw-surface2); border: 1px solid var(--ntw-border); padding: 1.5rem; }
+      .ntw-panel.is-gold  { border-top: 3px solid var(--ntw-gold); }
+      .ntw-panel.is-green { border-top: 3px solid var(--ntw-green); }
+      .ntw-panel.is-red   { border-top: 3px solid var(--ntw-red); }
+      .ntw-panel.is-amber { border-top: 3px solid var(--ntw-amber); }
+      .ntw-panel h3 { font-family: 'Oswald', sans-serif; font-size: 0.95rem; font-weight: 600; text-transform: uppercase; color: #fff; margin: 0.35rem 0 0.85rem; letter-spacing: 0.04em; }
+      .ntw-panel p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.86rem; line-height: 1.62; color: var(--ntw-muted); margin: 0 0 0.6rem; }
+      .ntw-panel p:last-child { margin: 0; }
+      .ntw-panel a { color: var(--ntw-gold); }
+      .ntw-panel-links { display: flex; flex-direction: column; }
+      .ntw-panel-link { font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ntw-gold); text-decoration: none; padding: 0.5rem 0; border-bottom: 1px solid var(--ntw-border); }
+      .ntw-panel-link:last-child { border-bottom: none; }
+      .ntw-panel-link::before { content: '→ '; }
+
+      /* ─── AFFILIATE CARD ─────────────────────────────── */
+      .ntw-affiliate-card { background: var(--ntw-surface2); border: 1px solid var(--ntw-border); border-top: 3px solid var(--ntw-amber); padding: 1.25rem; margin: 2rem 0; display: flex; gap: 1.25rem; align-items: flex-start; }
+      .ntw-affiliate-card img { width: 88px; height: 88px; object-fit: cover; flex-shrink: 0; border: 1px solid var(--ntw-border); }
+      .ntw-affiliate-card-body { flex: 1; }
+      .ntw-affiliate-card-body .ntw-label { margin-bottom: 0.4rem; }
+      .ntw-affiliate-card-body p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.88rem; line-height: 1.62; color: var(--ntw-muted); margin: 0.4rem 0 0.85rem; }
+      .ntw-affiliate-btn { display: inline-block; font-family: 'Oswald', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; background: var(--ntw-amber); color: #000; padding: 0.45rem 1rem; text-decoration: none; transition: background 0.15s; }
+      .ntw-affiliate-btn:hover { background: #d47120; }
+
+      /* ─── SAFETY TIP ─────────────────────────────────── */
+      .ntw-safety-tip { background: #0d1a0d; border: 1px solid rgba(39,174,96,0.35); border-left: 4px solid var(--ntw-green); padding: 1.25rem 1.5rem; margin-top: 2rem; }
+      .ntw-safety-tip-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ntw-green); margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.4rem; }
+      .ntw-safety-tip-label::before { content: ''; width: 7px; height: 7px; background: var(--ntw-green); border-radius: 50%; display: inline-block; }
+      .ntw-safety-tip p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.9rem; line-height: 1.68; color: #5a9e6a; margin: 0; }
+      .ntw-safety-tip p strong { color: #8fcf9a; }
+
+      /* ─── AMAZON DISCLOSURE ──────────────────────────── */
+      .ntw-disclosure { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; letter-spacing: 0.05em; color: #2d4050; line-height: 1.6; border-top: 1px solid var(--ntw-border); padding-top: 1rem; margin-top: 2rem; }
+
+      /* ─── SECTIONS ───────────────────────────────────── */
+      .ntw-section { padding: 3rem 0; background: var(--ntw-bg); }
+
+      /* ─── AD SLOT (hidden until AdSense approved) ────── */
+      /* To enable: change display:none to display:flex; justify-content:center */
+      .ntw-ad-slot { display: none; }
+    </style>
+  </head>
+
+  <body data-page="faq">
+    <div class="site-shell">
+
+      <!-- ═══ TICKER ═══════════════════════════════════════════════════════ -->
+      <div class="ntw-ticker" aria-label="Live status ticker" role="marquee">
+        <div class="ntw-ticker-track">
+          <span class="ntw-ticker-label">LIVE</span>
+          <span class="ntw-ticker-text">EPA RadNet monitoring active across the United States &nbsp;|&nbsp; NuclearThreatWatch.org — free public radiation monitoring &nbsp;|&nbsp; Hourly readings from the federal sensor network &nbsp;|&nbsp; Stale data flagged in real time — never hidden &nbsp;|&nbsp; EPA RadNet monitoring active across the United States &nbsp;|&nbsp; NuclearThreatWatch.org — free public radiation monitoring &nbsp;|&nbsp; Hourly readings from the federal sensor network &nbsp;|&nbsp; Stale data flagged in real time — never hidden &nbsp;|&nbsp;</span>
+        </div>
+      </div>
+
+      <!-- ═══ SITE HEADER — injected by layout.js ══════════════════════════ -->
+      <div data-site-header></div>
+
+      <main id="main-content">
+
+        <!-- ═══ PAGE HERO ════════════════════════════════════════════════════ -->
+        <section class="ntw-page-hero">
+          <div class="container">
+            <div class="ntw-page-hero-inner">
+              <p class="ntw-label">Help &amp; Reference</p>
+              <h1>
+                Frequently Asked<br>
+                <em>Questions</em>
+              </h1>
+              <p class="ntw-page-hero-lead">
+                How this site works, where the data comes from, and what you actually need to know about radiation exposure — answered plainly, sourced to federal guidance, and updated as the platform evolves.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ═══ MAIN CONTENT SECTION ═════════════════════════════════════════ -->
+        <section class="ntw-section">
+          <div class="container">
+            <div class="ntw-content-grid">
+
+              <!-- MAIN CONTENT AREA -->
+              <article class="ntw-prose">
+
+                <!-- ── SECTION 1: ABOUT THE SITE ──────────────────────── -->
+                <div class="ntw-divider">
+                  <h2>About NuclearThreatWatch.org</h2>
+                  <div class="ntw-divider-line"></div>
+                </div>
+
+                <p>NuclearThreatWatch.org exists because finding reliable, real-time radiation data in a readable format has historically required digging into government databases most people have never heard of. This platform pulls live gamma radiation readings from the <a href="https://www.epa.gov/radnet" target="_blank" rel="noopener">EPA RadNet</a> sensor network — the same federal infrastructure emergency managers rely on — and puts them on a map anyone can read in under ten seconds. It stays free through advertising so public access to this data never sits behind a paywall.</p>
+
+                <div class="ntw-faq-group">
+
+                  <div class="ntw-faq-item is-open">
+                    <button class="ntw-faq-q" aria-expanded="true">
+                      <span class="ntw-faq-q-text">What is NuclearThreatWatch.org?</span>
+                      <span class="ntw-faq-icon">+</span>
+                    </button>
+                    <div class="ntw-faq-a">
+                      <p>NuclearThreatWatch.org is a free public radiation monitoring platform that displays live gamma readings from the <a href="https://www.epa.gov/radnet" target="_blank" rel="noopener">EPA RadNet</a> nationwide sensor network on an interactive U.S. map. It is built and operated by DigiMktg Co. LLC, developed by Eric Glas out of Quincy, IL. The site is fully independent — not affiliated with any government agency — and is funded through advertising so it can remain free to the public indefinitely. The goal is straightforward: put federal radiation data in front of ordinary people without making them learn how to use a government API to see it.</p>
+                    </div>
+                  </div>
+
+                  <div class="ntw-faq-item">
+                    <button class="ntw-faq-q" aria-expanded="false">
+                      <span class="ntw-faq-q-text">Does this site replace official government guidance?</span>
+                      <span class="ntw-faq-icon">+</span>
+                    </button>
+                    <div class="ntw-faq-a">
+                      <p>No — and this cannot be stated firmly enough. NuclearThreatWatch.org is a reader-friendly monitoring interface built on public EPA data. It is not an official alerting service, it carries no emergency broadcast authority, and it should never substitute for instructions issued by <a href="https://www.ready.gov/nuclear-explosion" target="_blank" rel="noopener">FEMA Ready.gov</a>, the Emergency Alert System, or your local emergency management office. Use this site to stay informed. In a genuine emergency, follow official government direction first, every time.</p>
+                    </div>
+                  </div>
+
+                  <div class="ntw-faq-item">
+                    <button class="ntw-faq-q" aria-expanded="false">
+                      <span class="ntw-faq-q-text">Where does the radiation data come from?</span>
+                      <span class="ntw-faq-icon">+</span>
+                    </button>
+                    <div class="ntw-faq-a">
+                      <p>Every reading on NuclearThreatWatch.org originates from the <a href="https://www.epa.gov/radnet" target="_blank" rel="noopener">EPA RadNet program</a> — a permanent, nationwide network of fixed gamma radiation air monitors operated by the U.S. Environmental Protection Agency. Data is retrieved through the <a href="https://cdxapps.epa.gov/cdx-radnet-rest/swagger-ui.html" target="_blank" rel="noopener">EPA CDX API</a> on an hourly cycle. No third-party data providers are involved. No readings are fabricated or interpolated without a clear label marking them as such.</p>
+                    </div>
+                  </div>
+
+                  <div class="ntw-faq-item">
+                    <button class="ntw-faq-q" aria-expanded="false">
+                      <span class="ntw-faq-q-text">What does "stale" data mean on the map?</span>
+                      <span class="ntw-faq-icon">+</span>
+                    </button>
+                    <div class="ntw-faq-a">
+                      <p>A stale reading means the most recent usable data for that station is older than the site's freshness threshold. This does not mean something alarming is happening. EPA RadNet monitors go offline regularly for calibration, equipment maintenance, and telemetry issues — it is a routine part of network operations. Stale readings are always flagged visibly and are never silently passed off as current data. If you see a stale flag on a station you care about, check back in a few hours or consult <a href="https://www.epa.gov/radnet" target="_blank" rel="noopener">EPA RadNet directly</a> for station status information.</p>
+                    </div>
+                  </div>
+
+                  <div class="ntw-faq-item">
+                    <button class="ntw-faq-q" aria-expanded="false">
+                      <span class="ntw-faq-q-text">Is there a NuclearThreatWatch.org mobile app?</span>
+                      <span class="ntw-faq-icon">+</span>
+                    </button>
+                    <div class="ntw-faq-a">
+                      <p>Yes. NuclearThreatWatch.org is built as a <strong>Progressive Web App (PWA)</strong>, which means you can install it directly to your phone's home screen from your browser — no app store download required. It works on both iOS and Android. This makes it one of the only mobile-accessible platforms delivering real EPA gamma radiation data to your pocket. Other approaches — including apps that attempt to measure radiation by pointing a phone camera at a source — only function under extreme exposure conditions that would already represent a life-threatening emergency. NuclearThreatWatch.org uses the actual federal sensor network. To install: open the site in your mobile browser, tap the share or menu icon, and select "Add to Home Screen."</p>
+                    </div>
+                  </div>
+
+                  <div class="ntw-faq-item">
+                    <button class="ntw-faq-q" aria-expanded="false">
+                      <span class="ntw-faq-q-text">Why does a city name on the map sometimes differ from the EPA station name?</span>
+                      <span class="ntw-faq-icon">+</span>
+                    </button>
+                    <div class="ntw-faq-a">
+                      <p>EPA air-monitor location identifiers are technical slugs assigned during network deployment. They do not always match the nearest city's common name. NuclearThreatWatch.org uses display name overrides in these cases so the data retrieval path functions reliably while the map labels remain readable to the public. The underlying EPA station data is never altered — only the human-facing display label is adjusted.</p>
+                    </div>
+                  </div>
+
+                  <div class="ntw-faq-item">
+                    <button class="ntw-faq-q" aria-expanded="false">
+                      <span class="ntw-faq-q-text">What is an estimated reading?</span>
+                      <span class="ntw-faq-icon">+</span>
+                    </button>
+                    <div class="ntw-faq-a">
+                      <p>An estimated reading is a fallback value displayed only when a live EPA data row cannot be retrieved for a specific station during the current hourly cycle. Estimated values are always clearly labeled so they cannot be confused with a confirmed live-feed response. The site will never display a synthetic value as a verified current reading.</p>
+                    </div>
+                  </div>
+
+                </div><!-- /faq-group about site -->
+
+                <!-- ── AMAZON AFFILIATE CARD ───────────────────────────── -->
+                <!--
+                  NOTE FOR ERIC: Replace href and src with your actual Amazon affiliate
+                  short code and product image for the emergency backpack / first aid kit.
+                  Format: https://amzn.to/YOURCODE — add to Associates dashboard first.
+                -->
+                <div style="margin: 2rem 0; text-align: center;">
+                  <a href="https://amzn.to/4saTdob" target="_blank" rel="nofollow sponsored noopener" aria-label="Emergency preparedness first aid backpack on Amazon">
+                    <img src="assets/img/first-aid-backpack-ad.webp" alt="Emergency preparedness first aid backpack — Price on Amazon" style="max-width:100%; width:320px; height:auto; display:inline-block;" />
+                  </a>
+                </div>
+
+                <!-- ── SECTION 2: RADIATION SAFETY ───────────────────── -->
+                <div class="ntw-divider" style="margin-top:2.5rem;">
+                  <h2>Understanding Radiation</h2>
+                  <div class="ntw-divider-line"></div>
+                </div>
+
+                <p>Most people encounter the word "radiation" in alarming headlines and walk away with little practical understanding of what the numbers mean or when to act. The answers below are grounded in guidance from the <a href="https://www.cdc.gov/niosh/radiation/default.html" target="_blank" rel="noopener">CDC</a>, the <a href="https://www.fda.gov/drugs/bioterrorism-and-drug-preparedness/frequently-asked-questions-potassium-iodide-ki" target="_blank" rel="noopener">FDA</a>, and the <a href="https://www.nrc.gov/reactors/operating/list-power-reactor-units.html" target="_blank" rel="noopener">Nuclear Regulatory Commission</a>. They are educational only — not a substitute for medical advice or official emergency guidance.</p>
+
+                <div class="ntw-faq-group">
+
+                  <div class="ntw-faq-item">
+                    <button class="ntw-faq-q" aria-expanded="false">
+                      <span class="ntw-faq-q-text">What is background radiation?</span>
+                      <span class="ntw-faq-icon">+</span>
+                    </button>
+                    <div class="ntw-faq-a">
+                      <p>Background radiation is the naturally occurring ionizing radiation present everywhere on Earth at all times. It originates from four primary sources: cosmic rays streaming in from space, radon gas seeping up from soil and rock, trace radioactive minerals naturally present in building materials and the ground, and low-level radioactivity inherent in food and the human body itself. The U.S. average background dose is approximately <strong>310 millirem (mrem) per year</strong> — roughly 0.035 microsieverts per hour at ground level. This is the baseline against which EPA RadNet readings are compared, and it varies meaningfully by geography, elevation, and local geology.</p>
+                    </div>
+                  </div>
+
+                  <div class="ntw-faq-item">
+                    <button class="ntw-faq-q" aria-expanded="false">
+                      <span class="ntw-faq-q-text">What radiation level is considered dangerous?</span>
+                      <span class="ntw-faq-icon">+</span>
+                    </button>
+                    <div class="ntw-faq-a">
+                      <p>Brief exposures below <strong>100 millisieverts (mSv)</strong> are not associated with measurable increases in cancer risk or other health effects, according to the <a href="https://www.nrc.gov" target="_blank" rel="noopener">U.S. Nuclear Regulatory Commission</a>. Health risk rises with dose above that level, particularly when exposure occurs in a short time window. Acute Radiation Syndrome can begin at whole-body doses above <strong>1,000 mSv (1 Sv)</strong> received rapidly. For context: a chest X-ray delivers roughly 0.1 mSv, and a full-body CT scan is approximately 10 mSv. The EPA and NRC set public annual dose limits well below 100 mSv for routine, non-emergency situations. The readings shown on NuclearThreatWatch.org under normal conditions are many orders of magnitude below these thresholds.</p>
+                    </div>
+                  </div>
+
+                  <div class="ntw-faq-item">
+                    <button class="ntw-faq-q" aria-expanded="false">
+                      <span class="ntw-faq-q-text">What is radiation poisoning and what are the symptoms?</span>
+                      <span class="ntw-faq-icon">+</span>
+                    </button>
+                    <div class="ntw-faq-a">
+                      <p><strong>Acute Radiation Syndrome (ARS)</strong> — commonly called radiation poisoning — results from high-dose whole-body exposure in a short time period. It is not caused by the background-level readings EPA RadNet monitors under normal conditions. Symptoms progress through distinct stages:</p>
+                      <ul>
+                        <li><strong>Prodromal stage (0–48 hrs after exposure):</strong> nausea, vomiting, headache, fatigue, and fever. Onset speed and severity correlate with dose received.</li>
+                        <li><strong>Latent stage:</strong> symptoms subside temporarily and the person may feel relatively normal. Duration ranges from days to weeks depending on dose.</li>
+                        <li><strong>Manifest illness stage:</strong> bone marrow suppression, compromised immune function, potential hair loss, and internal bleeding at higher doses.</li>
+                        <li><strong>Recovery or death</strong> depending on total dose, time elapsed before medical treatment, and individual health factors.</li>
+                      </ul>
+                      <p>ARS is a life-threatening medical emergency. If you believe you have been exposed to a high-level radiation source, call 911 immediately and follow <a href="https://www.cdc.gov/niosh/radiation/default.html" target="_blank" rel="noopener">CDC radiation emergency guidance</a>. Do not rely on any monitoring website — including this one — as a diagnostic tool for radiation exposure.</p>
+                    </div>
+                  </div>
+
+                  <div class="ntw-faq-item">
+                    <button class="ntw-faq-q" aria-expanded="false">
+                      <span class="ntw-faq-q-text">What should I do if radiation levels spike on the map?</span>
+                      <span class="ntw-faq-icon">+</span>
+                    </button>
+                    <div class="ntw-faq-a">
+                      <p>A single elevated reading on one station does not confirm a public health emergency. RadNet sensors can produce anomalous readings due to equipment malfunctions, calibration drift, or highly localized events that carry no regional risk. Before taking any action:</p>
+                      <ul>
+                        <li>Check whether neighboring stations in the same region show similar elevation — isolated spikes are more likely sensor issues than widespread events.</li>
+                        <li>Monitor official sources: <a href="https://www.ready.gov/nuclear-explosion" target="_blank" rel="noopener">FEMA Ready.gov</a>, your state emergency management agency, and the Emergency Alert System (EAS).</li>
+                        <li>Do not evacuate based solely on anything you see on this site. Evacuation decisions require official authorization and coordinated emergency management.</li>
+                        <li>If multiple stations in your area are elevated simultaneously and official alerts are being issued, follow <a href="https://www.dhs.gov/topic/nuclear-and-radiological-threats" target="_blank" rel="noopener">DHS nuclear preparedness guidance</a> and shelter in place until told otherwise.</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="ntw-faq-item">
+                    <button class="ntw-faq-q" aria-expanded="false">
+                      <span class="ntw-faq-q-text">What is potassium iodide (KI) and when should I take it?</span>
+                      <span class="ntw-faq-icon">+</span>
+                    </button>
+                    <div class="ntw-faq-a">
+                      <p>Potassium iodide (KI) is a non-prescription medication that saturates the thyroid gland, blocking it from absorbing radioactive iodine (I-131) that may be released following a nuclear power plant accident or certain nuclear detonation scenarios. <strong>KI protects only the thyroid gland — it does not protect the rest of the body from radiation exposure of any kind.</strong> It is not a general-purpose radiation treatment and does not reduce whole-body dose.</p>
+                      <p>According to <a href="https://www.fda.gov/drugs/bioterrorism-and-drug-preparedness/frequently-asked-questions-potassium-iodide-ki" target="_blank" rel="noopener">FDA guidance on potassium iodide</a>, KI should only be taken on the explicit direction of public health officials or emergency management — not preemptively based on anything shown on a monitoring website. The FDA-recommended dose is <strong>130mg for adults and 65mg for children</strong>. Taking KI without a genuine radioactive iodine release event can cause serious side effects, particularly for people with thyroid conditions or iodine sensitivity.</p>
+                    </div>
+                  </div>
+
+                </div><!-- /faq-group radiation -->
+
+                <!-- SAFETY TIP — required on every page -->
+                <div class="ntw-safety-tip">
+                  <p class="ntw-safety-tip-label">Safety Tip</p>
+                  <p>
+                    <strong>Know your shelter-in-place basics before an emergency.</strong> In a radiological event, going inside a sturdy building and closing all windows, doors, and ventilation reduces your exposure significantly. A brick or concrete structure offers substantially more protection than a wood-frame home. Keep a battery-powered or hand-crank NOAA weather radio on hand — it is the most reliable alert channel when cell networks are overloaded. Review <a href="https://www.ready.gov/nuclear-explosion" target="_blank" rel="noopener" style="color:#8fcf9a;">FEMA's nuclear preparedness checklist</a> now, not after the fact.
+                  </p>
+                </div>
+
+
+
+              </article><!-- /ntw-prose -->
+
+              <!-- ═══ SIDEBAR ══════════════════════════════════════════════ -->
+              <aside class="ntw-sidebar">
+
+                <div class="ntw-panel is-gold">
+                  <p class="ntw-label is-gold">Quick Reference</p>
+                  <h3>Radiation Dose Units</h3>
+                  <p><strong style="color:#c8dde8;">Microsievert (µSv)</strong> — unit used on this map. Typical background: ~0.1 µSv/hr.</p>
+                  <p><strong style="color:#c8dde8;">Millisievert (mSv)</strong> — 1,000 µSv. U.S. annual average background: ~3.1 mSv.</p>
+                  <p><strong style="color:#c8dde8;">Millirem (mrem)</strong> — U.S. customary unit. 1 mSv = 100 mrem.</p>
+                  <p>Readings 2–3× background sustained over time warrant monitoring. Readings 10× background or higher with concurrent official alerts: follow emergency guidance immediately.</p>
+                </div>
+
+                <div class="ntw-panel is-green">
+                  <p class="ntw-label is-green">Official Sources</p>
+                  <h3>Government References</h3>
+                  <div class="ntw-panel-links">
+                    <a class="ntw-panel-link" href="https://www.epa.gov/radnet" target="_blank" rel="noopener">EPA RadNet Program</a>
+                    <a class="ntw-panel-link" href="https://www.ready.gov/nuclear-explosion" target="_blank" rel="noopener">FEMA Ready.gov</a>
+                    <a class="ntw-panel-link" href="https://www.fda.gov/drugs/bioterrorism-and-drug-preparedness/frequently-asked-questions-potassium-iodide-ki" target="_blank" rel="noopener">FDA — Potassium Iodide Guide</a>
+                    <a class="ntw-panel-link" href="https://www.cdc.gov/niosh/radiation/default.html" target="_blank" rel="noopener">CDC Radiation Safety</a>
+                    <a class="ntw-panel-link" href="https://www.dhs.gov/topic/nuclear-and-radiological-threats" target="_blank" rel="noopener">DHS Nuclear Threats</a>
+                    <a class="ntw-panel-link" href="https://www.nrc.gov/reactors/operating/list-power-reactor-units.html" target="_blank" rel="noopener">NRC Reactor Locations</a>
+                  </div>
+                </div>
+
+                <div class="ntw-panel">
+                  <p class="ntw-label">Related Pages</p>
+                  <div class="ntw-panel-links">
+                    <a class="ntw-panel-link" href="index.html">Live Map</a>
+                    <a class="ntw-panel-link" href="methodology.html">Methodology</a>
+                    <a class="ntw-panel-link" href="data.html">Data Architecture</a>
+                    <a class="ntw-panel-link" href="stations.html">Station Directory</a>
+                    <a class="ntw-panel-link" href="resources.html">Preparedness Resources</a>
+                  </div>
+                </div>
+
+                <!-- AD SLOT — sidebar — hidden until AdSense approved (counts toward 3-ad limit) -->
+                <!-- To enable: change display:none to display:flex; justify-content:center -->
+                <div class="ntw-ad-slot" data-ad-slot data-ad-position="sidebar" data-ad-page="faq"></div>
+
+              </aside>
+
+            </div><!-- /ntw-content-grid -->
+          </div><!-- /container -->
+        </section>
+
+        <!-- AD SLOT — lower — hidden until AdSense approved (counts toward 3-ad limit) -->
+        <!-- To enable: change display:none to display:flex; justify-content:center -->
+        <!-- AD COUNT THIS PAGE: 1 Amazon affiliate + 2 hidden AdSense = 3 total. At limit. -->
+        <div class="ntw-ad-slot" data-ad-slot data-ad-position="lower" data-ad-page="faq"></div>
+
+      </main>
+
+      <!-- ═══ SITE FOOTER — injected by layout.js ══════════════════════════ -->
+      <div data-site-footer></div>
+
+      <!-- ═══ COPYRIGHT BAR ════════════════════════════════════════════════ -->
+      <div style="background:#04080c; border-top:2px solid #1c2e3e; padding:1rem 0; text-align:center;">
+        <p style="font-family:'IBM Plex Mono',monospace; font-size:0.64rem; letter-spacing:0.1em; color:#2d4a5e; margin:0; line-height:1.8;">
+          &copy; 2026 NuclearThreatWatch.org &nbsp;|&nbsp; DigiMktg Co. LLC &nbsp;|&nbsp; Dev: Eric Glas
+          <br>
+          <span style="color:#1e3545;">Data sourced from <a href="https://www.epa.gov/radnet" target="_blank" rel="noopener" style="color:#2d5a74;text-decoration:none;">EPA RadNet</a> &mdash; for informational use only. Not an official government service.</span>
+        </p>
+      </div>
+
+    </div><!-- /site-shell -->
+
+    <script type="module" src="assets/js/main.js"></script>
+
+    <!-- FAQ accordion — vanilla JS, no framework, no build step required -->
+    <script>
+      (function () {
+        document.querySelectorAll('.ntw-faq-q').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var item = this.closest('.ntw-faq-item');
+            var isOpen = item.classList.contains('is-open');
+            // Close all open items
+            document.querySelectorAll('.ntw-faq-item.is-open').forEach(function (el) {
+              el.classList.remove('is-open');
+              el.querySelector('.ntw-faq-q').setAttribute('aria-expanded', 'false');
+            });
+            // Open the clicked item if it was previously closed
+            if (!isOpen) {
+              item.classList.add('is-open');
+              btn.setAttribute('aria-expanded', 'true');
+            }
+          });
+        });
+      })();
+    </script>
+
+  </body>
+</html>

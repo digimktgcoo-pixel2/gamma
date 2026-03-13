@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Methodology — How We Read Radiation Data & What the Numbers Mean | NuclearThreatWatch.org</title>
+    <meta name="description" content="How NuclearThreatWatch.org pulls live EPA RadNet radiation data, what safe radiation levels look like in microsieverts per hour, and exactly when you should be concerned." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://nuclearthreatwatch.org/methodology.html" />
+
+    <meta property="og:title" content="Methodology — How We Read Radiation Data & What the Numbers Mean | NuclearThreatWatch.org" />
+    <meta property="og:description" content="How NuclearThreatWatch.org pulls live EPA RadNet radiation data, what safe radiation levels look like in microsieverts per hour, and exactly when you should be concerned." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://nuclearthreatwatch.org/methodology.html" />
+    <meta property="og:image" content="https://nuclearthreatwatch.org/assets/img/social-share.png" />
+    <meta property="og:site_name" content="NuclearThreatWatch.org" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "name": "Methodology — How NuclearThreatWatch.org Reads Live Radiation Data",
+      "url": "https://nuclearthreatwatch.org/methodology.html",
+      "description": "How NuclearThreatWatch.org fetches live EPA RadNet radiation readings, handles stale data and station naming, and what radiation levels in microsieverts per hour actually mean for public safety.",
+      "author": {
+        "@type": "Organization",
+        "name": "NuclearThreatWatch.org",
+        "url": "https://nuclearthreatwatch.org"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "DigiMktg Co. LLC",
+        "url": "https://nuclearthreatwatch.org"
+      },
+      "isPartOf": { "@id": "https://nuclearthreatwatch.org/#website" },
+      "about": [
+        { "@type": "Thing", "name": "Radiation monitoring" },
+        { "@type": "Thing", "name": "EPA RadNet" },
+        { "@type": "Thing", "name": "Radiation safety levels" }
+      ]
+    }
+    </script>
+
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png" />
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#0a0e13" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/theme.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+
+    <style>
+      :root {
+        --ntw-red:      #c0392b;
+        --ntw-red-dark: #962d22;
+        --ntw-amber:    #e67e22;
+        --ntw-green:    #27ae60;
+        --ntw-gold:     #e8c84a;
+        --ntw-bg:       #080c10;
+        --ntw-surface:  #0d151d;
+        --ntw-surface2: #111d27;
+        --ntw-border:   #1c2e3e;
+        --ntw-muted:    #6a8a9e;
+      }
+
+      /* ─── TICKER ─────────────────────────────────────── */
+      .ntw-ticker { background: var(--ntw-red); overflow: hidden; white-space: nowrap; padding: 0.42rem 0; }
+      .ntw-ticker-track { display: inline-flex; align-items: center; animation: ntw-scroll 55s linear infinite; }
+      .ntw-ticker-label { font-family: 'Oswald', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em; background: #fff; color: var(--ntw-red); padding: 0.15rem 0.6rem; margin-right: 1.5rem; flex-shrink: 0; }
+      .ntw-ticker-text { font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; letter-spacing: 0.06em; color: rgba(255,255,255,0.92); padding-right: 4rem; }
+      @keyframes ntw-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+      /* ─── LABEL ──────────────────────────────────────── */
+      .ntw-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ntw-red); margin-bottom: 0.65rem; display: flex; align-items: center; gap: 0.5rem; }
+      .ntw-label.is-gold  { color: var(--ntw-gold); }
+      .ntw-label.is-green { color: var(--ntw-green); }
+      .ntw-label.is-amber { color: var(--ntw-amber); }
+      .ntw-label::before { content: ''; display: inline-block; width: 14px; height: 2px; background: currentColor; flex-shrink: 0; }
+
+      /* ─── PAGE HERO ──────────────────────────────────── */
+      .ntw-page-hero { padding: 3rem 0 2.5rem; background: var(--ntw-bg); border-bottom: 3px solid var(--ntw-border); position: relative; overflow: hidden; }
+      .ntw-page-hero-inner { position: relative; max-width: 820px; }
+      .ntw-page-hero h1 { font-family: 'Oswald', sans-serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; line-height: 1.02; text-transform: uppercase; color: #fff; margin: 0 0 1rem; }
+      .ntw-page-hero h1 em { font-style: normal; color: var(--ntw-gold); }
+      .ntw-page-hero-lead { font-family: 'Source Serif 4', Georgia, serif; font-size: 1.05rem; line-height: 1.72; color: #8faec0; max-width: 70ch; margin: 0; }
+
+      /* ─── CONTENT GRID ───────────────────────────────── */
+      .ntw-content-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; }
+      @media (min-width: 820px) { .ntw-content-grid { grid-template-columns: 1fr 300px; } }
+
+      /* ─── SECTION DIVIDER ────────────────────────────── */
+      .ntw-divider { display: flex; align-items: center; gap: 1rem; border-bottom: 2px solid var(--ntw-border); padding-bottom: 0.6rem; margin-bottom: 1.75rem; }
+      .ntw-divider h2 { font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #fff; margin: 0; white-space: nowrap; }
+      .ntw-divider-line { flex: 1; height: 1px; background: var(--ntw-border); }
+
+      /* ─── PROSE ──────────────────────────────────────── */
+      .ntw-prose h2 { font-family: 'Oswald', sans-serif; font-size: 1.15rem; font-weight: 700; text-transform: uppercase; color: #fff; margin: 2.5rem 0 0.8rem; letter-spacing: 0.04em; border-left: 3px solid var(--ntw-gold); padding-left: 0.75rem; }
+      .ntw-prose h2:first-child { margin-top: 0; }
+      .ntw-prose h3 { font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 600; text-transform: uppercase; color: #c8dde8; margin: 1.75rem 0 0.6rem; }
+      .ntw-prose p { font-family: 'Source Serif 4', Georgia, serif; font-size: 1rem; line-height: 1.8; color: #7a9fb5; margin: 0 0 1.1rem; }
+      .ntw-prose strong { color: #c8dde8; }
+      .ntw-prose a { color: var(--ntw-gold); text-decoration: underline; text-underline-offset: 2px; }
+      .ntw-prose ul, .ntw-prose ol { padding-left: 1.2rem; margin: 0 0 1.25rem; }
+      .ntw-prose ul li, .ntw-prose ol li { font-family: 'Source Serif 4', Georgia, serif; font-size: 1rem; line-height: 1.75; color: #7a9fb5; margin-bottom: 0.5rem; }
+
+      /* ─── RADIATION LEVEL TABLE ──────────────────────── */
+      .ntw-rad-table { width: 100%; border-collapse: collapse; margin: 1.25rem 0 1.75rem; }
+      .ntw-rad-table thead tr { background: var(--ntw-surface); border-bottom: 2px solid var(--ntw-border); }
+      .ntw-rad-table th { font-family: 'Oswald', sans-serif; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #c8dde8; padding: 0.65rem 0.9rem; text-align: left; }
+      .ntw-rad-table td { font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; color: #7a9fb5; padding: 0.6rem 0.9rem; border-bottom: 1px solid var(--ntw-border); vertical-align: top; line-height: 1.5; }
+      .ntw-rad-table tr:last-child td { border-bottom: none; }
+      .ntw-rad-table .lvl-normal { color: var(--ntw-green); font-weight: 500; }
+      .ntw-rad-table .lvl-watch  { color: var(--ntw-gold);  font-weight: 500; }
+      .ntw-rad-table .lvl-concern{ color: var(--ntw-amber); font-weight: 500; }
+      .ntw-rad-table .lvl-danger { color: var(--ntw-red);   font-weight: 500; }
+
+      /* ─── SIDEBAR PANELS ─────────────────────────────── */
+      .ntw-sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+      .ntw-panel { background: var(--ntw-surface2); border: 1px solid var(--ntw-border); padding: 1.5rem; }
+      .ntw-panel.is-gold  { border-top: 3px solid var(--ntw-gold); }
+      .ntw-panel.is-green { border-top: 3px solid var(--ntw-green); }
+      .ntw-panel.is-red   { border-top: 3px solid var(--ntw-red); }
+      .ntw-panel.is-amber { border-top: 3px solid var(--ntw-amber); }
+      .ntw-panel h3 { font-family: 'Oswald', sans-serif; font-size: 0.95rem; font-weight: 600; text-transform: uppercase; color: #fff; margin: 0.35rem 0 0.85rem; letter-spacing: 0.04em; }
+      .ntw-panel p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.86rem; line-height: 1.62; color: var(--ntw-muted); margin: 0 0 0.6rem; }
+      .ntw-panel p:last-child { margin: 0; }
+      .ntw-panel a { color: var(--ntw-gold); }
+      .ntw-panel-links { display: flex; flex-direction: column; }
+      .ntw-panel-link { font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ntw-gold); text-decoration: none; padding: 0.5rem 0; border-bottom: 1px solid var(--ntw-border); }
+      .ntw-panel-link:last-child { border-bottom: none; }
+      .ntw-panel-link::before { content: '→ '; }
+
+      /* ─── SAFETY TIP ─────────────────────────────────── */
+      .ntw-safety-tip { background: #0d1a0d; border: 1px solid rgba(39,174,96,0.35); border-left: 4px solid var(--ntw-green); padding: 1.25rem 1.5rem; margin-top: 2rem; }
+      .ntw-safety-tip-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ntw-green); margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.4rem; }
+      .ntw-safety-tip-label::before { content: ''; width: 7px; height: 7px; background: var(--ntw-green); border-radius: 50%; display: inline-block; }
+      .ntw-safety-tip p { font-family: 'Source Serif 4', Georgia, serif; font-size: 0.9rem; line-height: 1.68; color: #5a9e6a; margin: 0; }
+      .ntw-safety-tip p strong { color: #8fcf9a; }
+
+      /* ─── SECTIONS ───────────────────────────────────── */
+      .ntw-section { padding: 3rem 0; background: var(--ntw-bg); }
+
+      /* ─── AD SLOT ────────────────────────────────────── */
+      .ntw-ad-slot { display: none; }
+    </style>
+  </head>
+
+  <body data-page="methodology">
+    <div class="site-shell">
+
+      <!-- ═══ TICKER ═══════════════════════════════════════════════════════ -->
+      <div class="ntw-ticker" aria-label="Live status ticker" role="marquee">
+        <div class="ntw-ticker-track">
+          <span class="ntw-ticker-label">LIVE</span>
+          <span class="ntw-ticker-text">EPA RadNet monitoring active across the United States &nbsp;|&nbsp; NuclearThreatWatch.org — free public radiation monitoring &nbsp;|&nbsp; Hourly readings from the federal sensor network &nbsp;|&nbsp; Stale data flagged in real time — never hidden &nbsp;|&nbsp; EPA RadNet monitoring active across the United States &nbsp;|&nbsp; NuclearThreatWatch.org — free public radiation monitoring &nbsp;|&nbsp; Hourly readings from the federal sensor network &nbsp;|&nbsp; Stale data flagged in real time — never hidden &nbsp;|&nbsp;</span>
+        </div>
+      </div>
+
+      <!-- ═══ SITE HEADER — injected by layout.js ══════════════════════════ -->
+      <div data-site-header></div>
+
+      <main id="main-content">
+
+        <!-- ═══ PAGE HERO ════════════════════════════════════════════════════ -->
+        <section class="ntw-page-hero">
+          <div class="container">
+            <div class="ntw-page-hero-inner">
+              <p class="ntw-label">Data &amp; Transparency</p>
+              <h1>
+                How We Read the Data —<br>
+                <em>And What It Means</em>
+              </h1>
+              <p class="ntw-page-hero-lead">
+                Where every reading comes from, how the live fetch pipeline works, what radiation levels in microsieverts per hour actually mean for your safety, and exactly when the numbers on this map should make you pay attention.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ═══ MAIN CONTENT ═════════════════════════════════════════════════ -->
+        <section class="ntw-section">
+          <div class="container">
+            <div class="ntw-content-grid">
+
+              <article class="ntw-prose">
+
+                <!-- ── HOW THE DATA PIPELINE WORKS ──────────────────── -->
+                <div class="ntw-divider">
+                  <h2>How the Live Data Pipeline Works</h2>
+                  <div class="ntw-divider-line"></div>
+                </div>
+
+                <p>Every radiation reading shown on NuclearThreatWatch.org originates from one place: the <a href="https://www.epa.gov/radnet" target="_blank" rel="noopener">EPA RadNet program</a>, operated by the U.S. Environmental Protection Agency. RadNet is a permanent, nationwide network of fixed gamma radiation air monitors installed at locations across all 50 states. It is the same federal infrastructure that emergency managers, state health departments, and nuclear facility operators rely on to track ambient radiation levels in the environment. NuclearThreatWatch.org does not manufacture, estimate, or source data from anywhere else — the pipeline goes directly from EPA servers to your screen.</p>
+
+                <p>Data is fetched through the <a href="https://cdxapps.epa.gov/cdx-radnet-rest/swagger-ui.html" target="_blank" rel="noopener">EPA CDX API</a>, which provides structured access to RadNet CSV readings organized by year, state, and station location identifier. A Cloudflare Worker sitting between the frontend and the EPA API handles the actual request. This architecture keeps the browser-facing code clean, eliminates cross-origin resource sharing (CORS) issues that would block direct browser-to-EPA requests, and prevents path-encoding problems that can corrupt city name strings containing spaces or special characters. The Worker requests the data, the frontend displays it — simple and auditable.</p>
+
+                <h2>Year Fallback Logic — Why January Never Looks Broken</h2>
+
+                <p>One subtle but important detail in how EPA RadNet data is structured: readings are organized by calendar year. In early January, a station's current-year data path may be sparse or not yet returning a populated row because the year has just begun and the EPA pipeline hasn't backfilled recent readings into the new year's dataset. Without a fallback, a monitoring site built on live EPA data would appear to go silent every January 1st — which would be alarming and wrong.</p>
+
+                <p>NuclearThreatWatch.org handles this with a <strong>year fallback</strong>: the frontend first attempts to retrieve the current year's data for each station. If that path returns no usable row, it automatically retries with the previous year. This prevents a clean calendar rollover from creating the appearance of system failure or missing data. The fallback is transparent — readings pulled via this method are still labeled with their actual timestamp, not presented as live when they are not.</p>
+
+                <h2>Station Names & City Override Map</h2>
+
+                <p>One of the more technically tedious aspects of building on the EPA RadNet dataset is that the location identifiers used in the API do not always match the common city names people use in everyday conversation. The EPA assigns station slugs based on internal network deployment records — and those slugs sometimes point to suburbs, monitoring facility names, or geographic designations that have no obvious relationship to the nearest major city a reader would recognize.</p>
+
+                <p>NuclearThreatWatch.org maintains an explicit city override map that resolves the known trouble spots. Examples include: <strong>Dover</strong> for Delaware's primary station, <strong>St. Paul</strong> for Minnesota, <strong>Edison</strong> for the central New Jersey path, <strong>Lockport</strong> for the Buffalo-area New York station, <strong>Pierre</strong> for South Dakota, <strong>Casper</strong> for Wyoming, <strong>Baton Rouge</strong> for Louisiana, and <strong>Billings</strong> for Montana. The display label the map shows is the readable city name. The API call uses the EPA-correct slug behind the scenes. The underlying data is never altered — only the human-facing label is adjusted for clarity.</p>
+
+                <h2>Live, Stale, and Estimated — What Each State Means</h2>
+
+                <p>The map uses three clearly distinguished data states, and understanding the difference matters for reading it correctly.</p>
+
+                <p>A <strong>live reading</strong> is a current value retrieved directly from the EPA CDX endpoint within the site's freshness window. It carries a real timestamp from the EPA feed and reflects an actual sensor measurement. This is the normal operating state for active RadNet stations.</p>
+
+                <p>A <strong>stale reading</strong> means the most recently retrieved value for that station is older than the freshness threshold — typically a few hours. The reading is still displayed because hiding data the site has is worse than showing it with a caveat, but it is clearly flagged so no one mistakes an older reading for a current one. EPA stations go offline for maintenance, calibration, and telemetry issues on a routine basis. A stale flag does not indicate an emergency at the station — it indicates a gap in the EPA feed for that location.</p>
+
+                <p>An <strong>estimated reading</strong> is a last-resort fallback value shown only when no EPA row — current or recent — can be retrieved for a station at all. Estimated values are always labeled explicitly. They are not fabricated — they represent a baseline-style placeholder to prevent the map from showing a blank void where a station should be — but they should be treated with appropriate skepticism until the live feed resumes.</p>
+
+                <!-- ── RADIATION LEVELS REFERENCE ────────────────────── -->
+                <div class="ntw-divider" style="margin-top:2.5rem;">
+                  <h2>Radiation Levels — What the Numbers Actually Mean</h2>
+                  <div class="ntw-divider-line"></div>
+                </div>
+
+                <p>The single most common question new visitors have after they see the map is: <em>is that number normal?</em> The answer requires understanding what you are looking at. NuclearThreatWatch.org displays radiation readings in <strong>microsieverts per hour (µSv/hr)</strong> — the international unit for measuring the biological effect of radiation on the human body per unit time. Here is what the numbers mean in plain terms.</p>
+
+                <h3>The U.S. Background Radiation Baseline</h3>
+
+                <p>Background radiation is the naturally occurring ionizing radiation that has always been present on Earth. It comes from cosmic rays streaming in from space, radon gas seeping up from soil and granite, trace radioactive isotopes in building materials and food, and the natural radioactivity within the human body itself. The <a href="https://www.nrc.gov" target="_blank" rel="noopener">U.S. Nuclear Regulatory Commission</a> puts the average U.S. annual background dose at approximately <strong>310 millirem per year</strong>, which works out to roughly <strong>0.035–0.10 µSv/hr</strong> at ground level depending on location. High-altitude cities like Denver, Colorado run meaningfully higher due to reduced atmospheric shielding from cosmic radiation. Coastal cities at sea level typically run lower. This is the range you should expect to see on the NuclearThreatWatch.org map under normal conditions.</p>
+
+                <h3>Radiation Level Reference — When to Watch, When to Worry</h3>
+
+                <p>The table below translates common µSv/hr readings into plain-language context. These thresholds are derived from <a href="https://www.cdc.gov/niosh/radiation/default.html" target="_blank" rel="noopener">CDC radiation emergency guidelines</a>, <a href="https://www.nrc.gov" target="_blank" rel="noopener">NRC public dose standards</a>, and established health physics reference ranges. They apply to sustained exposure levels, not brief momentary spikes.</p>
+
+                <table class="ntw-rad-table" aria-label="Radiation level reference table">
+                  <thead>
+                    <tr>
+                      <th>Level (µSv/hr)</th>
+                      <th>Status</th>
+                      <th>Context</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="lvl-normal">0.03 – 0.10</td>
+                      <td class="lvl-normal">Normal</td>
+                      <td>Typical U.S. background. No concern whatsoever.</td>
+                    </tr>
+                    <tr>
+                      <td class="lvl-normal">0.10 – 0.30</td>
+                      <td class="lvl-normal">Elevated Normal</td>
+                      <td>High-altitude locations, granite geology, some building materials. Still within normal variation.</td>
+                    </tr>
+                    <tr>
+                      <td class="lvl-watch">0.30 – 1.00</td>
+                      <td class="lvl-watch">Monitor</td>
+                      <td>Above typical background. Worth noting if sustained. Single-station spikes here are often sensor or calibration events.</td>
+                    </tr>
+                    <tr>
+                      <td class="lvl-concern">1.00 – 10.00</td>
+                      <td class="lvl-concern">Concern Threshold</td>
+                      <td>Significantly elevated. Check neighboring stations. Monitor official sources. Do not panic — sensor malfunctions occur. If multiple stations show this simultaneously with official alerts, take shelter.</td>
+                    </tr>
+                    <tr>
+                      <td class="lvl-danger">Above 10.00</td>
+                      <td class="lvl-danger">Emergency Range</td>
+                      <td>Far above background. If multiple stations confirm and official alerts are active, follow FEMA shelter-in-place guidance immediately. Single-station readings at this level are almost always equipment failures.</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <h3>The Difference Between a Spike and a Pattern</h3>
+
+                <p>A single reading on a single station jumping above normal range is rarely meaningful on its own. RadNet sensors are sophisticated but they are also mechanical instruments exposed to the elements — they malfunction, they drift, they pick up localized noise from nearby equipment or construction. What matters when evaluating an elevated reading is whether the pattern holds across multiple stations in the same region over multiple consecutive readings. One station showing 2.5 µSv/hr for one hour is almost certainly a sensor event. Five stations across three states all trending above 1.0 µSv/hr simultaneously with official government alerts is an entirely different situation and warrants immediate action.</p>
+
+                <p>NuclearThreatWatch.org is designed to make this pattern recognition easier — you can see the full map at a glance rather than cross-referencing individual EPA data tables. That is the core utility of the platform. Use it to see the picture. Use official sources to decide what to do about it.</p>
+
+                <h3>Should I Own a Personal Geiger Counter?</h3>
+
+                <p>For most people, NuclearThreatWatch.org and the <a href="https://www.epa.gov/radnet" target="_blank" rel="noopener">EPA RadNet network</a> provide more than enough awareness of regional ambient radiation levels. However, if you live within the emergency planning zone of a nuclear power plant — typically a 10-mile radius as defined by the <a href="https://www.nrc.gov/reactors/operating/list-power-reactor-units.html" target="_blank" rel="noopener">NRC</a> — or if you work in a field where radiation exposure is a realistic occupational concern, owning a personal radiation detector is a reasonable preparedness step. A quality handheld Geiger counter can detect alpha, beta, and gamma radiation, giving you a real-time local reading that no network-based map can replicate at the individual household level.</p>
+
+                <!-- GEIGER COUNTER AFFILIATE CARD -->
+                <!-- Image file: assets/img/geiger-counter-ad.webp (from handoff brief)
+                     If your file extension is different (.webp, .png) update the src below. -->
+                <div style="margin: 2rem 0; text-align: center;">
+                  <a href="https://amzn.to/4cE9PzG" target="_blank" rel="nofollow sponsored noopener" aria-label="Geiger counter radiation detector on Amazon">
+                    <img src="assets/img/geiger-counter-ad.webp" alt="Handheld Geiger counter radiation detector — Price on Amazon" style="max-width:100%; width:320px; height:auto; display:inline-block;" />
+                  </a>
+                </div>
+
+                <h2>What Is Not in Scope Yet</h2>
+
+                <p>The current version of NuclearThreatWatch.org is intentionally focused on one thing: live ambient gamma radiation readings from the EPA RadNet sensor network, displayed clearly and honestly in real time. Several capabilities are planned for future versions but are not present in the launch build, and it is important to be transparent about what the site does not yet do.</p>
+
+                <p><strong>Historical data queries</strong> — the EPA's <a href="https://www.epa.gov/radnet" target="_blank" rel="noopener">Envirofacts database</a> provides access to years of historical RadNet readings and would power a proper historical research layer. Building a queryable historical interface is planned but not present in the current version. The <a href="data.html">data architecture page</a> explains why the live map uses the CDX CSV path while historical work will use Envirofacts.</p>
+
+                <p><strong>State-by-state drilldowns</strong> with individual station histories, downloadable data tables, and radiation trend graphs are all planned features that require the historical data layer first. They will follow once the core live-monitoring platform is stable.</p>
+
+                <p><strong>Lab-result data and isotope-specific readings</strong> — RadNet also collects air filter and precipitation samples that are analyzed in labs for specific isotopes including cesium, iodine, and strontium. This data is richer but also slower — results can take days to weeks to appear in the EPA feed. Integrating lab results is a future enhancement, not a launch feature.</p>
+
+                <p>The <a href="resources.html">preparedness resources section</a> and the <a href="stations.html">station directory</a> cover what is currently available in the platform. The methodology described on this page applies to everything currently live on the site.</p>
+
+                <!-- SAFETY TIP -->
+                <div class="ntw-safety-tip">
+                  <p class="ntw-safety-tip-label">Safety Tip</p>
+                  <p>
+                    <strong>Distance and shielding are your two best tools against radiation exposure.</strong> In any radiological scenario, putting distance between yourself and a source — and mass between yourself and a source — reduces dose received. A basement in a concrete or brick building offers substantial shielding compared to standing outside. The interior rooms of any multistory building reduce exposure compared to exterior walls. You do not need a specialized shelter to benefit from basic physics. Get inside, get to the center, and stay informed via official government channels.
+                  </p>
+                </div>
+
+              </article><!-- /ntw-prose -->
+
+              <!-- ═══ SIDEBAR ══════════════════════════════════════════════ -->
+              <aside class="ntw-sidebar">
+
+                <div class="ntw-panel is-gold">
+                  <p class="ntw-label is-gold">Quick Reference</p>
+                  <h3>µSv/hr At a Glance</h3>
+                  <p><strong style="color:#27ae60;">0.03–0.10</strong> — Normal U.S. background</p>
+                  <p><strong style="color:#27ae60;">0.10–0.30</strong> — Elevated normal (altitude, geology)</p>
+                  <p><strong style="color:#e8c84a;">0.30–1.00</strong> — Above typical, monitor</p>
+                  <p><strong style="color:#e67e22;">1.00–10.00</strong> — Concern threshold, check neighbors</p>
+                  <p><strong style="color:#c0392b;">10.00+</strong> — Emergency range if pattern confirmed</p>
+                  <p>Single-station spikes are nearly always sensor events. Patterns across multiple stations matter.</p>
+                </div>
+
+                <div class="ntw-panel is-green">
+                  <p class="ntw-label is-green">Official Sources</p>
+                  <h3>Government References</h3>
+                  <div class="ntw-panel-links">
+                    <a class="ntw-panel-link" href="https://www.epa.gov/radnet" target="_blank" rel="noopener">EPA RadNet Program</a>
+                    <a class="ntw-panel-link" href="https://cdxapps.epa.gov/cdx-radnet-rest/swagger-ui.html" target="_blank" rel="noopener">EPA CDX API</a>
+                    <a class="ntw-panel-link" href="https://www.nrc.gov/reactors/operating/list-power-reactor-units.html" target="_blank" rel="noopener">NRC Reactor Locations</a>
+                    <a class="ntw-panel-link" href="https://www.ready.gov/nuclear-explosion" target="_blank" rel="noopener">FEMA Ready.gov</a>
+                    <a class="ntw-panel-link" href="https://www.cdc.gov/niosh/radiation/default.html" target="_blank" rel="noopener">CDC Radiation Safety</a>
+                    <a class="ntw-panel-link" href="https://www.dhs.gov/topic/nuclear-and-radiological-threats" target="_blank" rel="noopener">DHS Nuclear Threats</a>
+                  </div>
+                </div>
+
+                <div class="ntw-panel is-amber">
+                  <p class="ntw-label is-amber">Data Units</p>
+                  <h3>Units Explained</h3>
+                  <p><strong style="color:#c8dde8;">µSv/hr</strong> — microsieverts per hour. Used on this map.</p>
+                  <p><strong style="color:#c8dde8;">mSv</strong> — millisieverts. 1 mSv = 1,000 µSv.</p>
+                  <p><strong style="color:#c8dde8;">mrem</strong> — millirem. U.S. unit. 1 mSv = 100 mrem.</p>
+                  <p><strong style="color:#c8dde8;">CPM</strong> — counts per minute. Used on handheld Geiger counters. Conversion to µSv/hr varies by detector model.</p>
+                </div>
+
+                <div class="ntw-panel">
+                  <p class="ntw-label">Related Pages</p>
+                  <div class="ntw-panel-links">
+                    <a class="ntw-panel-link" href="index.html">Live Map</a>
+                    <a class="ntw-panel-link" href="data.html">Data Architecture</a>
+                    <a class="ntw-panel-link" href="stations.html">Station Directory</a>
+                    <a class="ntw-panel-link" href="faq.html">FAQ</a>
+                    <a class="ntw-panel-link" href="resources.html">Preparedness Resources</a>
+                  </div>
+                </div>
+
+                <!-- AD SLOT — sidebar — hidden until AdSense approved -->
+                <!-- To enable: change display:none to display:flex; justify-content:center -->
+                <div class="ntw-ad-slot" data-ad-slot data-ad-position="sidebar" data-ad-page="methodology"></div>
+
+              </aside>
+
+            </div><!-- /ntw-content-grid -->
+          </div><!-- /container -->
+        </section>
+
+        <!-- AD SLOT — lower — hidden until AdSense approved -->
+        <!-- To enable: change display:none to display:flex; justify-content:center -->
+        <!-- AD COUNT THIS PAGE: 1 Amazon affiliate + 2 hidden AdSense = 3 total. At limit. -->
+        <div class="ntw-ad-slot" data-ad-slot data-ad-position="lower" data-ad-page="methodology"></div>
+
+      </main>
+
+      <!-- ═══ SITE FOOTER — injected by layout.js ══════════════════════════ -->
+      <div data-site-footer></div>
+
+      <!-- ═══ COPYRIGHT BAR ════════════════════════════════════════════════ -->
+      <div style="background:#04080c; border-top:2px solid #1c2e3e; padding:1rem 0; text-align:center;">
+        <p style="font-family:'IBM Plex Mono',monospace; font-size:0.64rem; letter-spacing:0.1em; color:#2d4a5e; margin:0; line-height:1.8;">
+          &copy; 2026 NuclearThreatWatch.org &nbsp;|&nbsp; DigiMktg Co. LLC &nbsp;|&nbsp; Dev: Eric Glas
+          <br>
+          <span style="color:#1e3545;">Data sourced from <a href="https://www.epa.gov/radnet" target="_blank" rel="noopener" style="color:#2d5a74;text-decoration:none;">EPA RadNet</a> &mdash; for informational use only. Not an official government service.</span>
+        </p>
+      </div>
+
+    </div><!-- /site-shell -->
+
+    <script type="module" src="assets/js/main.js"></script>
+  </body>
+</html>

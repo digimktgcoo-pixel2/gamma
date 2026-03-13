@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About NuclearThreatWatch — Real-Time U.S. Radiation Monitoring | Nuclear Emergency Preparedness Tool</title>
+    <meta
+      name="description"
+      content="NuclearThreatWatch is a free public radiation monitoring tool built on EPA RadNet live data. Learn about our mission, founder Eric Glas, and why real-time nuclear threat awareness matters for every American family."
+    />
+    <meta name="keywords" content="about NuclearThreatWatch, EPA RadNet radiation monitor, nuclear emergency preparedness tool, real-time radiation tracking USA, nuclear threat awareness, radiation monitoring public service, nuclear preparedness mission, Eric Glas founder, live radiation map explained, nuclear fallout early warning" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://nuclearthreatwatch.org/about.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="About NuclearThreatWatch — Our Mission & Who Built This" />
+    <meta property="og:description" content="NuclearThreatWatch exists to give every American free, immediate access to live EPA radiation data — no logins, no paywalls, no spin. Learn about the mission and the team behind it." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nuclearthreatwatch.org/about.html" />
+    <meta property="og:image" content="https://nuclearthreatwatch.org/assets/img/social-share.png" />
+    <meta property="og:site_name" content="NuclearThreatWatch" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="About NuclearThreatWatch" />
+    <meta name="twitter:description" content="Free real-time U.S. radiation monitoring. Built for the public. Powered by EPA RadNet." />
+    <meta name="twitter:image" content="https://nuclearthreatwatch.org/assets/img/social-share.png" />
+
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "@id": "https://nuclearthreatwatch.org/about.html",
+      "url": "https://nuclearthreatwatch.org/about.html",
+      "name": "About NuclearThreatWatch",
+      "description": "NuclearThreatWatch is a free public radiation monitoring tool built on EPA RadNet live data, founded by Eric Glas of Quincy, IL.",
+      "isPartOf": { "@id": "https://nuclearthreatwatch.org/#website" },
+      "about": {
+        "@type": "Organization",
+        "name": "NuclearThreatWatch",
+        "founder": {
+          "@type": "Person",
+          "name": "Eric Glas",
+          "jobTitle": "Founder & Lead Developer",
+          "address": { "@type": "PostalAddress", "addressLocality": "Quincy", "addressRegion": "IL" }
+        }
+      }
+    }
+    </script>
+
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png" />
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#0a0e13" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/theme.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+
+    <style>
+      /* =============================================
+         NUCLEARTHREATWATCH — SHARED PAGE STYLES
+         (identical design system to index.html)
+         ============================================= */
+      :root {
+        --ntw-red:      #c0392b;
+        --ntw-red-dark: #962d22;
+        --ntw-amber:    #e67e22;
+        --ntw-green:    #27ae60;
+        --ntw-gold:     #e8c84a;
+        --ntw-bg:       #080c10;
+        --ntw-surface:  #0d151d;
+        --ntw-surface2: #111d27;
+        --ntw-border:   #1c2e3e;
+        --ntw-text:     #d4e5f0;
+        --ntw-muted:    #6a8a9e;
+        --header-font:  'Oswald', 'Arial Narrow', Arial, sans-serif;
+        --body-font:    'Source Serif 4', Georgia, serif;
+        --bg:           var(--ntw-bg);
+        --surface:      var(--ntw-surface);
+      }
+
+      body[data-page="about"] { background: var(--ntw-bg); }
+      body[data-page="about"] h1,
+      body[data-page="about"] h2,
+      body[data-page="about"] h3,
+      body[data-page="about"] h4 {
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+      }
+      body[data-page="about"] p,
+      body[data-page="about"] li {
+        font-family: 'Source Serif 4', Georgia, serif;
+        color: var(--ntw-muted);
+      }
+
+      /* ---- Ticker ---- */
+      .ntw-ticker {
+        background: var(--ntw-red); overflow: hidden; white-space: nowrap; padding: 0.42rem 0;
+      }
+      .ntw-ticker-track {
+        display: inline-flex; align-items: center;
+        animation: ntw-scroll 55s linear infinite;
+      }
+      .ntw-ticker-label {
+        font-family: 'Oswald', sans-serif; font-size: 0.7rem; font-weight: 700;
+        letter-spacing: 0.18em; background: #fff; color: var(--ntw-red);
+        padding: 0.15rem 0.6rem; margin-right: 1.5rem; flex-shrink: 0;
+      }
+      .ntw-ticker-text {
+        font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem;
+        letter-spacing: 0.06em; color: rgba(255,255,255,0.92); padding-right: 4rem;
+      }
+      @keyframes ntw-scroll {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+
+      /* ---- Label / eyebrow ---- */
+      .ntw-label {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase;
+        color: var(--ntw-red); margin-bottom: 0.65rem;
+        display: flex; align-items: center; gap: 0.5rem;
+      }
+      .ntw-label.is-gold  { color: var(--ntw-gold); }
+      .ntw-label.is-green { color: var(--ntw-green); }
+      .ntw-label.is-amber { color: var(--ntw-amber); }
+      .ntw-label::before {
+        content: ''; display: inline-block;
+        width: 14px; height: 2px; background: currentColor; flex-shrink: 0;
+      }
+
+      /* ---- Page hero (inner pages) ---- */
+      .ntw-page-hero {
+        padding: 3rem 0 2.5rem;
+        background: var(--ntw-bg);
+        border-bottom: 3px solid var(--ntw-border);
+        position: relative; overflow: hidden;
+      }
+      .ntw-page-hero::before {
+        content: ''; position: absolute; inset: 0;
+        background: radial-gradient(ellipse 50% 60% at 90% 30%, rgba(192,57,43,0.05) 0%, transparent 70%);
+        pointer-events: none;
+      }
+      .ntw-page-hero-inner { position: relative; max-width: 780px; }
+      .ntw-page-hero h1 {
+        font-family: 'Oswald', sans-serif;
+        font-size: clamp(2rem, 5vw, 3.4rem);
+        font-weight: 700; line-height: 1.02;
+        text-transform: uppercase; color: #fff; margin: 0 0 1rem;
+      }
+      .ntw-page-hero h1 em { font-style: normal; color: var(--ntw-red); }
+      .ntw-page-hero-lead {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: 1.1rem; line-height: 1.72;
+        color: #8faec0; max-width: 64ch; margin: 0;
+      }
+
+      /* ---- Section divider ---- */
+      .ntw-divider {
+        display: flex; align-items: center; gap: 1rem;
+        border-bottom: 2px solid var(--ntw-border);
+        padding-bottom: 0.6rem; margin-bottom: 2rem;
+      }
+      .ntw-divider h2 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.15rem; font-weight: 700;
+        text-transform: uppercase; letter-spacing: 0.06em;
+        color: #fff; margin: 0; white-space: nowrap;
+      }
+      .ntw-divider-line { flex: 1; height: 1px; background: var(--ntw-border); }
+
+      /* ---- Mission quote block ---- */
+      .ntw-mission-quote {
+        border-left: 4px solid var(--ntw-red);
+        padding: 1.5rem 2rem;
+        background: linear-gradient(135deg, #0f1c29 0%, #0a1320 100%);
+        margin: 2rem 0;
+      }
+      .ntw-mission-quote blockquote {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: clamp(1.05rem, 2vw, 1.3rem);
+        font-style: italic;
+        color: #c8dde8;
+        line-height: 1.65;
+        margin: 0 0 0.75rem;
+      }
+      .ntw-mission-quote cite {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.68rem; letter-spacing: 0.12em;
+        text-transform: uppercase; color: var(--ntw-muted);
+        font-style: normal;
+      }
+      .ntw-mission-quote cite strong { color: var(--ntw-gold); }
+
+      /* ---- Main content / sidebar layout ---- */
+      .ntw-content-grid {
+        display: grid; grid-template-columns: 1fr; gap: 3rem;
+      }
+      @media (min-width: 768px) {
+        .ntw-content-grid { grid-template-columns: 1fr 320px; }
+      }
+
+      /* ---- Prose body ---- */
+      .ntw-prose h2 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.25rem; font-weight: 700;
+        text-transform: uppercase; color: #fff;
+        margin: 2.5rem 0 0.75rem; letter-spacing: 0.04em;
+        border-left: 3px solid var(--ntw-red); padding-left: 0.75rem;
+      }
+      .ntw-prose h2:first-child { margin-top: 0; }
+      .ntw-prose p {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: 1rem; line-height: 1.78; color: #7a9fb5; margin: 0 0 1.1rem;
+      }
+      .ntw-prose strong { color: #c8dde8; }
+      .ntw-prose a {
+        color: var(--ntw-gold); text-decoration: underline; text-underline-offset: 2px;
+      }
+      .ntw-prose a:hover { color: #f0d86a; }
+      .ntw-prose ul { padding-left: 1.2rem; margin: 0 0 1.1rem; }
+      .ntw-prose ul li {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: 1rem; line-height: 1.72; color: #7a9fb5; margin-bottom: 0.4rem;
+      }
+
+      /* ---- Sidebar panels ---- */
+      .ntw-sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+      .ntw-panel {
+        background: var(--ntw-surface2);
+        border: 1px solid var(--ntw-border);
+        padding: 1.5rem;
+      }
+      .ntw-panel h3 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 0.95rem; font-weight: 600;
+        text-transform: uppercase; color: #fff;
+        margin: 0.35rem 0 0.85rem; letter-spacing: 0.04em;
+      }
+      .ntw-panel p {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: 0.88rem; line-height: 1.62; color: var(--ntw-muted); margin: 0 0 0.6rem;
+      }
+      .ntw-panel ul { padding-left: 1rem; margin: 0; }
+      .ntw-panel ul li {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: 0.86rem; line-height: 1.65; color: var(--ntw-muted); margin-bottom: 0.4rem;
+      }
+      .ntw-panel ul li strong { color: #c8dde8; }
+      .ntw-panel-links { display: flex; flex-direction: column; gap: 0.5rem; }
+      .ntw-panel-link {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+        color: var(--ntw-gold); text-decoration: none;
+        padding: 0.45rem 0; border-bottom: 1px solid var(--ntw-border);
+      }
+      .ntw-panel-link:last-child { border-bottom: none; }
+      .ntw-panel-link:hover { color: #f0d86a; }
+      .ntw-panel-link::before { content: '→ '; }
+
+      /* ---- Founder card ---- */
+      .ntw-founder-card {
+        background: linear-gradient(135deg, #0d1e2e 0%, #0a1320 100%);
+        border: 1px solid var(--ntw-border);
+        border-top: 3px solid var(--ntw-gold);
+        padding: 1.5rem;
+      }
+      .ntw-founder-card h3 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 1rem; font-weight: 700;
+        text-transform: uppercase; color: #fff;
+        margin: 0.3rem 0 0.35rem; letter-spacing: 0.04em;
+      }
+      .ntw-founder-card .ntw-founder-title {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.65rem; letter-spacing: 0.12em;
+        text-transform: uppercase; color: var(--ntw-gold);
+        margin-bottom: 0.75rem;
+      }
+      .ntw-founder-card p {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: 0.86rem; line-height: 1.62; color: var(--ntw-muted); margin: 0;
+      }
+
+      /* ---- Safety tip box ---- */
+      .ntw-safety-tip {
+        background: #0d1a0d;
+        border: 1px solid rgba(39,174,96,0.35);
+        border-left: 4px solid var(--ntw-green);
+        padding: 1.25rem 1.5rem;
+        margin: 2.5rem 0 0;
+      }
+      .ntw-safety-tip-label {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase;
+        color: var(--ntw-green); margin-bottom: 0.5rem;
+        display: flex; align-items: center; gap: 0.4rem;
+      }
+      .ntw-safety-tip-label::before {
+        content: ''; width: 7px; height: 7px;
+        background: var(--ntw-green); border-radius: 50%;
+      }
+      .ntw-safety-tip p {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: 0.9rem; line-height: 1.68; color: #5a9e6a; margin: 0;
+      }
+      .ntw-safety-tip p strong { color: #8fcf9a; }
+
+      /* ---- Amazon ad block ---- */
+      .ntw-amazon-ad {
+        background: #000;
+        border: 1px solid var(--ntw-border);
+        display: block; overflow: hidden;
+        text-decoration: none;
+        transition: border-color 0.2s;
+        aspect-ratio: 1 / 1;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+      .ntw-amazon-ad:hover { border-color: var(--ntw-amber); }
+      .ntw-amazon-ad img {
+        width: 100%; height: 100%; object-fit: cover; display: block;
+      }
+      .ntw-amazon-ad-wrap {
+        margin: 1.5rem 0;
+      }
+      .ntw-amazon-ad-label {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase;
+        color: #2d4a5e; text-align: center; margin-top: 0.4rem;
+      }
+
+      /* ---- Bottom two-col section ---- */
+      .ntw-two-col {
+        display: grid; grid-template-columns: 1fr; gap: 1px;
+        background: var(--ntw-border); border: 1px solid var(--ntw-border);
+      }
+      @media (min-width: 600px) { .ntw-two-col { grid-template-columns: 1fr 1fr; } }
+      .ntw-two-col-item {
+        background: var(--ntw-surface); padding: 2rem 2.25rem;
+      }
+      .ntw-two-col-item h2 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.05rem; font-weight: 700;
+        text-transform: uppercase; color: #fff;
+        margin: 0.35rem 0 0.75rem; letter-spacing: 0.03em;
+      }
+      .ntw-two-col-item p {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: 0.9rem; line-height: 1.7; color: var(--ntw-muted); margin: 0;
+      }
+
+      /* ---- Hidden ad slots ---- */
+      .ntw-ad-slot {
+        display: none; width: 100%;
+        background: var(--ntw-surface);
+        border-top: 1px solid var(--ntw-border);
+        border-bottom: 1px solid var(--ntw-border);
+        padding: 0.5rem 0; min-height: 100px;
+        align-items: center; justify-content: center;
+      }
+
+      /* ---- Disclosure ---- */
+      .ntw-disclosure {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.62rem; letter-spacing: 0.05em; color: #2d4050;
+        line-height: 1.6; margin-top: 0.75rem;
+      }
+
+      .ntw-section { padding: 3rem 0; background: var(--ntw-bg); }
+      .ntw-section-mid { padding: 3rem 0; background: var(--ntw-surface); }
+    </style>
+  </head>
+
+  <body data-page="about">
+    <div class="site-shell">
+
+      <!-- TICKER -->
+      <div class="ntw-ticker" aria-label="Live status ticker" role="marquee">
+        <div class="ntw-ticker-track">
+          <span class="ntw-ticker-label">LIVE</span>
+          <span class="ntw-ticker-text">EPA RadNet monitoring active across the United States &nbsp;|&nbsp; Hourly radiation readings from federal sensor network &nbsp;|&nbsp; Nuclear threat awareness tool — free, no login required &nbsp;|&nbsp; Stale data flagged in real time — never hidden &nbsp;|&nbsp; 93 U.S. nuclear reactors under continuous EPA surveillance &nbsp;|&nbsp; EPA RadNet monitoring active across the United States &nbsp;|&nbsp; Hourly radiation readings from federal sensor network &nbsp;|&nbsp; Nuclear threat awareness tool — free, no login required &nbsp;|&nbsp; Stale data flagged in real time — never hidden &nbsp;|&nbsp; 93 U.S. nuclear reactors under continuous EPA surveillance &nbsp;|&nbsp;</span>
+        </div>
+      </div>
+
+      <!-- SITE HEADER — injected by layout.js -->
+      <div data-site-header></div>
+
+      <main id="main-content">
+
+        <!-- ═══ PAGE HERO ═══ -->
+        <section class="ntw-page-hero">
+          <div class="container">
+            <div class="ntw-page-hero-inner">
+              <p class="ntw-label">About This Project</p>
+              <h1>
+                Built for <em>Humanity.</em><br>
+                We Pray It's Never Needed.
+              </h1>
+              <p class="ntw-page-hero-lead">
+                NuclearThreatWatch is a free public radiation monitoring tool built on live 
+                <a href="https://www.epa.gov/radnet" target="_blank" rel="noopener noreferrer" style="color:var(--ntw-gold);">EPA RadNet</a> data. 
+                No logins. No paywalls. No spin. Just the numbers — when they matter most.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ═══ MISSION QUOTE ═══ -->
+        <div style="background:var(--ntw-surface); border-top:1px solid var(--ntw-border); border-bottom:1px solid var(--ntw-border); padding:2rem 0;">
+          <div class="container">
+            <div class="ntw-mission-quote">
+              <blockquote>
+                "The goal of NuclearThreatWatch is simple: give every American — 
+                regardless of technical background or income — immediate, unfiltered access 
+                to the same federal radiation data that scientists and emergency managers use. 
+                Information is the difference between informed action and blind panic. 
+                We exist to close that gap. We pray this site is never needed for an actual emergency. 
+                But if that day comes, we will be here."
+              </blockquote>
+              <cite>— <strong>Eric Glas</strong>, Founder &amp; Lead Developer, NuclearThreatWatch.org</cite>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ MAIN CONTENT + SIDEBAR ═══ -->
+        <section class="ntw-section">
+          <div class="container">
+            <div class="ntw-content-grid">
+
+              <!-- PROSE -->
+              <article class="ntw-prose">
+
+                <h2>Why NuclearThreatWatch Exists</h2>
+                <p>
+                  Nuclear risk is not a hypothetical. It is a documented, formally acknowledged, 
+                  actively planned-for reality — addressed in official guidance by 
+                  <a href="https://www.ready.gov/nuclear-explosion" target="_blank" rel="noopener noreferrer">FEMA</a>, 
+                  the <a href="https://www.dhs.gov/topic/nuclear-and-radiological-threats" target="_blank" rel="noopener noreferrer">Department of Homeland Security</a>, 
+                  and the <a href="https://www.nrc.gov/" target="_blank" rel="noopener noreferrer">Nuclear Regulatory Commission</a>. 
+                  The United States operates 93 commercial nuclear reactors at 54 active sites. 
+                  Global geopolitical tensions — between nuclear-armed nations — are at levels not seen 
+                  since the Cold War. And yet, the most useful piece of federal infrastructure for 
+                  civilian radiation awareness — <a href="https://www.epa.gov/radnet" target="_blank" rel="noopener noreferrer">EPA's RadNet monitoring network</a> — 
+                  is buried in government portals designed for technical researchers, not families 
+                  trying to make fast decisions under pressure.
+                </p>
+                <p>
+                  NuclearThreatWatch was built to fix that. We pull live data directly from the 
+                  <a href="https://cdxapps.epa.gov/cdx-radnet-rest/swagger-ui.html" target="_blank" rel="noopener noreferrer">EPA CDX RadNet REST API</a>, 
+                  render it on an accessible map updated hourly, label every reading with its data 
+                  status — Live, Stale, or Estimated — and present it in plain language. 
+                  <strong>No filtering. No editorial delays. No government PR timing.</strong> 
+                  When EPA publishes a reading, this site shows it.
+                </p>
+
+                <h2>Our Mission Statement</h2>
+                <p>
+                  Our mission is to do our part to help humanity survive. That sounds large — because 
+                  it is. But the mechanics are straightforward: nuclear preparedness information 
+                  has historically been siloed, technical, and inaccessible to the average person. 
+                  The people most likely to be harmed in a nuclear emergency are also the least likely 
+                  to have access to real-time monitoring data, know how to interpret a radiation reading, 
+                  or understand what immediate actions could reduce their exposure. 
+                  <strong>NuclearThreatWatch exists to change that equation</strong>, one informed 
+                  household at a time.
+                </p>
+                <p>
+                  We are not alarmists. This site runs ads to cover basic operating costs — hosting, 
+                  data infrastructure, and maintenance — and nothing more. If you see an advertisement 
+                  on NuclearThreatWatch.org, it exists to keep the lights on, full stop. We believe 
+                  the best version of this tool is one that people check weekly as a routine, build 
+                  familiarity with over months, and almost never need for an actual emergency. We 
+                  measure success by the number of people who know their local radiation baseline 
+                  before a crisis — not by traffic spikes during one.
+                </p>
+
+                <h2>What the Gamma Project Is — and Why It Matters</h2>
+                <p>
+                  The underlying platform — codenamed <strong>Gamma</strong> — is the technical 
+                  infrastructure behind NuclearThreatWatch. Gamma handles the live data pipeline 
+                  from EPA's CDX endpoint through a Cloudflare Worker proxy, resolves the city-name 
+                  mapping mismatches that exist between EPA's official station names and common 
+                  geographic labels, and surfaces hourly readings with source-aware status labels 
+                  so stale data is never silently presented as fresh.
+                </p>
+                <p>
+                  The Gamma architecture is built PWA-first — meaning NuclearThreatWatch functions 
+                  as an installable app directly from the browser, with no app store required. 
+                  This matters enormously in an actual nuclear emergency scenario: app stores become 
+                  unreliable under mass demand, cell networks degrade, and time becomes the scarcest 
+                  resource. A home-screen PWA with cached data loads even on congested or partially 
+                  offline connections. <strong>Install NuclearThreatWatch today, before you need it.</strong>
+                </p>
+
+                <h2>Data Sources &amp; Transparency</h2>
+                <p>
+                  Every data point on NuclearThreatWatch is traceable to a federal source. 
+                  Primary radiation readings come from the 
+                  <a href="https://www.epa.gov/radnet" target="_blank" rel="noopener noreferrer">EPA RadNet Program</a>, 
+                  the national network of fixed radiation monitoring stations operated by the 
+                  Environmental Protection Agency since 1978. Station metadata and geographic 
+                  context is cross-referenced against the 
+                  <a href="https://www.nrc.gov/reactors/operating/list-power-reactor-units.html" target="_blank" rel="noopener noreferrer">NRC's operating reactor unit list</a>. 
+                  Potassium iodide guidance follows 
+                  <a href="https://www.fda.gov/drugs/bioterrorism-and-drug-preparedness/frequently-asked-questions-potassium-iodide-ki" target="_blank" rel="noopener noreferrer">FDA dosing recommendations</a>. 
+                  Emergency response framing references 
+                  <a href="https://www.ready.gov/nuclear-explosion" target="_blank" rel="noopener noreferrer">FEMA's Ready.gov nuclear guidance</a>.
+                </p>
+                <p>
+                  We do not invent readings. We do not suppress readings. When EPA data is delayed or 
+                  a station returns no data, we label it Stale or Estimated rather than filling the gap 
+                  with guesswork. <strong>Honest data handling is a core part of the product</strong> — 
+                  not an afterthought.
+                </p>
+
+                <h2>What This Site Is Not</h2>
+                <p>
+                  NuclearThreatWatch is an informational tool, not a replacement for official emergency 
+                  guidance. It is not a government service. It is not a medical resource. It does not 
+                  issue evacuation orders or emergency alerts. In the event of a genuine nuclear emergency, 
+                  always follow the guidance of your 
+                  <a href="https://www.ready.gov/nuclear-explosion" target="_blank" rel="noopener noreferrer">local emergency management agency and FEMA</a>. 
+                  This site exists to give you better context before and during such events — 
+                  not to replace official channels.
+                </p>
+
+                <h2>Long-Tail Topics We Cover for Nuclear-Aware Readers</h2>
+                <p>
+                  Beyond the live map, NuclearThreatWatch is building a reference library designed 
+                  to answer the specific, unfiltered questions that nuclear-aware Americans are actually 
+                  searching for: <strong>real-time radiation levels near nuclear power plants in the U.S.</strong>, 
+                  <strong>how to read a radiation monitoring station reading</strong>, 
+                  <strong>what radiation dose levels are dangerous versus normal background</strong>, 
+                  <strong>nuclear fallout shelter options for suburban and rural homes</strong>, 
+                  <strong>potassium iodide (KI) dosing for adults and children during a nuclear emergency</strong>, 
+                  <strong>World War 3 nuclear fallout wind pattern modeling</strong>, 
+                  <strong>how far from a nuclear explosion is considered safe distance</strong>, 
+                  and <strong>what to do in the first 24 hours after a nuclear attack or reactor meltdown</strong>. 
+                  We treat these as legitimate preparedness questions, not conspiracy theory — 
+                  because that is exactly what they are.
+                </p>
+
+              </article>
+
+              <!-- SIDEBAR -->
+              <aside class="ntw-sidebar">
+
+                <!-- Founder Card -->
+                <div class="ntw-founder-card">
+                  <p class="ntw-label is-gold">Founder &amp; Lead Developer</p>
+                  <h3>Eric Glas</h3>
+                  <p class="ntw-founder-title">Quincy, Illinois &nbsp;|&nbsp; DigiMktg Co. LLC</p>
+                  <p>
+                    Eric Glas is the founder and lead developer of NuclearThreatWatch.org and the Gamma 
+                    platform. Based in Quincy, IL, Eric built NuclearThreatWatch out of a conviction that 
+                    public access to real-time federal radiation data should require no technical expertise, 
+                    no government portal navigation, and no cost. DigiMktg Co. LLC owns and operates the platform.
+                  </p>
+                </div>
+
+                <!-- Quick links -->
+                <div class="ntw-panel">
+                  <p class="ntw-label">Explore the Site</p>
+                  <div class="ntw-panel-links">
+                    <a class="ntw-panel-link" href="index.html">Live Radiation Map</a>
+                    <a class="ntw-panel-link" href="stations.html">Station Directory</a>
+                    <a class="ntw-panel-link" href="methodology.html">Data Methodology</a>
+                    <a class="ntw-panel-link" href="resources.html">Preparedness Resources</a>
+                    <a class="ntw-panel-link" href="faq.html">FAQ</a>
+                  </div>
+                </div>
+
+                <!-- Govt sources -->
+                <div class="ntw-panel">
+                  <p class="ntw-label is-amber">Official Sources</p>
+                  <h3>Data We Pull From</h3>
+                  <div class="ntw-panel-links">
+                    <a class="ntw-panel-link" href="https://www.epa.gov/radnet" target="_blank" rel="noopener">EPA RadNet Program</a>
+                    <a class="ntw-panel-link" href="https://www.nrc.gov/" target="_blank" rel="noopener">Nuclear Regulatory Commission</a>
+                    <a class="ntw-panel-link" href="https://www.ready.gov/nuclear-explosion" target="_blank" rel="noopener">FEMA Ready.gov Nuclear</a>
+                    <a class="ntw-panel-link" href="https://www.fda.gov/drugs/bioterrorism-and-drug-preparedness/frequently-asked-questions-potassium-iodide-ki" target="_blank" rel="noopener">FDA — Potassium Iodide Guide</a>
+                  </div>
+                </div>
+
+                <!-- Amazon ad — 1:1 ratio -->
+                <div>
+                  <div class="ntw-amazon-ad-wrap">
+                    <a class="ntw-amazon-ad" href="https://amzn.to/4s9Fr5c" target="_blank" rel="nofollow sponsored noopener" aria-label="Emergency Hand Crank Weather Radio — Shop on Amazon">
+                      <img
+                        src="assets/img/emergency-hand-crank-weather-radio-ad.jpg"
+                        alt="Emergency Hand Crank Weather Radio — Essential Nuclear Preparedness Gear"
+                        loading="lazy"
+                        width="300"
+                        height="300"
+                        onerror="this.closest('.ntw-amazon-ad').style.background='#0a0a0a'; this.style.display='none'; this.closest('.ntw-amazon-ad').insertAdjacentHTML('beforeend','<div style=\'padding:2rem;text-align:center;\'><p style=\'font-family:IBM Plex Mono,monospace;font-size:0.7rem;color:#5a8fa8;letter-spacing:0.1em;text-transform:uppercase;margin:0 0 0.5rem;\'>Recommended Gear</p><p style=\'font-family:Oswald,sans-serif;font-size:1rem;color:#fff;text-transform:uppercase;margin:0 0 0.75rem;\'>Emergency Hand Crank Weather Radio</p><span style=\'font-family:IBM Plex Mono,monospace;font-size:0.7rem;color:#e8c84a;letter-spacing:0.08em;text-transform:uppercase;\'>&#8599; Shop on Amazon</span></div>');"
+                      />
+                    </a>
+                    <p class="ntw-amazon-ad-label">Advertisement &mdash; affiliate link</p>
+                    <p class="ntw-disclosure">Affiliate link. We may earn a commission at no cost to you.</p>
+                  </div>
+                </div>
+
+              </aside>
+            </div>
+          </div>
+        </section>
+
+        <!-- MID AD SLOT — hidden until AdSense approved -->
+        <div data-ad-slot data-ad-position="mid" data-ad-page="about"></div>
+
+        <!-- ═══ TWO-COL BOTTOM SECTION ═══ -->
+        <section class="ntw-section-mid">
+          <div class="container">
+            <div class="ntw-divider">
+              <h2>Our Commitments to You</h2>
+              <div class="ntw-divider-line"></div>
+            </div>
+            <div class="ntw-two-col">
+              <div class="ntw-two-col-item">
+                <p class="ntw-label">Transparency</p>
+                <h2>Honest Data — Always</h2>
+                <p>
+                  EPA station names do not always match common city labels. NuclearThreatWatch corrects 
+                  for those mismatches in code and in editorial notes, so geographic approximations 
+                  never silently break the live data path. Stale readings are labeled. Estimated 
+                  fallback data is flagged. You always know what you're looking at and how fresh it is.
+                  We will never blend stale data in with live data without telling you.
+                </p>
+              </div>
+              <div class="ntw-two-col-item">
+                <p class="ntw-label">Public Trust</p>
+                <h2>Timestamps Are Part of the Reading</h2>
+                <p>
+                  A radiation number without freshness context is easy to misread — and in a nuclear 
+                  emergency, misreading data is dangerous. NuclearThreatWatch treats the timestamp as 
+                  a first-class part of every reading, not a footnote. If a station's last update was 
+                  six hours ago, that is the first thing you see. Real-time nuclear threat monitoring 
+                  only works if the data's age is as visible as the data itself.
+                </p>
+              </div>
+            </div>
+
+            <!-- Safety Tip -->
+            <div class="ntw-safety-tip" style="margin-top:2rem;">
+              <p class="ntw-safety-tip-label">Safety Tip</p>
+              <p>
+                <strong>Practice makes response automatic.</strong> Visit NuclearThreatWatch.org once a week 
+                and spend 90 seconds checking the radiation readings for the two or three EPA monitoring 
+                stations nearest your home. After a few weeks, recognizing your local baseline becomes 
+                effortless — which means you'll immediately recognize when something is abnormal. 
+                In a genuine nuclear emergency, that recognition is worth more than any amount of gear.
+              </p>
+            </div>
+
+            <!-- Amazon disclosure near safety tip -->
+            <p style="font-family:'IBM Plex Mono',monospace; font-size:0.62rem; letter-spacing:0.05em; color:#2d4050; line-height:1.6; margin-top:0.75rem;">
+              &#9432; NuclearThreatWatch.org participates in the Amazon Associates Program. Product links may earn a small commission at no cost to you.
+            </p>
+
+            <!-- External Resources -->
+            <div style="margin-top:2.5rem; padding-top:1.5rem; border-top:2px solid #1c2e3e;">
+              <p style="font-family:'IBM Plex Mono',monospace; font-size:0.68rem; letter-spacing:0.14em; text-transform:uppercase; color:#3d5a6e; margin:0 0 1rem; display:flex; align-items:center; gap:0.5rem;">
+                <span style="display:inline-block; width:14px; height:2px; background:#c0392b;"></span>
+                Official External Resources
+              </p>
+              <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr)); gap:0.5rem;">
+                <a href="https://www.epa.gov/radnet" target="_blank" rel="noopener noreferrer" style="display:flex; align-items:center; gap:0.5rem; font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.08em; color:#5a8fa8; text-decoration:none; padding:0.6rem 0.85rem; border:1px solid #1c2e3e; transition:color 0.2s, border-color 0.2s;" onmouseover="this.style.color='#e8c84a';this.style.borderColor='#e8c84a';" onmouseout="this.style.color='#5a8fa8';this.style.borderColor='#1c2e3e';">&#8599;&nbsp; EPA RadNet Program</a>
+                <a href="https://www.nrc.gov/reactors/operating/list-power-reactor-units.html" target="_blank" rel="noopener noreferrer" style="display:flex; align-items:center; gap:0.5rem; font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.08em; color:#5a8fa8; text-decoration:none; padding:0.6rem 0.85rem; border:1px solid #1c2e3e; transition:color 0.2s, border-color 0.2s;" onmouseover="this.style.color='#e8c84a';this.style.borderColor='#e8c84a';" onmouseout="this.style.color='#5a8fa8';this.style.borderColor='#1c2e3e';">&#8599;&nbsp; NRC Operating Reactors</a>
+                <a href="https://www.ready.gov/nuclear-explosion" target="_blank" rel="noopener noreferrer" style="display:flex; align-items:center; gap:0.5rem; font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.08em; color:#5a8fa8; text-decoration:none; padding:0.6rem 0.85rem; border:1px solid #1c2e3e; transition:color 0.2s, border-color 0.2s;" onmouseover="this.style.color='#e8c84a';this.style.borderColor='#e8c84a';" onmouseout="this.style.color='#5a8fa8';this.style.borderColor='#1c2e3e';">&#8599;&nbsp; FEMA Ready.gov — Nuclear</a>
+                <a href="https://www.dhs.gov/topic/nuclear-and-radiological-threats" target="_blank" rel="noopener noreferrer" style="display:flex; align-items:center; gap:0.5rem; font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.08em; color:#5a8fa8; text-decoration:none; padding:0.6rem 0.85rem; border:1px solid #1c2e3e; transition:color 0.2s, border-color 0.2s;" onmouseover="this.style.color='#e8c84a';this.style.borderColor='#e8c84a';" onmouseout="this.style.color='#5a8fa8';this.style.borderColor='#1c2e3e';">&#8599;&nbsp; DHS Nuclear Threats</a>
+                <a href="https://www.fda.gov/drugs/bioterrorism-and-drug-preparedness/frequently-asked-questions-potassium-iodide-ki" target="_blank" rel="noopener noreferrer" style="display:flex; align-items:center; gap:0.5rem; font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.08em; color:#5a8fa8; text-decoration:none; padding:0.6rem 0.85rem; border:1px solid #1c2e3e; transition:color 0.2s, border-color 0.2s;" onmouseover="this.style.color='#e8c84a';this.style.borderColor='#e8c84a';" onmouseout="this.style.color='#5a8fa8';this.style.borderColor='#1c2e3e';">&#8599;&nbsp; FDA — Potassium Iodide Guide</a>
+                <a href="https://www.cdc.gov/niosh/radiation/default.html" target="_blank" rel="noopener noreferrer" style="display:flex; align-items:center; gap:0.5rem; font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.08em; color:#5a8fa8; text-decoration:none; padding:0.6rem 0.85rem; border:1px solid #1c2e3e; transition:color 0.2s, border-color 0.2s;" onmouseover="this.style.color='#e8c84a';this.style.borderColor='#e8c84a';" onmouseout="this.style.color='#5a8fa8';this.style.borderColor='#1c2e3e';">&#8599;&nbsp; CDC Radiation Emergency</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- LOWER AD SLOT — hidden until AdSense approved -->
+        <div data-ad-slot data-ad-position="lower" data-ad-page="about"></div>
+
+      </main>
+
+      <!-- SITE FOOTER — injected by layout.js -->
+      <div data-site-footer></div>
+
+      <!-- COPYRIGHT -->
+      <div style="background:#04080c; border-top:2px solid #1c2e3e; padding:1rem 0; text-align:center;">
+        <p style="font-family:'IBM Plex Mono',monospace; font-size:0.64rem; letter-spacing:0.1em; color:#2d4a5e; margin:0; line-height:1.8;">
+          &copy; 2026 NuclearThreatWatch.org &nbsp;|&nbsp; DigiMktg Co. LLC &nbsp;|&nbsp; Dev: Eric Glas
+          <br>
+          <span style="color:#1e3545;">Data sourced from <a href="https://www.epa.gov/radnet" target="_blank" rel="noopener" style="color:#2d5a74;text-decoration:none;">EPA RadNet</a> &mdash; for informational use only. Not an official government service.</span>
+        </p>
+      </div>
+    </div>
+
+    <script type="module" src="assets/js/main.js"></script>
+  </body>
+</html>

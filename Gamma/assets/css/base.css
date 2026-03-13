@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(76, 200, 209, 0.12), transparent 30%),
+    linear-gradient(180deg, #08111a 0%, #0b1521 48%, #08111a 100%);
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+main {
+  display: block;
+}
+
+strong {
+  color: #fff;
+}

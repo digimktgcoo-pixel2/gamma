@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found | NuclearThreatWatch.org</title>
+    <meta name="description" content="Page not found. Return to the NuclearThreatWatch.org live radiation map, station directory, or nuclear preparedness resources." />
+    <meta name="robots" content="noindex, follow" />
+
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png" />
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#0a0e13" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/theme.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/pages.css" />
+
+    <style>
+      :root {
+        --ntw-red:      #c0392b;
+        --ntw-red-dark: #962d22;
+        --ntw-amber:    #e67e22;
+        --ntw-green:    #27ae60;
+        --ntw-gold:     #e8c84a;
+        --ntw-bg:       #080c10;
+        --ntw-surface:  #0d151d;
+        --ntw-surface2: #111d27;
+        --ntw-border:   #1c2e3e;
+        --ntw-muted:    #6a8a9e;
+        --header-font:  'Oswald', 'Arial Narrow', Arial, sans-serif;
+        --body-font:    'Source Serif 4', Georgia, serif;
+        --bg:           var(--ntw-bg);
+        --surface:      var(--ntw-surface);
+      }
+
+      body[data-page="404"] {
+        background: var(--ntw-bg);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      body[data-page="404"] .site-shell {
+        display: flex; flex-direction: column; min-height: 100vh;
+      }
+      body[data-page="404"] main {
+        flex: 1;
+        display: flex; align-items: center;
+      }
+
+      /* Ticker */
+      .ntw-ticker {
+        background: var(--ntw-red); overflow: hidden;
+        white-space: nowrap; padding: 0.42rem 0;
+      }
+      .ntw-ticker-track {
+        display: inline-flex; align-items: center;
+        animation: ntw-scroll 55s linear infinite;
+      }
+      .ntw-ticker-label {
+        font-family: 'Oswald', sans-serif; font-size: 0.7rem; font-weight: 700;
+        letter-spacing: 0.18em; background: #fff; color: var(--ntw-red);
+        padding: 0.15rem 0.6rem; margin-right: 1.5rem; flex-shrink: 0;
+      }
+      .ntw-ticker-text {
+        font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem;
+        letter-spacing: 0.06em; color: rgba(255,255,255,0.92); padding-right: 4rem;
+      }
+      @keyframes ntw-scroll {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+
+      /* 404 hero */
+      .ntw-404-section {
+        width: 100%; padding: 4rem 0 5rem;
+        position: relative; overflow: hidden;
+      }
+      .ntw-404-section::before {
+        content: '';
+        position: absolute; inset: 0;
+        background:
+          radial-gradient(ellipse 55% 60% at 85% 20%, rgba(192,57,43,0.07) 0%, transparent 65%),
+          radial-gradient(ellipse 40% 50% at 15% 90%, rgba(14,30,50,0.6) 0%, transparent 60%);
+        pointer-events: none;
+      }
+
+      /* Giant 404 background number */
+      .ntw-404-bg-num {
+        position: absolute;
+        top: 50%; right: -2rem;
+        transform: translateY(-50%);
+        font-family: 'Oswald', sans-serif;
+        font-size: clamp(12rem, 25vw, 22rem);
+        font-weight: 700;
+        color: rgba(192,57,43,0.06);
+        letter-spacing: -0.04em;
+        line-height: 1;
+        pointer-events: none;
+        user-select: none;
+      }
+
+      .ntw-404-inner {
+        position: relative; max-width: 620px;
+      }
+
+      .ntw-label {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase;
+        color: var(--ntw-red); margin-bottom: 0.75rem;
+        display: flex; align-items: center; gap: 0.5rem;
+      }
+      .ntw-label::before {
+        content: ''; display: inline-block;
+        width: 14px; height: 2px; background: currentColor; flex-shrink: 0;
+      }
+
+      .ntw-404-code {
+        font-family: 'Oswald', sans-serif;
+        font-size: clamp(5rem, 14vw, 9rem);
+        font-weight: 700; line-height: 0.9;
+        color: var(--ntw-red);
+        letter-spacing: -0.02em;
+        margin: 0 0 0.5rem;
+      }
+
+      .ntw-404-heading {
+        font-family: 'Oswald', sans-serif;
+        font-size: clamp(1.5rem, 4vw, 2.4rem);
+        font-weight: 600; text-transform: uppercase;
+        color: #fff; line-height: 1.08;
+        margin: 0 0 1.1rem; letter-spacing: 0.01em;
+      }
+
+      .ntw-404-lead {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: 1.05rem; line-height: 1.72;
+        color: #7a9fb5; margin: 0 0 2rem; max-width: 50ch;
+      }
+
+      /* Divider */
+      .ntw-404-divider {
+        width: 48px; height: 3px;
+        background: var(--ntw-red); margin: 1.25rem 0;
+      }
+
+      /* CTA buttons */
+      .ntw-cta-row {
+        display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 2.5rem;
+      }
+      .ntw-btn-primary {
+        display: inline-flex; align-items: center; gap: 0.4rem;
+        background: var(--ntw-red); color: #fff;
+        font-family: 'Oswald', sans-serif; font-size: 0.95rem; font-weight: 600;
+        letter-spacing: 0.08em; text-transform: uppercase;
+        text-decoration: none; padding: 0.75rem 1.5rem;
+        border: 2px solid var(--ntw-red);
+        transition: background 0.2s, border-color 0.2s;
+      }
+      .ntw-btn-primary:hover { background: var(--ntw-red-dark); border-color: var(--ntw-red-dark); }
+      .ntw-btn-secondary {
+        display: inline-flex; align-items: center;
+        font-family: 'Oswald', sans-serif; font-size: 0.95rem; font-weight: 500;
+        letter-spacing: 0.08em; text-transform: uppercase;
+        text-decoration: none; color: var(--ntw-gold);
+        border: 2px solid rgba(232,200,74,0.4); padding: 0.75rem 1.5rem;
+        transition: background 0.2s, border-color 0.2s;
+      }
+      .ntw-btn-secondary:hover { background: rgba(232,200,74,0.1); border-color: var(--ntw-gold); }
+      .ntw-btn-ghost {
+        display: inline-flex; align-items: center;
+        font-family: 'Oswald', sans-serif; font-size: 0.95rem; font-weight: 500;
+        letter-spacing: 0.08em; text-transform: uppercase;
+        text-decoration: none; color: var(--ntw-muted);
+        border: 2px solid var(--ntw-border); padding: 0.75rem 1.5rem;
+        transition: background 0.2s, color 0.2s;
+      }
+      .ntw-btn-ghost:hover { color: #fff; background: rgba(255,255,255,0.05); }
+
+      /* Quick nav links */
+      .ntw-404-nav {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1px;
+        background: var(--ntw-border);
+        border: 1px solid var(--ntw-border);
+        max-width: 600px;
+      }
+      .ntw-404-nav-item {
+        background: var(--ntw-surface2);
+        padding: 1rem 1.25rem;
+        text-decoration: none;
+        transition: background 0.18s;
+        display: flex; flex-direction: column; gap: 0.2rem;
+      }
+      .ntw-404-nav-item:hover { background: #162535; }
+      .ntw-404-nav-label {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase;
+        color: var(--ntw-red);
+      }
+      .ntw-404-nav-title {
+        font-family: 'Oswald', sans-serif;
+        font-size: 0.88rem; font-weight: 600; text-transform: uppercase;
+        letter-spacing: 0.04em; color: #fff;
+      }
+      .ntw-404-nav-desc {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: 0.78rem; color: var(--ntw-muted); line-height: 1.45;
+      }
+
+      /* Safety tip */
+      .ntw-safety-tip {
+        background: #0d1a0d;
+        border: 1px solid rgba(39,174,96,0.35);
+        border-left: 4px solid var(--ntw-green);
+        padding: 1rem 1.5rem; margin-top: 2rem; max-width: 600px;
+      }
+      .ntw-safety-tip-label {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase;
+        color: var(--ntw-green); margin-bottom: 0.4rem;
+        display: flex; align-items: center; gap: 0.4rem;
+      }
+      .ntw-safety-tip-label::before {
+        content: ''; width: 7px; height: 7px;
+        background: var(--ntw-green); border-radius: 50%;
+      }
+      .ntw-safety-tip p {
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: 0.88rem; line-height: 1.65; color: #5a9e6a; margin: 0;
+      }
+      .ntw-safety-tip p strong { color: #8fcf9a; }
+      .ntw-safety-tip a { color: var(--ntw-gold); }
+    </style>
+  </head>
+
+  <body data-page="404">
+    <div class="site-shell">
+
+      <!-- TICKER -->
+      <div class="ntw-ticker" aria-label="Live status ticker" role="marquee">
+        <div class="ntw-ticker-track">
+          <span class="ntw-ticker-label">LIVE</span>
+          <span class="ntw-ticker-text">EPA RadNet monitoring active across the United States &nbsp;|&nbsp; Hourly radiation readings from federal sensor network &nbsp;|&nbsp; NuclearThreatWatch.org — free public radiation monitoring tool &nbsp;|&nbsp; Stale data flagged in real time — never hidden &nbsp;|&nbsp; EPA RadNet monitoring active across the United States &nbsp;|&nbsp; Hourly radiation readings from federal sensor network &nbsp;|&nbsp; NuclearThreatWatch.org — free public radiation monitoring tool &nbsp;|&nbsp; Stale data flagged in real time — never hidden &nbsp;|&nbsp;</span>
+        </div>
+      </div>
+
+      <!-- SITE HEADER — injected by layout.js -->
+      <div data-site-header></div>
+
+      <main id="main-content">
+        <section class="ntw-404-section">
+          <div class="container">
+            <div class="ntw-404-bg-num" aria-hidden="true">404</div>
+            <div class="ntw-404-inner">
+
+              <p class="ntw-label">Error — Page Not Found</p>
+              <div class="ntw-404-code" aria-hidden="true">404</div>
+              <div class="ntw-404-divider"></div>
+              <h1 class="ntw-404-heading">
+                This Page Has Left<br>the Monitoring Grid.
+              </h1>
+              <p class="ntw-404-lead">
+                The page you're looking for doesn't exist or has moved. 
+                Head back to the live radiation map — your real-time 
+                U.S. EPA RadNet feed is always one click away on 
+                NuclearThreatWatch.org.
+              </p>
+
+              <div class="ntw-cta-row">
+                <a class="ntw-btn-primary" href="index.html">&#9654;&nbsp; Back to Live Map</a>
+                <a class="ntw-btn-secondary" href="resources.html">Preparedness Resources</a>
+                <a class="ntw-btn-ghost" href="stations.html">Station Directory</a>
+              </div>
+
+              <!-- Quick nav grid -->
+              <div class="ntw-404-nav" role="navigation" aria-label="Site navigation">
+                <a class="ntw-404-nav-item" href="index.html">
+                  <span class="ntw-404-nav-label">Live Data</span>
+                  <span class="ntw-404-nav-title">Radiation Map</span>
+                  <span class="ntw-404-nav-desc">Real-time EPA RadNet readings, continental U.S.</span>
+                </a>
+                <a class="ntw-404-nav-item" href="stations.html">
+                  <span class="ntw-404-nav-label">Directory</span>
+                  <span class="ntw-404-nav-title">All Stations</span>
+                  <span class="ntw-404-nav-desc">Browse every monitoring station in the network.</span>
+                </a>
+                <a class="ntw-404-nav-item" href="resources.html">
+                  <span class="ntw-404-nav-label">Guides</span>
+                  <span class="ntw-404-nav-title">Resources</span>
+                  <span class="ntw-404-nav-desc">Nuclear preparedness, fallout, and KI guides.</span>
+                </a>
+                <a class="ntw-404-nav-item" href="methodology.html">
+                  <span class="ntw-404-nav-label">Transparency</span>
+                  <span class="ntw-404-nav-title">Methodology</span>
+                  <span class="ntw-404-nav-desc">How we source, label, and display EPA data.</span>
+                </a>
+                <a class="ntw-404-nav-item" href="faq.html">
+                  <span class="ntw-404-nav-label">Help</span>
+                  <span class="ntw-404-nav-title">FAQ</span>
+                  <span class="ntw-404-nav-desc">Common questions about readings and data status.</span>
+                </a>
+                <a class="ntw-404-nav-item" href="contact.html">
+                  <span class="ntw-404-nav-label">Contact</span>
+                  <span class="ntw-404-nav-title">Report a Broken Link</span>
+                  <span class="ntw-404-nav-desc">Let us know what page you were looking for.</span>
+                </a>
+              </div>
+
+              <!-- Safety tip -->
+              <div class="ntw-safety-tip">
+                <p class="ntw-safety-tip-label">Safety Tip</p>
+                <p>
+                  <strong>Bookmark NuclearThreatWatch.org now</strong> — not just this URL, but the 
+                  home screen app. In an actual nuclear emergency, searching for a website under 
+                  pressure is a step you cannot afford. Use the 
+                  <a href="index.html">Install App button</a> on the homepage to add 
+                  NuclearThreatWatch.org directly to your phone's home screen. One tap. No searching.
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- SITE FOOTER — injected by layout.js -->
+      <div data-site-footer></div>
+
+      <!-- COPYRIGHT -->
+      <div style="background:#04080c; border-top:2px solid #1c2e3e; padding:1rem 0; text-align:center;">
+        <p style="font-family:'IBM Plex Mono',monospace; font-size:0.64rem; letter-spacing:0.1em; color:#2d4a5e; margin:0; line-height:1.8;">
+          &copy; 2026 NuclearThreatWatch.org &nbsp;|&nbsp; DigiMktg Co. LLC &nbsp;|&nbsp; Dev: Eric Glas
+          <br>
+          <span style="color:#1e3545;">Data sourced from <a href="https://www.epa.gov/radnet" target="_blank" rel="noopener" style="color:#2d5a74;text-decoration:none;">EPA RadNet</a> &mdash; for informational use only. Not an official government service.</span>
+        </p>
+      </div>
+    </div>
+
+    <script type="module" src="assets/js/main.js"></script>
+  </body>
+</html>
